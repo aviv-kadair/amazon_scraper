@@ -4,16 +4,16 @@ from collections import defaultdict
 para1={}
 re={}
 
-review = defaultdict(list)
-def get_description(laptop_link):
-    headers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36", "Accept-Encoding":"gzip, deflate",     "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "DNT":"1","Connection":"close", "Upgrade-Insecure-Requests":"1"}
 
+def get_description(laptop_link):
+    review = defaultdict(list)
+    headers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36", "Accept-Encoding":"gzip, deflate",     "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "DNT":"1","Connection":"close", "Upgrade-Insecure-Requests":"1"}
     webpage = requests.get(laptop_link, headers=headers)#, proxies=proxies)
     if not webpage.ok:
         print('Server responded: ', webpage.status_code)
     else:
         content = webpage.content
-        soup = BeautifulSoup(content)
+        soup = BeautifulSoup(content, features="lxml")
 
         #Table1
         #val1 = soup.findAll('th', attrs={'class':'a-span3 comparison_attribute_name_column comparison_table_first_col'})
@@ -36,10 +36,10 @@ def get_description(laptop_link):
             t = tab.findAll('th')
             str_paras = str(t)
 
-            parameters_tab2 =  BeautifulSoup(str_paras).get_text().replace('\n', '')
+            parameters_tab2 =  BeautifulSoup(str_paras,features="lxml").get_text().replace('\n', '')
             par = tab.findAll('td')
             str_cells = str(par)
-            values2=BeautifulSoup(str_cells).get_text().replace('\n', '')[1:-1].split(", ")
+            values2=BeautifulSoup(str_cells, features="lxml").get_text().replace('\n', '')[1:-1].split(", ")
 
 
         par2 = parameters_tab2[1:-1].split(", ")
@@ -51,10 +51,10 @@ def get_description(laptop_link):
         for tab in table3:
             t = tab.findAll('th')
             str_paras = str(t)
-            parameters_tab3 =  BeautifulSoup(str_paras).get_text().replace("\n","")
+            parameters_tab3 =  BeautifulSoup(str_paras, features="lxml").get_text().replace("\n","")
             par = tab.findAll('td')
             str_cells = str(par)
-            values3=BeautifulSoup(str_cells).get_text().replace('\n','')[1:-1].split(", ")
+            values3=BeautifulSoup(str_cells, features="lxml").get_text().replace('\n','')[1:-1].split(", ")
 
 
         par3 = parameters_tab3[1:-1].split(", ")
@@ -63,7 +63,7 @@ def get_description(laptop_link):
 
         #reviews
 
-        soup = BeautifulSoup(content)
+        soup = BeautifulSoup(content, features="lxml")
         for d in soup.findAll('div', attrs={'class':"a-section review aok-relative"}):
             #get the name
             n = d.find('span', attrs={'class':'a-profile-name'})
@@ -86,7 +86,7 @@ def get_description(laptop_link):
 
         parameters = dict(para2, **para3)
         parameters['laptop_link']=laptop_link
-        return  parameters,review
+        return parameters,review
 
 
 

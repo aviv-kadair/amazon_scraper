@@ -10,7 +10,7 @@ def get_data(pageNo):
         print('Server responded: ', webpage.status_code)
     else:
         content = webpage.content
-        soup = BeautifulSoup(content)
+        soup = BeautifulSoup(content,features="lxml")
 
 
 
@@ -24,6 +24,8 @@ def get_data(pageNo):
 
         if name is not None:
             link = d.find('a', {'class':"a-link-normal a-text-normal"})['href']
+        else:
+            link=None
 
         all=[]
 
