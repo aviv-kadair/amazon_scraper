@@ -36,7 +36,7 @@ def get_description(laptop_link):
             t = tab.findAll('th')
             str_paras = str(t)
 
-            parameters_tab2 =  BeautifulSoup(str_paras,features="lxml").get_text().replace('\n', '')
+            parameters_tab2 =  BeautifulSoup(str_paras,features="lxml").get_text().replace('\n', '').replace('\r',"")
             par = tab.findAll('td')
             str_cells = str(par)
             values2=BeautifulSoup(str_cells, features="lxml").get_text().replace('\n', '')[1:-1].split(", ")
@@ -51,7 +51,7 @@ def get_description(laptop_link):
         for tab in table3:
             t = tab.findAll('th')
             str_paras = str(t)
-            parameters_tab3 =  BeautifulSoup(str_paras, features="lxml").get_text().replace("\n","")
+            parameters_tab3 =  BeautifulSoup(str_paras, features="lxml").get_text().replace("\n","").replace('\r',"")
             par = tab.findAll('td')
             str_cells = str(par)
             values3=BeautifulSoup(str_cells, features="lxml").get_text().replace('\n','')[1:-1].split(", ")
