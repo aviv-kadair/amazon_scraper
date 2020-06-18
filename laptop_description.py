@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from collections import defaultdict
 para1={}
 re={}
 
