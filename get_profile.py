@@ -1,3 +1,6 @@
+"""Get info about amazon users with their profile link
+Authors: Aviv & Serah"""
+
 from selenium import webdriver
 import selenium as se
 import re
@@ -6,6 +9,15 @@ import os
 
 
 def user_profile(my_url):
+    """Retrieve reviewers ranking, reviews, and helpful votes with the link of the user
+
+    :param
+    my_url (string) The link of a user profile
+
+    :returns
+    reviewer_ranking, reviews, votes (int)
+    """
+
     cwd = os.getcwd()
     options = se.webdriver.ChromeOptions()
     options.add_argument('headless chrome=83.0.4103.106')
@@ -40,5 +52,3 @@ def user_profile(my_url):
     return reviewer_ranking,reviews,votes
 
 
-my_url = '/gp/profile/amzn1.account.AGZHZLWZGTY5L5FESNQ5VCKP24UQ/ref=cm_cr_arp_d_gw_btm?ie=UTF8'
-print(user_profile(my_url))
