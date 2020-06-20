@@ -94,19 +94,22 @@ def profile(users_links):
     :return
     csv file with all the details on each profile that gave a review on a laptop
     """
-    users_data = pd.DataFrame()
+    users_data = pd.read_csv('users_data.csv')
     rank = []
     rev = []
     help_votes = []
     stage = 0
     for i, link in enumerate(users_links):
-        print(f'{i} profile(s) on {len(users_links)} have been retrieved')
-        sleep(2)
+        print(f'{i+1} profile(s) on {len(users_links)} have been retrieved')
         reviewer_ranking, reviews, votes = user_profile(link)
         rank.append(reviewer_ranking)
         rev.append(reviews)
         help_votes.append(votes)
-    users_data['Reviewer_Ranking'] = rank
-    users_data['Reviews'] = rev
-    users_data['Helpful_votes'] = help_votes
+        sleep(2)
+    users_data = users_data.append(pd.DataFrame({'Reviewer_Ranking': rank, 'Reviews': rev, 'Helpu_votes': help_votes}), ignore_index= True)
+    #users_data['Reviewer_Ranking'] = rank
+    #users_data['Reviews'] = rev
+    #users_data['Helpful_votes'] = help_votes
     users_data.to_csv('users_data.csv', index=False, encoding='utf-8')
+
+    return rank, rev, help_votes
