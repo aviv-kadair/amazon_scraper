@@ -8,7 +8,7 @@ re={}
 def get_description(laptop_link):
     review = defaultdict(list)
     headers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36", "Accept-Encoding":"gzip, deflate",     "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "DNT":"1","Connection":"close", "Upgrade-Insecure-Requests":"1"}
-    webpage = requests.get(laptop_link, headers=headers)#, proxies=proxies)
+    webpage = requests.get(laptop_link, headers=headers,verify = False)#, proxies=proxies)
     if not webpage.ok:
         print('Server responded: ', webpage.status_code)
     else:
