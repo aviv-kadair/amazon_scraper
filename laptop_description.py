@@ -4,13 +4,14 @@ Authors: Aviv & Serah
 import requests
 from bs4 import BeautifulSoup
 from collections import defaultdict
+from time import sleep
 
 
 def get_description(laptop_link):
-    """Get the laptop features and all the reviews
+    """Get the laptop features and corresponding reviews
 
     :param
-    laptop_link (str) the link of the laptop page
+    laptop_link (str): the link of the laptop page
 
     :returns
     parameters (dict):  all the features of the laptop
@@ -26,9 +27,10 @@ def get_description(laptop_link):
     if not web_page.ok:
         print('Server responded: ', web_page.status_code)
     else:
+        sleep(3)
         content = web_page.content
         soup = BeautifulSoup(content, features="lxml")
-        # laptop characteristics
+        # laptop specs
         # table2
         # Get the titles (parameters) and the corresponding values
         table2 = soup.findAll(id="productDetails_techSpec_section_2")
@@ -78,6 +80,7 @@ def get_description(laptop_link):
             review.setdefault(name, []).append(rev.get_text())
             # get the profil link of the user
             review.setdefault(name, []).append(d.find('a', href=True, attrs={'class': 'a-profile'})['href'])
+
 
         parameters = dict(para2, **para3)
         parameters['laptop_link'] = laptop_link
