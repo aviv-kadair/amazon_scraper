@@ -98,15 +98,16 @@ def profile(users_links):
     rank = []
     rev = []
     help_votes = []
-    stage = 0
+    profile_link = []
     for i, link in enumerate(users_links):
         print(f'{i+1} profile(s) on {len(users_links)} have been retrieved')
-        reviewer_ranking, reviews, votes = user_profile(link)
+        reviewer_ranking, reviews, votes= user_profile(link)
         rank.append(reviewer_ranking)
         rev.append(reviews)
         help_votes.append(votes)
+        profile_link.append(link)
         sleep(2)
-    users_data = users_data.append(pd.DataFrame({'Reviewer_Ranking': rank, 'Reviews': rev, 'Helpu_votes': help_votes}), ignore_index= True)
+    users_data = users_data.append(pd.DataFrame({'Reviewer_Ranking': rank, 'Reviews': rev, 'Helpful_votes': help_votes, 'Profile_link': profile_link}), ignore_index= True)
     #users_data['Reviewer_Ranking'] = rank
     #users_data['Reviews'] = rev
     #users_data['Helpful_votes'] = help_votes
