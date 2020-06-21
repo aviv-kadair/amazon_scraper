@@ -9,10 +9,10 @@ def get_data(page_no):
     """Get the name, price, rating, link of the laptop from the search page
 
     :param
-    page_no (int): The numero of the page we want to analyze in the laptop search
+    page_no (int): The number of the page we want to analyze in the laptop search
 
     :return
-    dict with the name of the laptop for the key and all its info (price, rating..) in a list for the value
+    dict with the name of the laptop as the key and all its info (price, rating..) in a list for the value
     """
 
     dic = {}

@@ -1,5 +1,5 @@
 """
-Loop over all the pages, and the links to retrieve all the info of the laptop using the function we have defined
+Loop over all the pages, and the associated links to retrieve all the info of the laptop using the function we have defined
 Authors: Aviv & Serah
 """
 
@@ -12,10 +12,10 @@ from pathlib import Path
 
 
 def search_results(no_pages):
-    """Save the info of all the laptop search page in a csv
+    """Save the info of all of the laptop search page in a csv
 
     :param
-    no_pages (int): the number of pages that we want to retrieve data from them
+    no_pages (int): the number of pages that we want to retrieve data from
 
     :returns
     - csv file with all the info of the laptop search
@@ -46,10 +46,10 @@ def laptop_page(links):
     """Retrieve all the info for all the laptop pages description
 
     :param
-    links (list) all the links for all the laptop page description
+    links (list): all the links for all the laptop page description
 
     :returns
-    users_links (list) all the users profile links
+    users_links (list): all the users profile links
     (two csv file one with all the parameters for each laptop and second one with the reviews details
     """
     par_list = []
@@ -87,10 +87,10 @@ def laptop_page(links):
 
 
 def profile(users_links):
-    """Get the data for all the profiles
+    """Get the data from the user profiles
 
     :param
-    users_links (list) all the profile link for all the laptop
+    users_links (list): all the profile links of users that reviewed laptops
 
     :return
     csv file with all the details on each profile that gave a review on a laptop
@@ -98,7 +98,6 @@ def profile(users_links):
     my_file = Path('users_data.csv')
     if my_file.is_file():
         users_data = pd.read_csv('users_data.csv')
-
     else:
         users_data = pd.DataFrame()
     rank = []
