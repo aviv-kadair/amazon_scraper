@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     #data2 = pd.read_csv("reviews_info.csv")
     #profile_links = data2['link']
-    #profile(profile_links[2:5])
+    #profile(profile_links[10:15])
 
 
 

@@ -61,7 +61,7 @@ def laptop_page(links):
     for i, li in enumerate(links):
         if round(100*i/len(links)) % 5 == 0 and round(100*i/len(links)) != stage:
             stage = round(100*i/len(links))
-            print(str(stage) + '% of the laptop link has been retrieved')
+            print(str(stage) + '% of the laptop links has been retrieved')
         par, review = get_description(li)
         par_list.append(par)
         names.extend(review.keys())
