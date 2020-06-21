@@ -8,6 +8,7 @@ from get_data import get_data
 from laptop_description import get_description
 from get_profile import user_profile
 from time import sleep
+from pathlib import Path
 
 
 def search_results(no_pages):
@@ -94,9 +95,12 @@ def profile(users_links):
     :return
     csv file with all the details on each profile that gave a review on a laptop
     """
+    my_file = Path('users_data.csv')
+    if my_file.is_file():
+        users_data = pd.read_csv('users_data.csv')
 
-    users_data = pd.read_csv('users_data.csv')
-    #users_data = pd.DataFrame()
+    else:
+        users_data = pd.DataFrame()
     rank = []
     rev = []
     help_votes = []
