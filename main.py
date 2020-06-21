@@ -14,13 +14,13 @@ if __name__ == "__main__":
 
     #search_results(NO_PAGES)
 
-    #data = pd.read_csv("search_page.csv")
-    #links = data["Link"]
-    #users_links = laptop_page(links)
+    data = pd.read_csv("search_page.csv")
+    links = data["Link"]
+    users_links = laptop_page(links)
 
-    data2 = pd.read_csv("reviews_info.csv")
-    profile_links = data2['link']
-    profile(profile_links[10:11])
+    #data2 = pd.read_csv("reviews_info.csv")
+    #profile_links = data2['link']
+    #profile(profile_links[2:5])
 
 
 
