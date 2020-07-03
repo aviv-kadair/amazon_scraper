@@ -25,7 +25,7 @@ cur.execute('''DROP TABLE laptop_features''')
 cur.execute('''CREATE TABLE laptop_features (
                             Laptop_id INT PRIMARY KEY,
                             Screen_Size VARCHAR(30),
-                            Max_Screen Resolution VARCHAR(30), 
+                            Max_Screen_Resolution VARCHAR(30), 
                             Chipset_Brand VARCHAR(30),
                             Card_Description VARCHAR(30),
                             Brand_Name VARCHAR(30), 
