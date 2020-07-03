@@ -45,7 +45,7 @@ class Search_Page(Scraper):
     def __init__(self, link):
         super().__init__(link)
 
-    def get_data(self, page_no):
+    def get_data(self):
         dic = {}
         for d in self.soup.findAll('div', attrs={'class': 'sg-col-4-of-12 sg-col-8-of-16 sg-col-16-of-24 sg-col-12-of-20 sg-col-24-of-32 sg-col sg-col-28-of-36 sg-col-20-of-28'}):
             name = d.find('span', attrs={'class': 'a-size-medium a-color-base a-text-normal'})
@@ -64,12 +64,12 @@ class Search_Page(Scraper):
                 all_para.append(name.text)
 
                 if price is not None:
-                    all_para.append(price.text)
+                    all_para.append(price.text[1::])
                 else:
-                    all_para.append('$0')
+                    all_para.append('0')
 
                 if rating is not None:
-                    all_para.append(rating.text)
+                    all_para.append(rating.text.split()[0])
                 else:
                     all_para.append('-1')
 
@@ -134,11 +134,14 @@ class Reviews(Scraper):
             n = d.find('span', attrs={'class': 'a-profile-name'})
             name = n.get_text()
             # get the location and the date of the comment
-            location = d.find('span', attrs={'class': 'a-size-base a-color-secondary review-date'})
-            review.setdefault(name, []).append(location.get_text())
+            loc = d.find('span', attrs={'class': 'a-size-base a-color-secondary review-date'})
+            location = loc.get_text().split(' on ')[0].split('Reviewed in ')[1]
+            review.setdefault(name, []).append(location)
+            date = loc.get_text().split(' on ')[1]
+            review.setdefault(name, []).append(date)
             # get the rank that the user gives to the laptop
-            rev = d.find('span', attrs={'class': 'a-icon-alt'})
-            review.setdefault(name, []).append(rev.get_text())
+            rev = d.find('span', attrs={'class': 'a-icon-alt'}).get_text().split()[0]
+            review.setdefault(name, []).append(rev)
             # get the profil link of the user
             review.setdefault(name, []).append(d.find('a', href=True, attrs={'class': 'a-profile'})['href'])
 
