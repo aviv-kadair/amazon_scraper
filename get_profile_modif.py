@@ -4,6 +4,8 @@ Authors: Aviv & Serah"""
 from selenium import webdriver
 import selenium as se
 import re
+from bs4 import BeautifulSoup
+import pandas as pd
 import csv
 import os
 
@@ -17,38 +19,31 @@ def user_profile(my_url):
     :returns
     reviewer_ranking, reviews, votes (int)
     """
-
+    #driver = webdriver.Chrome("chromedriver.exe")
+    #driver.get(url)
     options = se.webdriver.ChromeOptions()
     options.add_argument('headless chrome=83.0.4103.106')
-    #options.add_argument("enable-features=NetworkServiceInProcess")
+    options.add_argument("enable-features=NetworkServiceInProcess")
     options.add_argument("disable-features=NetworkService")
     options.add_argument("--lang=en-US")
     driver = se.webdriver.Chrome("chromedriver.exe", options=options)
     driver.get("https://www.amazon.com" + my_url)
-    p_element = driver.find_element_by_id(id_='profile_v5')
-    txt = p_element.text
+    bs_obj = BeautifulSoup(driver.page_source, 'lxml')
 
-    #Get Reviewer ranking
-    match1 = re.findall(r'Reviewer ranking\n#(\d+)\n', txt)
-    if match1:
-        reviewer_ranking = match1[0]
-    else:
-        reviewer_ranking = 0
+    for d in bs_obj.findAll('div', attrs={'class': "dashboard-desktop-stat-value"}):
+        if d.get_text() != "":
+            print(d.get_text())
+        else:
+            print('blank page')
 
-    #Get reviews
-    match2 = re.findall(r'\n([\d\,]+)\nreviews', txt)
-    if match2:
-        reviews = match2[0]
-    else:
-        reviews = 0
-
-    #Get helpful votes
-    match3 = re.findall(r'\n([\d\,]+)\nhelpful votes', txt)
-    if match3:
-        votes = match3[0]
-    else:
-        votes = 0
-
-    return reviewer_ranking,reviews,votes
+    for d in bs_obj.findAll('div', attrs={'class': "a-section a-spacing-top-base"}):
+        print(d.get_text())
 
 
+
+
+data2 = pd.read_csv("reviews_info.csv")
+profile_links = data2['link'][9:16]
+for i, url in enumerate(profile_links):
+    user_profile(url)
+    print(i)
