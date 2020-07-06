@@ -25,10 +25,10 @@
   pip3 install -r requirements.txt
   ```
   
- ## Running:
- '''
+ ## Run:
+ ```
  run main.py
- '''
+ ```
 
  ## Current Status:
  - Stable: version 1.0
