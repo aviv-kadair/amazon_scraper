@@ -8,7 +8,7 @@
 ## Features:
 -   **Scrape laptops from the search results**
 -   **Scrape laptop specs**
--   **Scrape reviewers data**
+-   **Scrape reviewers profile**
 -   Results are saved into csv files
 -   Scraping 20 pages of products
 
@@ -25,4 +25,22 @@
   pip3 install -r requirements.txt
   ```
   
-  
+ ## Running:
+ '''
+ run main.py
+ '''
+
+ ## Current Status:
+ - Stable: version 1.0
+    - Scrapes laptop specs and reviewers details.
+ ## Issues:
+ - Amazon server occasionally blocks the ip address. 
+    
+ ## In Development:
+ - Transition to classes
+ - User based filtered results:
+    - User may filter the reuslts based on specs, price or manufacture
+ - SQL database:
+    - Detection of product availability date
+ 
+ 
