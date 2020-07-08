@@ -7,7 +7,7 @@ import selenium as se
 import re
 import sys, os, re, cmd, shlex, optparse, json, pprint
 import argparse
-import click
+import queries_url
 
 
 class cli_tool(argparse.Action):
@@ -23,8 +23,8 @@ class cli_tool(argparse.Action):
         print(value)
 
     @staticmethod
-    def query_builder():
-        pass
+    def query_builder(parser, value):
+        URL = 'https://www.amazon.com/s?k=laptops&page='
 
 
 parser = argparse.ArgumentParser()
@@ -36,7 +36,30 @@ if args.filterQ == 'Y':
     parser.add_argument('-parameter', action=cli_tool)
     filtering_choice = {'ranking':1, 'manufacture':2, 'screen':3 , 'RAM':4, 'Weight':5, 'HD type':6}
     args.parameter = input(f'Choose a filter from the following list: {filtering_choice}')
-    cli_tool.print_action(parser,args.parameter)
+    parser.add_argument('-spec_param', action=cli_tool)
+    if args.parameter == '1':
+        args.spec_param = input('Choose a minimal item ranking, from 1 to 5 ')
+        # TODO insert while loop to ensure data integrity, relevant for all conditions
+        """while args.spec_param not in range(1,5):
+            args.spec_param = input('Choose a minimal item ranking, from 1 to 5 ')
+            if args.spec_param in range(1,5):
+                break"""
+    elif args.parameter == '2':
+        manufactures = ['Acer', 'Dell','HP', 'Samsung','Lenovo','Asus','Apple']
+        args.spec_param = input(f'Choose a manufacture, from the following list: {manufactures}')
+    elif args.parameter == '3':
+        screen_sizes = ['11', '11-12','12-13', '13-14','14-15', '15-16', '17']
+        args.spec_param = input(f'Choose a screen size, from the following list: {screen_sizes}')
+    elif args.parameter == '4':
+        RAM_sizes = ['4', '8', '12', '16','32']
+        args.spec_param = input(f'Choose RAM size, from the following list: {RAM_sizes}')
+    elif args.parameter == '5':
+        weights = ['3-', '3-4', '4-5', '5-6', '7-8', '8+']
+        args.spec_param = input(f'Choose desired weight, from the following list: {weights}')
+    elif args.parameter == '5':
+        HD_type = ['SSD', 'HDD', 'Hybrid']
+        args.spec_param = input(f'Choose desired weight, from the following list: {HD_type}')
+    cli_tool.print_action(parser,args.spec_param)
 
 else:
     print('No')
