@@ -1,14 +1,14 @@
 import sys
 import logging
 
+
 class Logger:
     def __init__(self):
         # Initiating the logger object
         self.logger = logging.getLogger(__name__)
 
         # Set the level of the logger. This is SUPER USEFUL since it enables you to decide what to save in the logs file.
-        # Explanation regarding the logger levels can be found here - https://docs.python.org/3/howto/logging.html
-        self.logger.setLevel(logging.DEBUG)
+        self.logger.setLevel(logging.INFO)
 
         # Create the logs.log file
         handler = logging.FileHandler('logs.log')
@@ -21,10 +21,7 @@ class Logger:
         self.logger.addHandler(handler)
 
         # And printing the logs to the console as well
-        self.logger.addHandler(logging.StreamHandler(sys.stdout))
+        #self.logger.addHandler(logging.StreamHandler(sys.stdout))
 
-# Usage example:
+
 logger = Logger().logger
-logger.debug("This log's level is 'DEBUG'")
-logger.info("This log's level is 'info'")
-logger.error("This log's level is 'error'")
