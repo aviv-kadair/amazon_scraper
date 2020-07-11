@@ -4,13 +4,12 @@ import random
 from selenium import webdriver
 import selenium as se
 import re
-from laptop_class import Laptop
-from laptop_features_class import Features
-from reviews_class import Review
-from profile_class import Profile
-import config
-import sys
-from Logging import logger
+from OOP.laptop_class import Laptop
+from OOP.laptop_features_class import Features
+from OOP.reviews_class import Review
+from OOP.profile_class import Profile
+from configuration import config
+from Logging.Logging import logger
 
 
 class Scraper:

@@ -3,12 +3,9 @@ Loop over all the pages, and the associated links to retrieve all the info of th
 Authors: Aviv & Serah
 """
 
-import scraper_class
-from laptop_class import *
-import config
-from random import randint
-from time import sleep
-
+from scraping import scraper_class
+from OOP.laptop_class import *
+from configuration import config
 
 pages = config.NOPAGES
 
@@ -86,26 +83,10 @@ def profile():
 
 def retrieve_profile(db_output):
     pro = scraper_class.ProfileScrapper(db_output[0])
-    profil = pro.user_profile()
-    if profil.if_exist():
-        profil.update_db()
+    p = pro.user_profile()
+    if p.if_exist():
+        p.update_db()
 
     else:
-        profil.add_to_db()
+        p.add_to_db()
 
-
-
-
-
-
-laptops = search_results(pages)
-reviews(laptops[1])
-features_laptop(laptops[0])
-output = profile()
-for i, p in enumerate(output[0:3]):
-    retrieve_profile(p)
-    sleep(randint(10, 100))
-    print(i + 1)
-
-
-# valid_features()

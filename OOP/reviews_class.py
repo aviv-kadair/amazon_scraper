@@ -1,10 +1,9 @@
 import contextlib
 import sqlite3
 from datetime import datetime
-import config
-from Logging import logger
+from configuration import config
+from Logging.Logging import logger
 import sys
-
 
 DB_FILENAME = config.DB_FILENAME
 
@@ -32,7 +31,6 @@ class Review:
         except:
             e = sys.exc_info()[0]
             logger.error(f'An error {e} occurs when adding the reviews of the laptop' + str(laptop_id))
-
 
     @staticmethod
     def get_arg_db(laptop_id, *args):

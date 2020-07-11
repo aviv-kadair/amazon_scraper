@@ -1,8 +1,8 @@
 import contextlib
 import sqlite3
 from datetime import datetime
-import config
-from Logging import logger
+from configuration import config
+from Logging.Logging import logger
 import sys
 
 DB_FILENAME = config.DB_FILENAME

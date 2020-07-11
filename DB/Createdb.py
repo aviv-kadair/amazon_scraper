@@ -1,6 +1,6 @@
 import sqlite3
-import config
-from Logging import logger
+from configuration import config
+from Logging.Logging import logger
 
 DB_FILENAME = config.DB_FILENAME
 

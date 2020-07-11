@@ -1,8 +1,8 @@
 import contextlib
 import sqlite3
 from datetime import datetime
-import config
-from Logging import logger
+from configuration import config
+from Logging.Logging import logger
 import sys
 
 DB_FILENAME = config.DB_FILENAME
@@ -64,7 +64,6 @@ class Features:
             e = sys.exc_info()[0]
             logger.error(f'An error {e} occurs when updating the features of laptop' + laptop_id)
             print('Write you arguments by using the laptop features table columns name ')
-
 
     @staticmethod
     def get_arg_db(name, *args):

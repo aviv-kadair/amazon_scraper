@@ -1,13 +1,12 @@
-from random import randint
+from running_functions.functions import *
 from time import sleep
-from functions import *
+from random import randint
 
 pages = config.NOPAGES
 
-
-if '__name__' == '__main__ ':
-
+if __name__ == '__main__':
     laptops = search_results(pages)
+
     reviews(laptops[1])
     features_laptop(laptops[0])
     output = profile()
@@ -16,8 +15,4 @@ if '__name__' == '__main__ ':
         sleep(randint(10, 100))
         print(i + 1)
 
-
-# valid_features()
-
-
-    # valid_features()
+    valid_features()
