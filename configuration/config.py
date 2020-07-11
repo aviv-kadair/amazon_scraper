@@ -19,6 +19,6 @@ LAPTOP_FEATURES = ['Screen Size', 'Max Screen Resolution', 'Chipset Brand', 'Car
 
 AMAZON = 'https://www.amazon.com'
 
-BROWSER="chromedriver.exe"
+BROWSER = "chromedriver.exe"
 
 NOPAGES = 20

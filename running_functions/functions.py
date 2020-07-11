@@ -1,8 +1,3 @@
-"""
-Loop over all the pages, and the associated links to retrieve all the info of the laptop using the function we have defined
-Authors: Aviv & Serah
-"""
-
 from scraping import scraper_class
 from OOP.laptop_class import *
 from configuration import config

@@ -63,8 +63,7 @@ class Laptop:
     def get_arg_db(self, *args):
         query = ''
         for arg in args:
-            query += f'{arg} ,'
-
+            query += f'{arg}, '
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
                 with con:
@@ -77,8 +76,7 @@ class Laptop:
         except:
             e = sys.exc_info()[0]
             logger.error(f'An error {e} occurs when selecting the laptop' + self.name)
-            print('Write you arguments by using the laptop table columns name -\n\
-             Laptop_id, Product_Name, Price, Rating, Reviews, Link, Created_At, Last_Update, Valid')
+
 
     def get_arg(self, *args):
         output = []

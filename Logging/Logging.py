@@ -1,4 +1,3 @@
-import sys
 import logging
 
 
@@ -21,7 +20,7 @@ class Logger:
         self.logger.addHandler(handler)
 
         # And printing the logs to the console as well
-        #self.logger.addHandler(logging.StreamHandler(sys.stdout))
+        # self.logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 logger = Logger().logger
