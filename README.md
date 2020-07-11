@@ -74,7 +74,10 @@
     `reviews_class.py`
     `profile_class.py`
 
-![alt text](images_readme/Class.png)
+
+<p align="center">
+  <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/Class.PNG" width="200"><br><br>
+</p>
 
 ## Functions explanation:
 
