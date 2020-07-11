@@ -12,7 +12,7 @@ if __name__ == '__main__':
     output = profile()
     for i, p in enumerate(output[0:3]):
         retrieve_profile(p)
-        sleep(randint(10, 100))
+        sleep(randint(1, 10))
         print(i + 1)
 
     valid_features()

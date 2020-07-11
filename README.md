@@ -41,7 +41,7 @@
  
      - random sleep between the requests
      - adding a random proxy from a list of proxies for each request
-     - adding a column 'valid' to check the validity of the scraping so we can retry after from the records that are not valids.
+     - adding a column 'valid' to check the validity of the scraping so we can retry scraping for the records that are not valids.
 
  
  ## Scraping
@@ -74,7 +74,7 @@
     `reviews_class.py`
     `profile_class.py`
 
-![alt text](images_readme\Class.png)
+![alt text](images_readme/Class.png)
 
 ## Functions explanation:
 
