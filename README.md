@@ -72,9 +72,9 @@
 
  ## Command Line Interface
  `class_cli.py`
- -Class cli_tool:
-      -params: argprase parameters
-      -Interacts with argparse --> returns a search query
+ - Class cli_tool:
+      - params: argprase parameters
+      - Interacts with argparse --> returns a search query
  
  ## Run:
   ```
