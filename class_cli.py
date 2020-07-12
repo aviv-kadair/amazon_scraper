@@ -34,9 +34,9 @@ class cli_tool(argparse.Action):
 
     def query_builder_manufacture(parser, filtering_choice, spec_param):
         var_name = filtering_choice+'_'+spec_param
-        print(var_name)
+        #print(var_name)
         URL = queries_url.manufacture.get(var_name)
-        print(URL)
+        #print(URL)
         return URL
 
 

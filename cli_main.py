@@ -11,6 +11,7 @@ import queries_url
 import scraper_class
 import class_cli
 
+import csv
 
 def main():
     """This main function should run in order to activate the CLI"""
@@ -73,13 +74,35 @@ def main():
     items = res.get_data()
 
     if items:
+        link_list = []
         print('The following results match your search parameters: ')
         for result in items:
             splitter = result.split(',')
             print(f'Laptop name: {splitter[0]}')
-            print(f'Specs: {splitter[1:]}')
+            #print(f'Specs: {splitter[1:]}')
+            laptop_info = items.get(result)
+            link_list.append(laptop_info[-1])
+        links = ['https://www.amazon.com/'+adrs for adrs in link_list]
+
+        print('Writing results into CSV, it will take a few minutes')
+        list_params = []
+        for lnk in links:
+            laptop_data = scraper_class.Parameters(lnk)
+            try:
+                pams = laptop_data.get_param()
+                list_params.append(pams)
+            except AttributeError:
+                pass
+        csv_file = "filtered_results.csv"
+        field_names = ['Operating System', 'Item Weight', 'Computer Memory Type', 'Batteries', 'Chipset Brand', 'Card Description', 'Max Screen Resolution']
+        with open(csv_file, 'w') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=field_names)
+            writer.writeheader()
+            for data in list_params:
+                writer.writerow(data)
+
     else:
-        print('Your search had no results, please try again')
+        print('Your search found no results, please try again')
 
 
 if __name__ == '__main__':
