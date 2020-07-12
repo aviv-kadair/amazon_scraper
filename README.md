@@ -30,6 +30,7 @@
  ```
  run main.py
  ```
+**We have programmed a task manager who executes the main.py once a day at 8am to update our db.**
 
  ## Current Status:
  - Stable: version 1.0
