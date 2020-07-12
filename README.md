@@ -75,6 +75,7 @@
  - Class cli_tool:
       - params: argprase parameters
       - Interacts with argparse --> returns a search query
+      - Saves search results into a CSV file
  
  ## Run:
   ```
