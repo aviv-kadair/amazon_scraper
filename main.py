@@ -1,30 +1,32 @@
-"""Run all of the project scripts to build the databases
-Authors: Aviv & Serah
+"""
+Run the main function to update the db
+Authors:
+Aviv and Serah
 """
 
-from scrapper_functions import search_results
-from scrapper_functions import laptop_page
-from scrapper_functions import profile
-import pandas as pd
+from functions import *
+from time import sleep
+from random import randint
 
-NO_PAGES = 20
+pages = config.NOPAGES
 
-if __name__ == "__main__":
-    """Run all the function from the scrapper_functions"""
+if __name__ == '__main__':
 
-    #get the data from the laptop search result for all the pages
-    #search_results(NO_PAGES)
+    laptops = search_results(pages)
+    if len(laptops[1]) > 0:
+        reviews(laptops[1])
+    if len(laptops[0]) > 0:
+        features_laptop(laptops[0])
 
-    #get all the features and reviewes of the laptops obtained previously.
-    data = pd.read_csv("search_page.csv")
-    links = data["Link"]
-    users_links = laptop_page(links)
+    try:
+        output = profile()
+        print(len(output))
+        for i, p in enumerate(output[1:4]):
 
-    #Get the profile links of laptop reviewers
-    #The scraping is done gradually in order to avoid TimeOut error from the server.
-'''
-    data2 = pd.read_csv("reviews_info.csv")
-    profile_links = data2['link']
-    profile(profile_links[1:3])
-'''
-
+            retrieve_profile(p)
+            sleep(randint(1, 10))
+            print(i + 1)
+            continue
+        valid_features()
+    except sqlite3.OperationalError:
+        print('The database is blocked, try to unblock it before running the main.')
