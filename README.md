@@ -8,7 +8,7 @@
 ## Features:
 -   **Scrape Amazon laptops from the search results**
 -   **Scrape laptop specs from the product page**
--   **Scrape laptop reviews**
+-   **Scrape laptop top reviews**
 -   **Scrape reviewers profile**
 
 
