@@ -10,7 +10,7 @@
 -   **Scrape laptop specs from the product page**
 -   **Scrape laptop top reviews**
 -   **Scrape reviewers profile**
--   **Scrape laptops based on user's choice**
+-   **Command Line Interface for filter based search**
 
 
 ## Requirements:
