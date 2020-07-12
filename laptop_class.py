@@ -1,9 +1,15 @@
+"""
+Define an OOP Laptop, with the corresponding attributes and functions.
+Authors:
+Aviv and Serah
+"""
+
 import contextlib
 import sqlite3
 from datetime import datetime
-from configuration import config
-from Logging.Logging import logger
-import sys
+import config
+from Logging import logger
+
 
 DB_FILENAME = config.DB_FILENAME
 
@@ -16,12 +22,15 @@ class Laptop:
         self.reviews = reviews
         self.link = link
 
+        # Check if we didn't get empty values from the scraping.
+        # If valid is 0, I will retry the scraping.
         if self.price != 0 or self.rating != -1 or self.reviews != 0:
             self.valid = 1
         else:
             self.valid = 0
 
     def add_to_db(self):
+        """Add the Laptop to the table laptop of the db"""
 
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
@@ -32,11 +41,11 @@ class Laptop:
                         [self.name, self.price, self.rating, self.reviews, self.link, datetime.now(), None, self.valid])
                 con.commit()
             logger.info('Table laptop: added -> ' + self.name)
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when adding the laptop ' + self.name)
 
     def update_db(self, *args):
+        """Update the Laptop in the table laptop of the db"""
         q = ''
         val = {}
         parameter = {'Price': self.price, 'Rating': self.rating, 'Reviews': self.reviews, 'Link': self.link}
@@ -56,29 +65,29 @@ class Laptop:
                     cur.execute(query, val)
                     con.commit()
             logger.info('Table laptop: updated -> ' + self.name)
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when updating the laptop ' + self.name)
 
     def get_arg_db(self, *args):
+        """Retrieve info from the table laptop of the db for the specific laptop"""
         query = ''
         for arg in args:
             query += f'{arg}, '
+
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
                 with con:
                     cur = con.cursor()
 
-                    get_query = "SELECT " + query[0:-1] + " FROM laptop WHERE Product_Name=:name"
+                    get_query = "SELECT " + query[0:-2] + " FROM laptop WHERE Product_Name=:name"
                     cur.execute(get_query, {"name": self.name})
                     db_output = [item for item in cur.fetchall()]
                     return db_output
-        except:
-            e = sys.exc_info()[0]
-            logger.error(f'An error {e} occurs when selecting the laptop' + self.name)
-
+        except Exception as e:
+            logger.error(f'An error {e} occurs when selecting the laptop ' + self.name)
 
     def get_arg(self, *args):
+        """Get the values of my Laptop attributes"""
         output = []
         for option in args:
             if option == 'Price':
@@ -99,6 +108,7 @@ class Laptop:
         return output
 
     def if_exist(self):
+        """Check if the Laptop already exists in the table laptop of the db"""
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:
                 with con:
@@ -109,6 +119,5 @@ class Laptop:
                         return True
                     else:
                         return False
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when opening the table laptop')

@@ -1,24 +1,27 @@
-
 """
-Loop over all the pages, and the associated links to retrieve all the info of the laptop using the function we have defined
-Authors: Aviv & Serah
+This is a copy of functions.py with a little change in the first function with the implementation of grequests.
+It is still in progress.
+Authors:
+Aviv and Serah
 """
 import grequests
-from scraping import scraper_class
-from OOP.laptop_class import *
-from configuration import config
+import scraper_class
+from laptop_class import *
+import config
 import random
 from bs4 import BeautifulSoup
-pages = config.NOPAGES
 import time
+
+pages = config.NOPAGES
 
 DB_FILENAME = config.DB_FILENAME
 proxies_list = config.PROXIES_LIST
 
+
 def search_results(no_pages):
     new_laptop = []
     total_laptop = []
-    my_urls=[]
+    my_urls = []
     for count in range(1, 20):
         my_urls.append(f'https://www.amazon.com/s?k=laptops&page={count}&qid=1594392240&ref=sr_pg_{count}')
     proxy = {'http': random.choice(proxies_list)}
@@ -102,14 +105,5 @@ def retrieve_profile(db_output):
 
 before = time.time()
 laptops = search_results(pages)
-after=time.time()
-print(after-before)
-#reviews(laptops[1])
-#features_laptop(laptops[0])
-#output = profile()
-#for i, p in enumerate(output[0:3]):
-#    retrieve_profile(p)
-#    sleep(randint(10, 100))
-#    print(i + 1)
-
-# valid_features()
+after = time.time()
+print(after - before)

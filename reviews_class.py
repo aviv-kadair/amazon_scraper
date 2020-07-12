@@ -1,9 +1,15 @@
+"""
+Define an OOP Review, with the corresponding attributes and functions.
+Authors:
+Aviv and Serah
+"""
+
 import contextlib
 import sqlite3
 from datetime import datetime
-from configuration import config
-from Logging.Logging import logger
-import sys
+import config
+from Logging import logger
+
 
 DB_FILENAME = config.DB_FILENAME
 
@@ -17,7 +23,7 @@ class Review:
         self.profile = profile
 
     def add_to_db(self, laptop_id):
-
+        """Add the Review to the table reviews of the db"""
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
                 with con:
@@ -28,12 +34,12 @@ class Review:
                     con.commit()
             logger.info('Table features reviews: added -> ' + str(laptop_id))
 
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when adding the reviews of the laptop' + str(laptop_id))
 
     @staticmethod
     def get_arg_db(laptop_id, *args):
+        """Retrieve info from the table reviews of the db for the specific Review"""
         query = ''
         for arg in args:
             query += f'{arg} ,'
@@ -48,11 +54,11 @@ class Review:
                     db_output = [item for item in cur.fetchall()]
                     return db_output
 
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when selecting the reviews of the laptop' + str(laptop_id))
 
     def get_arg(self, *args):
+        """Get the values of my Review attributes"""
         output = []
         for option in args:
             if option == 'Username':
@@ -71,6 +77,7 @@ class Review:
         return output
 
     def if_exist(self):
+        """Check if the Review already exists in the table reviews of the db"""
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
                 with con:
@@ -81,6 +88,5 @@ class Review:
                         return True
                     else:
                         return False
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when opening the table reviews')

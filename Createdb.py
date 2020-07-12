@@ -1,6 +1,11 @@
+"""
+Create our database for the amazon project
+Authors: Aviv & Serah
+"""
+
 import sqlite3
-from configuration import config
-from Logging.Logging import logger
+import config
+from Logging import logger
 
 DB_FILENAME = config.DB_FILENAME
 

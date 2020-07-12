@@ -1,9 +1,14 @@
+"""
+Define an OOP Features, with the corresponding attributes and functions for the features of the laptop
+Authors:
+Aviv and Serah
+"""
+
 import contextlib
 import sqlite3
 from datetime import datetime
-from configuration import config
-from Logging.Logging import logger
-import sys
+import config
+from Logging import logger
 
 DB_FILENAME = config.DB_FILENAME
 
@@ -21,6 +26,8 @@ class Features:
         self.computer_memory_type = computer_memory_type
         self.batteries = batteries
 
+        # Check if we didn't get empty values from the scraping.
+        # If valid is 0, I will retry the scraping.
         if self.screen_size != '' or self.max_screen_resolution != '' or self.brand != '' \
                 or self.card_description != '' or self.brand_name != '' or self.item_weight != '' \
                 or self.operating_system != '' or self.computer_memory_type != '' or self.batteries != '':
@@ -29,6 +36,7 @@ class Features:
             self.valid = 0
 
     def add_to_db(self, name, laptop_id, link):
+        """Add the Features to the table laptop_features of the db"""
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
                 with con:
@@ -41,11 +49,11 @@ class Features:
                     con.commit()
             logger.info('Table features laptop: added -> ' + str(laptop_id))
 
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when adding the features of laptop' + laptop_id)
 
     def update_db(self, laptop_id):
+        """Update the Features to the table laptop_features of the db in case the argument valid is 0."""
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
                 with con:
@@ -60,13 +68,12 @@ class Features:
 
             logger.info('Table features laptop: updated -> ' + str(laptop_id))
 
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when updating the features of laptop' + laptop_id)
-            print('Write you arguments by using the laptop features table columns name ')
 
     @staticmethod
     def get_arg_db(name, *args):
+        """Retrieve info from the table laptop_features of the db for this specific laptop"""
         query = ''
         for arg in args:
             query += f'{arg} ,'
@@ -80,11 +87,11 @@ class Features:
                     db_output = [item for item in cur.fetchall()[0]]
                     return db_output
 
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when selecting the features of laptop' + name)
 
     def get_arg(self, *args):
+        """Get the values of my Laptop attributes"""
         output = []
         for option in args:
             if option == 'Screen_Size':

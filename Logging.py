@@ -1,3 +1,9 @@
+"""
+We define a class Logger where we set all the parameters of our log.
+Authors:
+Aviv and Serah
+"""
+
 import logging
 
 

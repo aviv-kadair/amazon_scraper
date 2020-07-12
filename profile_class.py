@@ -1,9 +1,14 @@
+"""
+Define an OOP Profile, with the corresponding attributes and functions for the profile of a user
+Authors:
+Aviv and Serah
+"""
+
 import contextlib
 import sqlite3
 from datetime import datetime
-from configuration import config
-import sys
-from Logging.Logging import logger
+import config
+from Logging import logger
 
 DB_FILENAME = config.DB_FILENAME
 
@@ -14,13 +19,16 @@ class Profile:
         self.ranking = ranking
         self.review = review
         self.votes = votes
+
+        # Check if we didn't get empty values from the scraping.
+        # If valid is 0, I will retry the scraping.
         if self.review == 0 and self.ranking == 0 and self.ranking == 0:
             self.valid = 0
         else:
             self.valid = 1
 
     def add_to_db(self):
-
+        """Add the Profile to the table profile of the db"""
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
                 with con:
@@ -31,11 +39,11 @@ class Profile:
                     con.commit()
             logger.info('Table profile: added -> ' + self.username)
 
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when adding the profile' + self.username)
 
     def get_arg_db(self, *args):
+        """Retrieve info from the table profile of the db for this specific user """
         query = ''
         for arg in args:
             query += f'{arg} ,'
@@ -49,13 +57,11 @@ class Profile:
                     cur.execute(get_query, {"username": self.username})
                     db_output = [item for item in cur.fetchall()[0]]
                     return db_output
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when selecting the profile' + self.username)
-            print('Write you arguments by using the profile table columns name -\n\
-             Username, Reviewer_Ranking, Reviews, Helpful_votes, Created_at,Last_Update, Valid')
 
     def get_arg(self, *args):
+        """Get the values of my Profile attributes"""
         output = []
         for option in args:
             if option == 'Username':
@@ -74,6 +80,7 @@ class Profile:
         return output
 
     def if_exist(self):
+        """Check if the Profile already exists in the table profile of the db"""
         try:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:
                 with con:
@@ -84,11 +91,11 @@ class Profile:
                         return True
                     else:
                         return False
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when opening the table profile')
 
     def update_db(self, *args):
+        """Update the Profile in the table profile of the db"""
         q = ''
         val = {}
         parameters = {'Reviewer_Ranking': self.ranking, 'Reviews': self.review, 'Helpful_votes': self.votes}
@@ -108,6 +115,5 @@ class Profile:
                     cur.execute(query, val)
                     con.commit()
             logger.info('Table profile: updated -> ' + self.username)
-        except:
-            e = sys.exc_info()[0]
+        except Exception as e:
             logger.error(f'An error {e} occurs when updating the profile' + self.username)

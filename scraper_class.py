@@ -1,15 +1,23 @@
+"""
+This file contains all the scraping class
+Authors:
+Aviv and Serah
+"""
+
 import requests
 from bs4 import BeautifulSoup
 import random
 from selenium import webdriver
 import selenium as se
 import re
-from OOP.laptop_class import Laptop
-from OOP.laptop_features_class import Features
-from OOP.reviews_class import Review
-from OOP.profile_class import Profile
-from configuration import config
-from Logging.Logging import logger
+from laptop_class import Laptop
+from laptop_features_class import Features
+from reviews_class import Review
+from profile_class import Profile
+import config
+from Logging import logger
+from time import sleep
+from random import randint
 
 
 class Scraper:
@@ -33,6 +41,7 @@ class Scraper:
             self.soup = BeautifulSoup(content, features="lxml")
 
     def get_soup(self):
+        """Return the web content of our url after BeautifulSoup"""
         return self.soup
 
 
@@ -41,6 +50,7 @@ class SearchPage(Scraper):
         super().__init__(link)
 
     def get_data(self):
+        """Retrieve the data for all the laptops of the search page of amazon"""
         laptop_list = []
         for d in self.soup.findAll('div', attrs={'class': 'sg-col-4-of-12 sg-col-8-of-16 sg-col-16-of-24 sg-col-12-of-20 sg-col-24-of-32 sg-col sg-col-28-of-36 sg-col-20-of-28'}):
             name = d.find('span', attrs={'class': 'a-size-medium a-color-base a-text-normal'})
@@ -85,6 +95,7 @@ class Parameters(Scraper):
         super().__init__(link)
 
     def get_param(self):
+        """Retrieve all the parameters of a laptop from the product page"""
         para = {}
         table2 = self.soup.find(attrs={'id': "productDetails_techSpec_section_2"})
         if table2 is not None:
@@ -131,6 +142,7 @@ class Reviews(Scraper):
         super().__init__(link)
 
     def get_reviews(self):
+        """Get all the top reviews from the product page of the laptop"""
         reviews = []
         for d in self.soup.findAll('div', attrs={'class': "a-section review aok-relative"}):
             # get the name
@@ -159,9 +171,14 @@ class ProfileScrapper:
         options.add_argument("--lang=en-US")
         self.driver = se.webdriver.Chrome(config.BROWSER, options=options)
         self.link = link
-        self.driver.get(config.AMAZON + self.link)
+        try:
+            self.driver.get(config.AMAZON + self.link)
+        except TimeoutError:
+            sleep(randint(1, 10))
+            self.driver.back()
 
     def user_profile(self):
+        """Get the user info from its profile"""
 
         p_element = self.driver.find_element_by_id(id_='profile_v5')
         txt = p_element.text
