@@ -10,8 +10,8 @@ import argparse
 import queries_url
 import scraper_class
 import class_cli
-
 import csv
+
 
 def main():
     """This main function should run in order to activate the CLI"""
@@ -76,10 +76,12 @@ def main():
     if items:
         link_list = []
         print('The following results match your search parameters: ')
+        laptop_names = []
         for result in items:
             splitter = result.split(',')
             print(f'Laptop name: {splitter[0]}')
             #print(f'Specs: {splitter[1:]}')
+            laptop_names.append(splitter[0])
             laptop_info = items.get(result)
             link_list.append(laptop_info[-1])
         links = ['https://www.amazon.com/'+adrs for adrs in link_list]
@@ -96,11 +98,11 @@ def main():
         csv_file = "filtered_results.csv"
         field_names = ['Operating System', 'Item Weight', 'Computer Memory Type', 'Batteries', 'Chipset Brand', 'Card Description', 'Max Screen Resolution']
         with open(csv_file, 'w') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=field_names)
+            writer = csv.DictWriter(csvfile, fieldnames=field_names, lineterminator='\n')
             writer.writeheader()
             for data in list_params:
                 writer.writerow(data)
-
+        print('Writing to CSV finished.')
     else:
         print('Your search found no results, please try again')
 
