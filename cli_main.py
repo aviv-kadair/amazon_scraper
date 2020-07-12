@@ -66,7 +66,7 @@ def main():
             URL = class_cli.cli_tool.query_builder_HD_type(parser,'HD_type', args.spec_param)
 
     try:
-        res = scraper_class.Search_Page(URL)
+        res = scraper_class.SearchPage(URL)
         class_cli.cli_tool.print_action(parser)
     except requests.exceptions.MissingSchema:
         print('Filtering choice was not recognised, exiting')
@@ -78,15 +78,15 @@ def main():
         print('The following results match your search parameters: ')
         laptop_names = []
         for result in items:
-            splitter = result.split(',')
-            print(f'Laptop name: {splitter[0]}')
-            #print(f'Specs: {splitter[1:]}')
-            laptop_names.append(splitter[0])
-            laptop_info = items.get(result)
-            link_list.append(laptop_info[-1])
+
+            print(f'Laptop name: {result.name}')
+
+            laptop_names.append(result.name)
+            link_list.append(result.link)
+
         links = ['https://www.amazon.com/'+adrs for adrs in link_list]
 
-        print('Writing results into CSV, it will take a few minutes')
+        #print('Writing results into CSV, it will take a few minutes')
         list_params = []
         for lnk in links:
             laptop_data = scraper_class.Parameters(lnk)
@@ -95,14 +95,14 @@ def main():
                 list_params.append(pams)
             except AttributeError:
                 pass
-        csv_file = "filtered_results.csv"
+        """csv_file = "filtered_results.csv"
         field_names = ['Operating System', 'Item Weight', 'Computer Memory Type', 'Batteries', 'Chipset Brand', 'Card Description', 'Max Screen Resolution']
         with open(csv_file, 'w') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=field_names, lineterminator='\n')
             writer.writeheader()
             for data in list_params:
                 writer.writerow(data)
-        print('Writing to CSV finished.')
+        print('Writing to CSV finished.')"""
     else:
         print('Your search found no results, please try again')
 
