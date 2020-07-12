@@ -73,7 +73,7 @@
  ## Command Line Interface
  `class_cli.py`
  -Class cli_tool:
-      params: argprase parameters
+      -params: argprase parameters
       -Interacts with argparse --> returns a search query
  
  ## Run:
@@ -81,8 +81,9 @@
  run cli_main.py
  ```     
 <p align="center">
-  <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/filtering.PNG" width="600"><br><br>
+  <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/filtering.png" width="600"><br><br>
 </p>
+
 ## Object Oriented:
    `laptop_class.py`
     `laptop_features_class.py`
