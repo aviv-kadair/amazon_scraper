@@ -75,6 +75,7 @@
  - Class cli_tool:
       - params: argprase parameters
       - Interacts with argparse --> returns a search query
+      - Saves search results into a CSV file
  
  ## Run:
   ```
@@ -107,7 +108,7 @@
 `Createdb.py`
 
 <p align="center">
-  <img src="https://github.com/thewizardofozz/amazon_scraper/images_readme/db.png" width="600"><br><br>
+  <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/db.png" width="600"><br><br>
 </p>
 
 - The table laptop and profile need to be updated frequently because they contains attributes that are constantly changing.
