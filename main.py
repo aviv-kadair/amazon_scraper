@@ -26,7 +26,7 @@ if __name__ == '__main__':
             retrieve_profile(p)
             sleep(randint(1, 10))
             print(i + 1)
-            continue
+
         valid_features()
     except sqlite3.OperationalError:
         print('The database is blocked, try to unblock it before running the main.')
