@@ -8,8 +8,9 @@
 ## Features:
 -   **Scrape Amazon laptops from the search results**
 -   **Scrape laptop specs from the product page**
--   **Scrape laptop reviews**
+-   **Scrape laptop top reviews**
 -   **Scrape reviewers profile**
+-   **Command Line Interface for filter based search**
 
 
 ## Requirements:
@@ -30,10 +31,12 @@
  ```
  run main.py
  ```
+**We have programmed a task manager who executes the main.py once a day at 8am to update our db.**
 
  ## Current Status:
- - Stable: version 1.0
+ - Stable: version 2.0
     - Scrapes laptop specs and reviewers details.
+    - Scrapes based on user's filter choice
  ## Issues:
  - Amazon server occasionally blocks the ip address. 
  
@@ -66,14 +69,27 @@
  - Class ProfileScrapper:
       - param: url
       - function: user_profile() --> return an object oriented Profile for each user
-      
+
+ ## Command Line Interface
+ `class_cli.py`
+ - Class cli_tool:
+      - params: argprase parameters
+      - Interacts with argparse --> returns a search query
+ 
+ ## Run:
+  ```
+ run cli_main.py
+ ```     
+<p align="center">
+  <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/filtering.png" width="600"><br><br>
+</p>
 
 ## Object Oriented:
    `laptop_class.py`
     `laptop_features_class.py`
     `reviews_class.py`
     `profile_class.py`
-
+    `class_cli.py`
 
 <p align="center">
   <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/Class.PNG" width="600"><br><br>
@@ -116,3 +132,4 @@
 - Use grequests to accelarate the scraping processus.
 - Find a solution for the timeout error when using selenium with amazon.
 (For now we use a loop to do it in step and avoid the amazon blocking)
+- Improve search results returned from the CLI
