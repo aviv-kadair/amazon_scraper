@@ -19,6 +19,7 @@ class cli_tool(argparse.Action):
         setattr(namespace, self.dest, filtering_choice, spec_param)
 
 
+
     @staticmethod
     def print_action(parser):
         print('Retrieving search results, please wait')
