@@ -10,10 +10,10 @@ import random
 from selenium import webdriver
 import selenium as se
 import re
-from laptop_class import Laptop
-from laptop_features_class import Features
-from reviews_class import Review
-from profile_class import Profile
+from DB.laptop_class import Laptop
+from DB.laptop_features_class import Features
+from DB.reviews_class import Review
+from DB.profile_class import Profile
 import config
 from Logging import logger
 from time import sleep
@@ -25,6 +25,7 @@ class Scraper:
     headers = config.HEADERS
 
     def __init__(self, link):
+
         self.url = link
         self.proxy = {'http': random.choice(Scraper.proxies_list)}
         self.web_page = requests.get(self.url, headers=Scraper.headers, proxies=self.proxy)
@@ -36,6 +37,7 @@ class Scraper:
                 logger.warning("Page %s must have been blocked by Amazon as the status code was %d" % (
                     self.url, self.web_page.status_code))
             self.soup = None
+
         else:
             content = self.web_page.content
             self.soup = BeautifulSoup(content, features="lxml")
@@ -97,6 +99,22 @@ class Parameters(Scraper):
     def get_param(self):
         """Retrieve all the parameters of a laptop from the product page"""
         para = {}
+
+        table1 = self.soup.find(attrs={'id': "productDetails_db_sections"})
+        if table1 is not None:
+            table1 = table1.findAll('tr')
+
+            for tab in table1:
+                str_paras = str(tab.findAll('th'))
+                parameters_tab1 = BeautifulSoup(str_paras, features="lxml").get_text().replace('\n', '').replace('\r',
+                                                                                                                 "")
+                characteristics = config.LAPTOP_FEATURES
+                if parameters_tab1[1:-1] in characteristics:
+                    str_cells = str(tab.findAll('td'))
+                    para[parameters_tab1[1:-1]] = BeautifulSoup(str_cells, features="lxml").get_text().replace('\n',
+                                                                                                               '')[
+                                                  1:-1]
+
         table2 = self.soup.find(attrs={'id': "productDetails_techSpec_section_2"})
         if table2 is not None:
             table2 = table2.findAll('tr')
@@ -105,8 +123,7 @@ class Parameters(Scraper):
                 str_paras = str(tab.findAll('th'))
                 parameters_tab2 = BeautifulSoup(str_paras, features="lxml").get_text().replace('\n', '').replace('\r',
                                                                                                                  "")
-                characteristics = ['Screen Size', 'Max Screen Resolution', 'Chipset Brand', 'Card Description',
-                                   'Brand Name', 'Item Weight', 'Operating System', 'Computer Memory Type', 'Batteries']
+                characteristics = config.LAPTOP_FEATURES
                 if parameters_tab2[1:-1] in characteristics:
                     str_cells = str(tab.findAll('td'))
                     para[parameters_tab2[1:-1]] = BeautifulSoup(str_cells, features="lxml").get_text().replace('\n',
@@ -133,7 +150,7 @@ class Parameters(Scraper):
 
         if table2 is not None and table3 is not None:
             new_para = {k.lower().replace(' ', '_'): v for k, v in para.items()}
-            return Features(**new_para)
+            return Features( **new_para)
 
 
 class Reviews(Scraper):
@@ -156,8 +173,11 @@ class Reviews(Scraper):
             rev = d.find('span', attrs={'class': 'a-icon-alt'}).get_text().split()[0]
             # get the profile link of the user
             link = d.find('a', href=True, attrs={'class': 'a-profile'})['href']
+            user_id = re.findall(r'([\w]+)',link)[4]
+            #get the reviews content
+            cont = d.find('div', attrs={'class': 'a-expander-content reviewText review-text-content a-expander-partial-collapse-content'}).get_text()
 
-            reviews.append(Review(name, location, date, rev, link))
+            reviews.append(Review(user_id, name, location, date, rev, link, cont))
         return reviews
 
 
@@ -171,8 +191,10 @@ class ProfileScrapper:
         options.add_argument("--lang=en-US")
         self.driver = se.webdriver.Chrome(config.BROWSER, options=options)
         self.link = link
+        self.user_id = re.findall(r'([\w]+)',self.link)[4]
         try:
             self.driver.get(config.AMAZON + self.link)
+            sleep(randint(30, 120))
         except TimeoutError:
             sleep(randint(1, 10))
             self.driver.back()
@@ -204,13 +226,13 @@ class ProfileScrapper:
         else:
             votes = 0
 
-        return Profile(self.link, reviewer_ranking, reviews, votes)
+        return Profile(self.user_id, reviewer_ranking, reviews, votes)
 
 # print(get_description('https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'))
 
-# url = 'https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'
+#url = 'https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'
 
-# scraper = Reviews(url)
-# print(scraper.get_reviews())
+#scraper = Reviews(url)
+#print(scraper.get_reviews())
 # scrap = ProfileScrapper('/gp/profile/amzn1.account.AEQQY4I75RA6VVZW5WQN2KUU4YRQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8')
 # print(scrap.user_profile().get_arg('Reviewer_Ranking'))

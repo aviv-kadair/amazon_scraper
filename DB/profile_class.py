@@ -14,8 +14,8 @@ DB_FILENAME = config.DB_FILENAME
 
 
 class Profile:
-    def __init__(self, username, ranking='', review='', votes=''):
-        self.username = username
+    def __init__(self,user_id, ranking='', review='', votes=''):
+        self.username = user_id
         self.ranking = ranking
         self.review = review
         self.votes = votes
@@ -34,7 +34,7 @@ class Profile:
                 with con:
                     cur = con.cursor()
                     cur.execute(
-                        "INSERT INTO profile ( Username, Reviewer_Ranking, Reviews, Helpful_votes, Created_at,Last_Update, Valid) VALUES ( ?, ?, ?, ?, ?,?,?)",
+                        "INSERT INTO profile ( User_id, Reviewer_Ranking, Reviews, Helpful_votes, Created_at,Last_Update, Valid) VALUES ( ?, ?, ?, ?, ?,?,?)",
                         [self.username, self.ranking, self.review, self.votes, datetime.now(), None, self.valid])
                     con.commit()
             logger.info('Table profile: added -> ' + self.username)
@@ -53,7 +53,7 @@ class Profile:
                 with con:
                     cur = con.cursor()
 
-                    get_query = "SELECT " + query[0:-1] + " FROM profile WHERE Username=:username"
+                    get_query = "SELECT " + query[0:-1] + " FROM profile WHERE User_id=:username"
                     cur.execute(get_query, {"username": self.username})
                     db_output = [item for item in cur.fetchall()[0]]
                     return db_output
@@ -64,7 +64,7 @@ class Profile:
         """Get the values of my Profile attributes"""
         output = []
         for option in args:
-            if option == 'Username':
+            if option == 'User_id':
                 output.append(self.username)
             elif option == 'Reviewer_Ranking':
                 output.append(self.ranking)
@@ -76,7 +76,7 @@ class Profile:
                 output.append(self.valid)
             else:
                 print('Write you arguments by using the following 10 options:\n\
-                 Username, Reviewer_Ranking, Reviews, Helpful_votes, Valid')
+                 User_id, Reviewer_Ranking, Reviews, Helpful_votes, Valid')
         return output
 
     def if_exist(self):
@@ -85,7 +85,7 @@ class Profile:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:
                 with con:
                     cur = con.cursor()
-                    query = "SELECT COUNT(*) FROM profile WHERE Username= :username"
+                    query = "SELECT COUNT(*) FROM profile WHERE User_id= :username"
                     cur.execute(query, {'username': self.username})
                     if cur.fetchone()[0] != 0:
                         return True
@@ -111,7 +111,7 @@ class Profile:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:
                 with con:
                     cur = con.cursor()
-                    query = "UPDATE profile SET " + q + " WHERE Username = :username"
+                    query = "UPDATE profile SET " + q + " WHERE User_id = :username"
                     cur.execute(query, val)
                     con.commit()
             logger.info('Table profile: updated -> ' + self.username)

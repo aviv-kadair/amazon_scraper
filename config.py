@@ -15,12 +15,12 @@ HEADERS = {
     'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
 }
 LAPTOP_FEATURES = ['Screen Size', 'Max Screen Resolution', 'Chipset Brand', 'Card Description',
-                   'Brand Name', 'Item Weight', 'Operating System', 'Computer Memory Type', 'Batteries']
+                   'Brand', 'Item Weight', 'Operating System', 'Computer Memory Type', 'Batteries','Date First Available']
 
 AMAZON = 'https://www.amazon.com'
 
 BROWSER = "chromedriver.exe"
 
-NOPAGES = 20
+NOPAGES = 50
 
 

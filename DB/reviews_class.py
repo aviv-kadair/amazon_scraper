@@ -15,12 +15,14 @@ DB_FILENAME = config.DB_FILENAME
 
 
 class Review:
-    def __init__(self, username, location, date, rank, profile):
+    def __init__(self,user_id, username, location, date, rank, profile, cont):
+        self.user_id = user_id
         self.username = username
         self.location = location
         self.date = date
         self.rank = rank
         self.profile = profile
+        self.content = cont
 
     def add_to_db(self, laptop_id):
         """Add the Review to the table reviews of the db"""
@@ -29,8 +31,8 @@ class Review:
                 with con:
                     cur = con.cursor()
                     cur.execute(
-                        "INSERT INTO reviews ( Laptop_id, Username, Location, Date, UserRank, Profile_link, Created_At) VALUES ( ?, ?, ?, ?, ?,?,?)",
-                        [laptop_id, self.username, self.location, self.date, self.rank, self.profile, datetime.now()])
+                        "INSERT INTO reviews ( Laptop_id, User_id, Username, Location, Date, UserRank, Profile_link, Content, Created_At) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)",
+                        [laptop_id, self.user_id, self.username, self.location, self.date, self.rank, self.profile, self.content, datetime.now()])
                     con.commit()
             logger.info('Table features reviews: added -> ' + str(laptop_id))
 
@@ -71,6 +73,8 @@ class Review:
                 output.append(self.rank)
             elif option == 'Profile_link':
                 output.append(self.profile)
+            elif option == 'Content':
+                output.append(self.content)
             else:
                 print('Write you arguments by using the following 5 options:\n\
                  Username, Location, Date, UserRank, Profile_link')

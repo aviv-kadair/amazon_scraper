@@ -4,8 +4,8 @@ Authors:
 Aviv and Serah
 """
 
-import scraper_class
-from laptop_class import *
+from Scraping import scraper_class
+from DB.laptop_class import *
 import config
 
 pages = config.NOPAGES

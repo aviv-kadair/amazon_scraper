@@ -47,6 +47,7 @@ cur.execute('''CREATE TABLE laptop_features (
                             Operating_System VARCHAR(30), 
                             Computer_Memory_Type VARCHAR(30),
                             Batteries VARCHAR(30),
+                            Date_First_Available TEXT,
                             Created_At TEXT,
                             Valid INT
                             )''')
@@ -58,11 +59,17 @@ cur.execute('''DROP TABLE IF EXISTS reviews''')
 cur.execute('''CREATE TABLE reviews (
                             Review_id INTEGER PRIMARY KEY AUTOINCREMENT,
                             Laptop_id INT,
+                            User_id TEXT,
                             Username VARCHAR(30),
                             Location TEXT,
                             Date TEXT,
                             UserRank REAL,
                             Profile_link TEXT,
+                            Content TEXT,
+                            Polarity VARCHAR(30),
+                            Subjectivity VARCHAR(30), 
+                            Polarity_confidence REAL,
+                            Subjectivity_confidence REAL,
                             Created_at TEXT
                             )''')
 
@@ -71,15 +78,14 @@ logger.info('Table reviews has been created')
 cur.execute('''DROP TABLE IF EXISTS profile''')
 
 cur.execute('''CREATE TABLE profile ( 
-                            User_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                            Username TEXT UNIQUE,
+                            User_id TEXT PRIMARY KEY ,
                             Reviewer_Ranking INT,
                             Reviews INT,
                             Helpful_votes INT,
                             Created_at TEXT,
                             Last_Update,
                             Valid INT,
-                            FOREIGN KEY (Username) REFERENCES reviews (Username)
+                            FOREIGN KEY (User_id) REFERENCES reviews (User_id)
                             )''')
 
 logger.info('Table profile has been created')

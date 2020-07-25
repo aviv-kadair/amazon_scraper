@@ -14,17 +14,18 @@ DB_FILENAME = config.DB_FILENAME
 
 
 class Features:
-    def __init__(self, screen_size='', max_screen_resolution='', chipset_brand='', card_description='', brand_name='',
-                 item_weight='', operating_system='', computer_memory_type='', batteries=''):
+    def __init__(self, screen_size='', max_screen_resolution='', chipset_brand='', card_description='', brand='',
+                 item_weight='', operating_system='', computer_memory_type='', batteries='', date_first_available=''):
         self.screen_size = screen_size
         self.max_screen_resolution = max_screen_resolution
         self.brand = chipset_brand
         self.card_description = card_description
-        self.brand_name = brand_name
+        self.brand_name = brand
         self.item_weight = item_weight
         self.operating_system = operating_system
         self.computer_memory_type = computer_memory_type
         self.batteries = batteries
+        self.date = date_first_available
 
         # Check if we didn't get empty values from the scraping.
         # If valid is 0, I will retry the scraping.
@@ -42,10 +43,10 @@ class Features:
                 with con:
                     cur = con.cursor()
                     cur.execute(
-                        "INSERT INTO laptop_features (Laptop_id, Product_Name, Link, Screen_Size, Max_Screen_Resolution, Chipset_Brand, Card_Description, Brand_Name, Item_Weight, Operating_System, Computer_Memory_Type, Batteries, Created_At, Valid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)",
+                        "INSERT INTO laptop_features (Laptop_id, Product_Name, Link, Screen_Size, Max_Screen_Resolution, Chipset_Brand, Card_Description, Brand_Name, Item_Weight, Operating_System, Computer_Memory_Type, Batteries, Date_First_Available, Created_At, Valid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)",
                         [laptop_id, name, link, self.screen_size, self.max_screen_resolution, self.brand,
                          self.card_description, self.brand_name, self.item_weight, self.operating_system,
-                         self.computer_memory_type, self.batteries, datetime.now(), self.valid])
+                         self.computer_memory_type, self.batteries, self.date, datetime.now(), self.valid])
                     con.commit()
             logger.info('Table features laptop: added -> ' + str(laptop_id))
 
@@ -58,12 +59,13 @@ class Features:
             with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
                 with con:
                     cur = con.cursor()
-                    query = "UPDATE laptop_features SET Screen_Size=:screensize, Max_Screen_Resolution=:maxscreen, Chipset_Brand=:chipset, Card_Description=:card, Brand_Name=:brand, Item_Weight=:weight, Operating_System=:operating, Computer_Memory_Type=:memory, Batteries=:batterie, Valid=:valid WHERE Laptop_id = :id"
+                    query = "UPDATE laptop_features SET Screen_Size=:screensize, Max_Screen_Resolution=:maxscreen, Chipset_Brand=:chipset, Card_Description=:card, Brand_Name=:brand, Item_Weight=:weight, Operating_System=:operating, Computer_Memory_Type=:memory, Batteries=:batterie, Date_First_Available=:date,Valid=:valid WHERE Laptop_id = :id"
                     cur.execute(query, {"screensize": self.screen_size, "maxscreen": self.max_screen_resolution,
                                         "chipset": self.brand, "card": self.card_description,
                                         "brand": self.brand_name, "weight": self.item_weight,
                                         "operating": self.operating_system, "memory": self.computer_memory_type,
-                                        "batterie": self.batteries, "valid": self.valid, "id": laptop_id})
+                                        "batterie": self.batteries, "date": self.date, "valid": self.valid,
+                                        "id": laptop_id})
                     con.commit()
 
             logger.info('Table features laptop: updated -> ' + str(laptop_id))
@@ -114,7 +116,9 @@ class Features:
                 output.append(self.batteries)
             elif option == 'Valid':
                 output.append(self.valid)
+            elif option == 'Date':
+                output.append(self.date)
             else:
                 print('Write you arguments by using the following 10 options:\n\
-                 Screen_Size, Max_Screen_Resolution, Chipset_Brand, Card_Description, Brand_Name, Item_Weight, Operating_System, Computer_Memory_Type, Batteries, Valid')
+                 Screen_Size, Max_Screen_Resolution, Chipset_Brand, Card_Description, Brand_Name, Item_Weight, Operating_System, Computer_Memory_Type, Batteries, Valid, Date')
         return output
