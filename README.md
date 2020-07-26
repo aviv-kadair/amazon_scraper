@@ -11,7 +11,7 @@
 -   **Scrape laptop top reviews**
 -   **Scrape reviewers profile**
 -   **Command Line Interface for filter based search**
-
+-   **New! write filtered results directly to the database
 
 ## Requirements:
 - BeautifulSoup4
@@ -87,11 +87,12 @@ We end with four new columns:
 We choose this api because it allows us to make 1000 requests per day for free, whereas the others were limited to 500 (or 1000) in total.
 
  ## Command Line Interface
- `class_cli.py`
- - Class cli_tool:
+ `cli_main.py`
+ - cli_tool:
       - params: argprase parameters
       - Interacts with argparse --> returns a search query
-      - Saves search results into a CSV file
+      - Multiple functions which refine the search and build the query
+      - Saves search results into the DB
  
  ## Run:
   ```
@@ -106,7 +107,7 @@ We choose this api because it allows us to make 1000 requests per day for free, 
     `laptop_features_class.py`
     `reviews_class.py`
     `profile_class.py`
-    `class_cli.py`
+    
 
 <p align="center">
   <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/Class.PNG" width="600"><br><br>
@@ -124,7 +125,7 @@ We choose this api because it allows us to make 1000 requests per day for free, 
 `Createdb.py`
 
 <p align="center">
-  <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/db.png" width="600"><br><br>
+  <img src="https://raw.githubusercontent.com/thewizardofozz/amazon_scraper/master/images_readme/ERD.png" width="600"><br><br>
 </p>
 
 - The table laptop and profile need to be updated frequently because they contains attributes that are constantly changing.
