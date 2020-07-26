@@ -95,7 +95,7 @@ We choose this api because it allows us to make 1000 requests per day for free, 
  
  ## Run:
   ```
- run cli_main.py
+ run main_cli.py
  ```     
 <p align="center">
   <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/filtering.png" width="600"><br><br>

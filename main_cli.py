@@ -3,6 +3,7 @@ Run this file to scrape using the cli
 Author: Aviv
 """
 from Cli_command import cli_functions
+from DB.api_sentiment_analysis import *
 import argparse
 from DB.functions import *
 from Cli_command import queries_url
@@ -35,10 +36,17 @@ def main():
     if len(laptops[0]) > 0:
         features_laptop(laptops[0])
 
+    dboutput = get_reviews_content()
+
+    for review_id, text in dboutput:
+        if sentiment_analyser(text) is not None:
+            polarity, subjectivity, polarity_conf, subjectivity_conf = sentiment_analyser(text)
+            add_sentiment_to_db(review_id, polarity, subjectivity, polarity_conf, subjectivity_conf)
+
     try:
         output = profile()
-        #print(len(output))
-        for i, p in enumerate(output[1:4]):
+        # print(len(output))
+        for i, p in enumerate(output[0:4]):
             retrieve_profile(p)
             sleep(randint(1, 10))
             print(i + 1)
