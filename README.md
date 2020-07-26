@@ -71,11 +71,12 @@
       - function: user_profile() --> return an object oriented Profile for each user
 
  ## Command Line Interface
- `class_cli.py`
- - Class cli_tool:
+ `cli_main.py`
+ - cli_tool:
       - params: argprase parameters
       - Interacts with argparse --> returns a search query
-      - Saves search results into a CSV file
+      - Multiple functions which refine the search and build the query
+      - Saves search results into the DB
  
  ## Run:
   ```
@@ -90,7 +91,7 @@
     `laptop_features_class.py`
     `reviews_class.py`
     `profile_class.py`
-    `class_cli.py`
+    
 
 <p align="center">
   <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/Class.PNG" width="600"><br><br>
