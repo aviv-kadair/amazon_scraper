@@ -1,4 +1,10 @@
 import requests
+import argparse
+import queries_url
+import scraper_class
+import class_cli
+import cli_class_tests
+import requests
 from cli_functions_db import *
 import argparse
 import queries_url
@@ -10,14 +16,40 @@ from random import randint
 
 def main():
     """This main function should run in order to activate the CLI"""
+    #parser = cli_class_tests.cli_tool_test()
     parser = argparse.ArgumentParser()
-    parser.add_argument('-filterQ', action=class_cli.cli_tool)
+    parser.add_argument('-filterQ', action=cli_class_tests.cli_tool_test)
     args = parser.parse_args()
     args.filterQ = input('Would you like to filter results? Y/N : ').upper()
     if args.filterQ == 'Y':
         #cli_tool.print_action(parser,args.filterQ)
-        parser.add_argument('-parameter', action=class_cli.cli_tool)
-        args.parameter = input(f'Choose a filter from the following list: {queries_url.filtering_choice} ')
+        parser.add_argument('-parameter', action=cli_class_tests.cli_tool_test)
+        parser.add_argument('-spec', action=cli_class_tests.cli_tool_test)
+        args.parameter, args.spec = cli_class_tests.cli_tool_test.choose_filter(parser)
+        URL = cli_class_tests.cli_tool_test.function_map(args.parameter, args.spec)
+        print(URL)
+    else:
+        URL = queries_url.default_url
+    try:
+        res = scraper_class.SearchPage(URL)
+        class_cli.cli_tool.print_action(parser)
+    except requests.exceptions.MissingSchema:
+        print('Filtering choice was not recognised, exiting')
+        quit()
+    items = res.get_data()
+    if items:
+        link_list = []
+        print('The following results match your search parameters: ')
+        laptop_names = []
+        for result in items:
+            print(f'Laptop name: {result.name}')
+
+            laptop_names.append(result.name)
+            link_list.append(result.link)
+
+
+"""
+        #args.parameter = input(f'Choose a filter from the following list: {queries_url.filtering_choice} ')
         parser.add_argument('-spec_param', action=class_cli.cli_tool)
         if args.parameter == '1':
             args.spec_param = input('Choose a minimal item ranking, from 1 to 4: ')
@@ -54,65 +86,9 @@ def main():
             args.spec_param = input(f'Choose desired hard drive type, from the following list: {HD_type} ')
             if args.spec_param not in HD_type:
                 args.spec_param = input('HD type was not recognised, please try again: ')
-            URL = class_cli.cli_tool.query_builder_HD_type(parser,'HD_type', args.spec_param)
-    else:
-        URL = queries_url.default_url
-    try:
-        res = scraper_class.SearchPage(URL)
-        class_cli.cli_tool.print_action(parser)
-    except requests.exceptions.MissingSchema:
-        print('Filtering choice was not recognised, exiting')
-        quit()
-    items = res.get_data()
-    if items:
-        link_list = []
-        print('The following results match your search parameters: ')
-        laptop_names = []
-        for result in items:
+            URL = class_cli.cli_tool.query_builder_HD_type(parser,'HD_type', args.spec_param)"""
 
-            print(f'Laptop name: {result.name}')
 
-            laptop_names.append(result.name)
-            link_list.append(result.link)
-
-        """links = ['https://www.amazon.com/'+adrs for adrs in link_list]
-
-        #print('Writing results into CSV, it will take a few minutes')
-        list_params = []
-        for lnk in links:
-            laptop_data = scraper_class.Parameters(lnk)
-            try:
-                pams = laptop_data.get_param()
-                list_params.append(pams)
-            except AttributeError:
-                print('Data was not retrieved correctly, please try again')"""
-        """csv_file = "filtered_results.csv"
-        field_names = ['Operating System', 'Item Weight', 'Computer Memory Type', 'Batteries', 'Chipset Brand', 'Card Description', 'Max Screen Resolution']
-        with open(csv_file, 'w') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=field_names, lineterminator='\n')
-            writer.writeheader()
-            for data in list_params:
-                writer.writerow(data)
-        print('Writing to CSV finished.')"""
-    else:
-        print('Your search found no results, please try again')
-    laptops = search_results(URL)
-    if len(laptops[1]) > 0:
-        reviews(laptops[1])
-    if len(laptops[0]) > 0:
-        features_laptop(laptops[0])
-
-    try:
-        output = profile()
-        print(len(output))
-        for i, p in enumerate(output[1:4]):
-            retrieve_profile(p)
-            sleep(randint(1, 10))
-            print(i + 1)
-
-        valid_features()
-    except sqlite3.OperationalError:
-        print('The database is blocked, try to unblock it before running the main.')
 
 if __name__ == '__main__':
     main()
