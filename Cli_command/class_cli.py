@@ -1,6 +1,14 @@
+import requests
+from bs4 import BeautifulSoup
+from collections import defaultdict
+import random
+from selenium import webdriver
+import selenium as se
+import re
+import sys, os, re, cmd, shlex, optparse, json, pprint
 import argparse
-from Cli_command import queries_url
-
+import queries_url
+import scraper_class
 
 class cli_tool(argparse.Action):
     """This class builds a search query based on the user input"""
