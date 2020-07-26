@@ -70,6 +70,22 @@
       - param: url
       - function: user_profile() --> return an object oriented Profile for each user
 
+
+## Features Engineering
+
+We use the aylien api to enrich our database: 
+`https://aylien-text.p.rapidapi.com/sentiment`
+
+The api gives us the sentiment analysis of the content of the reviews.
+
+We end with four new columns:
+- Polarity (positive/negative)
+- Subjectivity (objective/subjective)
+- Polarity confidence (number between 0 to 1)
+- Subjectivity confidence (number between 0 to 1)
+
+We choose this api because it allows us to make 1000 requests per day for free, whereas the others were limited to 500 (or 1000) in total.
+
  ## Command Line Interface
  `class_cli.py`
  - Class cli_tool:
@@ -129,8 +145,3 @@
 ## Configuration
 `config.py`
 
-## In Development:
-- Use grequests to accelarate the scraping processus.
-- Find a solution for the timeout error when using selenium with amazon.
-(For now we use a loop to do it in step and avoid the amazon blocking)
-- Improve search results returned from the CLI

@@ -1,7 +1,6 @@
 """
 Retrieve information from the scraping and adding or updating my database
-Authors:
-Aviv and Serah
+Author: Serah
 """
 
 from Scraping import scraper_class

@@ -762,3 +762,540 @@
 2020-07-24 14:29:24,926 - Logging - INFO - Table features reviews: added -> 316
 2020-07-24 14:29:30,149 - Logging - INFO - Table features reviews: added -> 317
 2020-07-24 14:29:30,160 - Logging - INFO - Table features reviews: added -> 317
+2020-07-26 19:32:26,601 - Logging - INFO - Table laptop: added -> Acer Nitro 5 Gaming Laptop, 9th Gen Intel Core i5-9300H, NVIDIA GeForce GTX 1650, 15.6" Full HD IPS Display, 8GB DDR4, 256GB NVMe SSD, WiFi 6, Waves MaxxAudio, Backlit Keyboard, AN515-54-5812
+2020-07-26 19:32:26,619 - Logging - INFO - Table laptop: added -> Acer Predator Helios 300 Gaming Laptop, Intel Core i7-9750H, GeForce GTX 1660 Ti, 15.6" Full HD 144Hz Display, 3ms Response Time, 16GB DDR4, 512GB PCIe NVMe SSD, RGB Backlit Keyboard, PH315-52-710B
+2020-07-26 19:32:26,633 - Logging - INFO - Table laptop: added -> Acer Swift 3 Thin & Light Laptop, 14" Full HD IPS, AMD Ryzen 7 4700U Octa-Core Processor with Radeon Graphics, 8GB LPDDR4, 512GB NVMe SSD, WiFi 6, Backlit Keyboard, Fingerprint Reader, SF314-42-R9YN
+2020-07-26 19:32:26,650 - Logging - INFO - Table laptop: added -> Acer Aspire 5 Slim Laptop, 15.6" Full HD IPS Display, 10th Gen Intel Core i5-10210U, 8GB DDR4, 256GB PCIe NVMe SSD, Intel Wi-Fi 6 AX201 802.11ax, Fingerprint Reader, Backlit KB, A515-54-59W2, Silver
+2020-07-26 19:32:26,666 - Logging - INFO - Table laptop: updated -> Acer Chromebook Spin 11 CP311-1H-C5PN Convertible Laptop, Celeron N3350, 11.6" HD Touch, 4GB DDR4, 32GB eMMC, Google Chrome
+2020-07-26 19:32:26,679 - Logging - INFO - Table laptop: added -> Acer Nitro 5 AN515-54-51M5-15.6" - i5-9300H - NVIDIA GTX 1650-8GB - 1TB HDD+128GB SSD
+2020-07-26 19:32:26,695 - Logging - INFO - Table laptop: updated -> Acer Spin 5 Convertible Laptop, 13.5" 2K 2256 x 1504 IPS Touch, 10th Gen Intel Core i7-1065G7, 16GB LPDDR4X, 512GB NVMe SSD, WiFi 6, Backlit KB, FPR, Rechargeable Active Stylus, SP513-54N-74V2
+2020-07-26 19:32:26,707 - Logging - INFO - Table laptop: updated -> Acer Chromebook Spin 13 CP713-1WN-53NF 2-in-1 Convertible, 8th Gen Intel Core i5-8250U, 13.5" 2K Resolution Touchscreen, 8GB LPDDR3, 128GB eMMC, Backlit Keyboard, Aluminum Chassis,Steel Gray
+2020-07-26 19:32:26,721 - Logging - INFO - Table laptop: added -> Acer Chromebook R 13 Convertible, 13.3-inch  Full HD Touch, MediaTek MT8173C, 4GB LPDDR3, 32GB, Chrome, CB5-312T-K5X4
+2020-07-26 19:32:26,734 - Logging - INFO - Table laptop: added -> Newest Acer 14inch Flagship Chromebook, Intel Quad-Core Atom E8000 Up to 2.00GHz Processor, 4GB RAM,32GB SSD, WiFi, HDMI, Chrome OS-(Renewed) (Silver/Atom)
+2020-07-26 19:32:26,749 - Logging - INFO - Table laptop: added -> Acer Chromebook 314, Intel Celeron N4000, 14" Full HD Display, 4GB LPDDR4, 64GB eMMC, Gigabit WiFi, Google Chrome, CB314-1H-C884
+2020-07-26 19:32:26,763 - Logging - INFO - Table laptop: added -> Acer Swift 5 Ultra-Thin & Lightweight Laptop 15.6” FHD IPS Touch Display in a thin .23" bezel, 8th Gen Intel Core i5-8265U, 8GB DDR4, 256GB PCIe NVMe SSD, Back-lit Keyboard, Windows 10, SF515-51T-507P
+2020-07-26 19:32:26,778 - Logging - INFO - Table laptop: added -> Acer Chromebook 15, Intel Atom X5-E8000 Quad-Core Processor, 15.6" HD, 4GB LPDDR3, 16GB eMMC, CB3-532-108H
+2020-07-26 19:32:26,790 - Logging - INFO - Table laptop: added -> Acer Aspire 7 Laptop, 15.6" Full HD IPS Display, 9th Gen Intel Core i7-9750H, GeForce GTX 1050 3GB, 16GB DDR4, 512GB PCIe NVMe SSD, Backlit Keyboard, A715-74G-71WS
+2020-07-26 19:32:26,804 - Logging - INFO - Table laptop: added -> Acer Spin 11 2-in-1 Convertible 11.6" HD Touchscreen WLED-Backlit Chromebook, Intel Celeron N3350 Processor, 4GB Memory, 32GB eMMC, Bluetooth, WiFi, Webcam, Google Chrome OS, Obsidian Black
+2020-07-26 19:32:26,817 - Logging - INFO - Table laptop: added -> Acer High Performance Spin 11.6inch FHD Multi-Touch Laptop, Intel Pentium N4200 Quad-core Up to 2.5GHz, 4GB RAM, 64GB SSD, WiFi, Bluetooth, HDMI, Win10(Renewed)
+2020-07-26 19:32:29,731 - Logging - INFO - Table features reviews: added -> 318
+2020-07-26 19:32:29,741 - Logging - INFO - Table features reviews: added -> 318
+2020-07-26 19:32:29,754 - Logging - INFO - Table features reviews: added -> 318
+2020-07-26 19:32:29,764 - Logging - INFO - Table features reviews: added -> 318
+2020-07-26 19:32:29,776 - Logging - INFO - Table features reviews: added -> 318
+2020-07-26 19:32:29,787 - Logging - INFO - Table features reviews: added -> 318
+2020-07-26 19:32:29,798 - Logging - INFO - Table features reviews: added -> 318
+2020-07-26 19:32:29,809 - Logging - INFO - Table features reviews: added -> 318
+2020-07-26 19:32:33,357 - Logging - INFO - Table features reviews: added -> 319
+2020-07-26 19:32:33,368 - Logging - INFO - Table features reviews: added -> 319
+2020-07-26 19:32:33,380 - Logging - INFO - Table features reviews: added -> 319
+2020-07-26 19:32:36,354 - Logging - INFO - Table features reviews: added -> 320
+2020-07-26 19:32:36,364 - Logging - INFO - Table features reviews: added -> 320
+2020-07-26 19:32:36,375 - Logging - INFO - Table features reviews: added -> 320
+2020-07-26 19:32:39,337 - Logging - INFO - Table features reviews: added -> 321
+2020-07-26 19:32:39,348 - Logging - INFO - Table features reviews: added -> 321
+2020-07-26 19:32:39,360 - Logging - INFO - Table features reviews: added -> 321
+2020-07-26 19:32:47,605 - Logging - INFO - Table features reviews: added -> 322
+2020-07-26 19:32:47,617 - Logging - INFO - Table features reviews: added -> 322
+2020-07-26 19:32:47,628 - Logging - INFO - Table features reviews: added -> 322
+2020-07-26 19:32:47,639 - Logging - INFO - Table features reviews: added -> 322
+2020-07-26 19:32:47,649 - Logging - INFO - Table features reviews: added -> 322
+2020-07-26 19:32:47,660 - Logging - INFO - Table features reviews: added -> 322
+2020-07-26 19:32:47,673 - Logging - INFO - Table features reviews: added -> 322
+2020-07-26 19:32:47,685 - Logging - INFO - Table features reviews: added -> 322
+2020-07-26 19:32:57,671 - Logging - INFO - Table features reviews: added -> 323
+2020-07-26 19:32:57,682 - Logging - INFO - Table features reviews: added -> 323
+2020-07-26 19:32:57,695 - Logging - INFO - Table features reviews: added -> 323
+2020-07-26 19:33:00,457 - Logging - INFO - Table features reviews: added -> 324
+2020-07-26 19:33:00,468 - Logging - INFO - Table features reviews: added -> 324
+2020-07-26 19:33:00,483 - Logging - INFO - Table features reviews: added -> 324
+2020-07-26 19:33:00,498 - Logging - INFO - Table features reviews: added -> 324
+2020-07-26 19:33:00,511 - Logging - INFO - Table features reviews: added -> 324
+2020-07-26 19:33:00,526 - Logging - INFO - Table features reviews: added -> 324
+2020-07-26 19:33:04,170 - Logging - INFO - Table features reviews: added -> 325
+2020-07-26 19:33:04,182 - Logging - INFO - Table features reviews: added -> 325
+2020-07-26 19:33:04,197 - Logging - INFO - Table features reviews: added -> 325
+2020-07-26 19:33:04,210 - Logging - INFO - Table features reviews: added -> 325
+2020-07-26 19:33:04,225 - Logging - INFO - Table features reviews: added -> 325
+2020-07-26 19:33:04,238 - Logging - INFO - Table features reviews: added -> 325
+2020-07-26 19:33:07,725 - Logging - INFO - Table features reviews: added -> 326
+2020-07-26 19:33:07,744 - Logging - INFO - Table features reviews: added -> 326
+2020-07-26 19:33:07,798 - Logging - INFO - Table features reviews: added -> 326
+2020-07-26 19:33:07,829 - Logging - INFO - Table features reviews: added -> 326
+2020-07-26 19:33:07,846 - Logging - INFO - Table features reviews: added -> 326
+2020-07-26 19:33:07,856 - Logging - INFO - Table features reviews: added -> 326
+2020-07-26 19:33:07,867 - Logging - INFO - Table features reviews: added -> 326
+2020-07-26 19:33:07,882 - Logging - INFO - Table features reviews: added -> 326
+2020-07-26 19:33:10,395 - Logging - INFO - Table features reviews: added -> 327
+2020-07-26 19:33:10,406 - Logging - INFO - Table features reviews: added -> 327
+2020-07-26 19:33:10,417 - Logging - INFO - Table features reviews: added -> 327
+2020-07-26 19:33:10,427 - Logging - INFO - Table features reviews: added -> 327
+2020-07-26 19:33:10,438 - Logging - INFO - Table features reviews: added -> 327
+2020-07-26 19:33:10,449 - Logging - INFO - Table features reviews: added -> 327
+2020-07-26 19:33:10,460 - Logging - INFO - Table features reviews: added -> 327
+2020-07-26 19:33:10,470 - Logging - INFO - Table features reviews: added -> 327
+2020-07-26 19:33:13,144 - Logging - INFO - Table features reviews: added -> 328
+2020-07-26 19:33:13,155 - Logging - INFO - Table features reviews: added -> 328
+2020-07-26 19:33:13,166 - Logging - INFO - Table features reviews: added -> 328
+2020-07-26 19:33:15,878 - Logging - INFO - Table features reviews: added -> 329
+2020-07-26 19:33:15,891 - Logging - INFO - Table features reviews: added -> 329
+2020-07-26 19:33:15,904 - Logging - INFO - Table features reviews: added -> 329
+2020-07-26 19:33:15,916 - Logging - INFO - Table features reviews: added -> 329
+2020-07-26 19:33:15,928 - Logging - INFO - Table features reviews: added -> 329
+2020-07-26 19:33:15,940 - Logging - INFO - Table features reviews: added -> 329
+2020-07-26 19:33:15,961 - Logging - INFO - Table features reviews: added -> 329
+2020-07-26 19:33:15,974 - Logging - INFO - Table features reviews: added -> 329
+2020-07-26 19:33:18,940 - Logging - INFO - Table features reviews: added -> 330
+2020-07-26 19:33:18,951 - Logging - INFO - Table features reviews: added -> 330
+2020-07-26 19:33:18,962 - Logging - INFO - Table features reviews: added -> 330
+2020-07-26 19:33:18,973 - Logging - INFO - Table features reviews: added -> 330
+2020-07-26 19:33:18,984 - Logging - INFO - Table features reviews: added -> 330
+2020-07-26 19:33:18,996 - Logging - INFO - Table features reviews: added -> 330
+2020-07-26 19:33:19,012 - Logging - INFO - Table features reviews: added -> 330
+2020-07-26 19:33:21,773 - Logging - INFO - Table features laptop: added -> 318
+2020-07-26 19:33:25,404 - Logging - INFO - Table features laptop: added -> 319
+2020-07-26 19:33:28,505 - Logging - INFO - Table features laptop: added -> 320
+2020-07-26 19:33:32,571 - Logging - INFO - Table features laptop: added -> 321
+2020-07-26 19:33:36,953 - Logging - INFO - Table features laptop: added -> 322
+2020-07-26 19:33:39,523 - Logging - INFO - Table features laptop: added -> 323
+2020-07-26 19:33:42,746 - Logging - INFO - Table features laptop: added -> 324
+2020-07-26 19:33:45,515 - Logging - INFO - Table features laptop: added -> 325
+2020-07-26 19:33:48,405 - Logging - INFO - Table features laptop: added -> 326
+2020-07-26 19:33:51,126 - Logging - INFO - Table features laptop: added -> 327
+2020-07-26 19:33:53,644 - Logging - INFO - Table features laptop: added -> 328
+2020-07-26 19:34:54,482 - Logging - WARNING - https://www.amazon.com/Acer-11-Convertible-Touchscreen-WLED-Backlit/dp/B0851YV771/ref=sr_1_15?dchild=1&qid=1594230281&refinements=p_89%3AAcer&rnid=2528832011&s=computers-intl-ship&sr=1-15  doesn't return content for table2
+2020-07-26 19:34:54,482 - Logging - WARNING - https://www.amazon.com/Acer-11-Convertible-Touchscreen-WLED-Backlit/dp/B0851YV771/ref=sr_1_15?dchild=1&qid=1594230281&refinements=p_89%3AAcer&rnid=2528832011&s=computers-intl-ship&sr=1-15  doesn't return content for table3
+2020-07-26 19:34:57,696 - Logging - INFO - Table features laptop: added -> 330
+2020-07-26 19:37:56,942 - Logging - INFO - Table laptop: updated -> Acer Chromebook Spin 11 CP311-1H-C5PN Convertible Laptop, Celeron N3350, 11.6" HD Touch, 4GB DDR4, 32GB eMMC, Google Chrome
+2020-07-26 19:37:56,952 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:37:56,962 - Logging - INFO - Table laptop: added -> Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L,Silver
+2020-07-26 19:37:56,977 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:37:56,990 - Logging - INFO - Table laptop: added -> ASUS VivoBook L203MA Laptop, 11.6” HD Display, Intel Celeron Dual Core CPU, 4GB RAM, 64GB Storage, USB-C, Windows 10 Home In S Mode, Up To 10 Hours Battery Life, One Year of Microsoft 365, L203MA-DS04
+2020-07-26 19:37:57,006 - Logging - INFO - Table laptop: added -> 2020 HP 14-inch HD Touchscreen Premium Laptop PC, AMD Ryzen 3 3200U Processor, 8GB DDR4 Memory, 256GB SSD, Bluetooth, Windows 10, Silver
+2020-07-26 19:37:57,020 - Logging - INFO - Table laptop: updated -> Laptop Notebook 14 Inch Windows 10 – Winnovo N140 Netbook Intel Celeron Processor 4GB RAM 64GB eMMC HD IPS Display Dual Band WiFi Numeric Touchpad Support SSD Extension (Grey)
+2020-07-26 19:37:57,033 - Logging - INFO - Table laptop: updated -> Acer Nitro 5 Gaming Laptop, 9th Gen Intel Core i5-9300H, NVIDIA GeForce GTX 1650, 15.6" Full HD IPS Display, 8GB DDR4, 256GB NVMe SSD, WiFi 6, Waves MaxxAudio, Backlit Keyboard, AN515-54-5812
+2020-07-26 19:37:57,046 - Logging - INFO - Table laptop: added -> HP 14-inch Touchscreen Laptop, AMD Ryzen 3-3200U up to 3.5GHz, 8GB DDR4, 256GB SSD, Bluetooth, USB 3.1 Type-C, Webcam, WiFi, HDMI, Windows 10 Home
+2020-07-26 19:37:57,059 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6" Full HD IPS Display, 10th Gen Intel Core i5-10210U, 8GB DDR4, 256GB PCIe NVMe SSD, Intel Wi-Fi 6 AX201 802.11ax, Fingerprint Reader, Backlit KB, A515-54-59W2, Silver
+2020-07-26 19:37:57,074 - Logging - INFO - Table laptop: added -> Lenovo Flex 5 14" 2-in-1 Laptop, 14.0" FHD (1920 x 1080) Touch Display, AMD Ryzen 5 4500U Processor, 16GB DDR4, 256GB SSD, AMD Radeon Graphics, Digital Pen Included, Win 10, 81X20005US, Graphite Grey
+2020-07-26 19:37:57,088 - Logging - INFO - Table laptop: updated -> Lenovo Chromebook Flex 5 13" Laptop, FHD (1920 x 1080) Touch Display, Intel Core i3-10110U Processor, 4GB DDR4 OnBoard RAM, 64GB SSD, Intel Integrated Graphics, Chrome OS, 82B80006UX, Graphite Grey
+2020-07-26 19:37:57,101 - Logging - INFO - Table laptop: added -> 2020 HP 15 15.6" HD Touchscreen Premium Laptop - 10th Gen Intel Core i5-1035G1, 16GB DDR4, 512GB SSD, USB Type-C, HDMI, Windows 10 - Silver W
+2020-07-26 19:37:57,116 - Logging - INFO - Table laptop: added -> 2020 ASUS VivoBook 15 15.6 Inch FHD 1080P Laptop (AMD Ryzen 3 3200U up to 3.5GHz, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 3, Backlit Keyboard, FP Reader, WiFi, Bluetooth, HDMI, Windows 10) (Grey)
+2020-07-26 19:37:57,131 - Logging - INFO - Table laptop: added -> HP 14 14" HD SVA Anti-Glare Micro-Edge WLED-backlit Laptop for Students, AMD Athlon 3050U 2.3GHz up to 3.2GHz, 4GB DDR4, 128GB SSD, Wi-Fi 5, Bluetooth 4.2, HDMI, Webcam, Windows 10 S, Accessory Bundle
+2020-07-26 19:37:57,145 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:37:57,158 - Logging - INFO - Table laptop: added -> ASUS Chromebook Flip C302 2-In-1 Laptop- 12.5” Full HD 4-Way NanoEdge Touchscreen, Intel Core M7 Processor, 8GB RAM, 64GB Flash Storage, USB Type C, All Metal Body, Chrome OS- C302CA-AH74 Silver
+2020-07-26 19:37:57,173 - Logging - INFO - Table laptop: added -> HP 14" Touchscreen Home and Business Laptop Ryzen 3-3200U, 8GB RAM, 128GB M.2 SSD, Dual-Core up to 3.50 GHz, Vega 3 Graphics, RJ-45, USB-C, 4K Output HDMI, Bluetooth, Webcam, 1366x768, Win 10
+2020-07-26 19:37:57,188 - Logging - INFO - Table laptop: added -> 2020 Newest Dell Inspiron 15 3000 PC Laptop: 15.6" HD Anti-Glare LED-Backlit Nontouch Display, Intel 2-Core 4205U Processor, 8GB RAM, 1TB HDD, WiFi, Bluetooth, HDMI, Webcam,DVD-RW, Win 10
+2020-07-26 19:37:57,204 - Logging - INFO - Table laptop: added -> HP 2020 Newest 17.3 Inch Flagship Laptop?Computer (8th Gen?Intel Core i5-8265U 3.9GHz, 16GB RAM, 256GB SSD, Intel HD 620, WiFi, Bluetooth, DVD, Windows 10)
+2020-07-26 19:37:57,219 - Logging - INFO - Table laptop: added -> 2020 HP 14“ Laptop (AMD A9-9425 up to 3.7 GHz, 4GB DDR4 RAM, 128GB SSD, AMD Radeon R5 Graphic, Wi-Fi, Bluetooth, HDMI, Windows 10 Home)
+2020-07-26 19:37:57,234 - Logging - INFO - Table laptop: added -> LG Gram 2-in-1 Convertible Laptop: 14" Full HD IPS Touchscreen Display, Intel 10th Gen Core i7-10510U CPU, 16GB RAM, 1TB (512GB x 2) M.2 MVMe SSD, Thunderbolt 3, 20.5 Hour Battery 14T90N (2020)
+2020-07-26 19:37:57,248 - Logging - INFO - Table laptop: added -> HP Stream 14-inch Laptop, Intel Celeron N4000, 4 GB RAM, 32 GB eMMC, Windows 10 Home in S Mode with Office 365 Personal for 1 Year (14-cb184nr, Rose Pink)
+2020-07-26 19:37:57,262 - Logging - INFO - Table laptop: updated -> Acer Predator Helios 300 Gaming Laptop, Intel Core i7-9750H, GeForce GTX 1660 Ti, 15.6" Full HD 144Hz Display, 3ms Response Time, 16GB DDR4, 512GB PCIe NVMe SSD, RGB Backlit Keyboard, PH315-52-710B
+2020-07-26 19:37:57,275 - Logging - INFO - Table laptop: added -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” Full HD, AMD Quad Core R5-3500U CPU, 8GB DDR4 RAM, 256GB PCIe SSD, AMD Radeon Vega 8 Graphics, Windows 10 Home, F512DA-EB51, Slate Gray
+2020-07-26 19:37:57,290 - Logging - INFO - Table laptop: added -> HP High Performance 15.6" Touch-Screen Laptop (15-EF0023dx) AMD Ryzen 5 3500U 12GB Memory 256GB SSD - Natural Silver
+2020-07-26 19:37:57,305 - Logging - INFO - Table laptop: added -> 2020 HP 17.3" Laptop Computer/ 8th Gen Intel Quad-Core i5-8265U Up to 3.9GHz/ 8GB DDR4 RAM/ 256GB PCIe SSD/ DVD/ Bluetooth 4.2/ USB 3.1/ HDMI/ Windows 10 Home/ Black
+2020-07-26 19:37:57,320 - Logging - INFO - Table laptop: added -> Asus TUF FX505DT Gaming Laptop, 15.6” 120Hz Full HD, AMD Ryzen 5 R5-3550H Processor, GeForce GTX 1650 Graphics, 8GB DDR4, 256GB PCIe SSD, Gigabit Wi-Fi 5, Windows 10 Home, FX505DT-AH51, RGB Keyboard
+2020-07-26 19:38:07,575 - Logging - INFO - Table features reviews: added -> 331
+2020-07-26 19:38:07,586 - Logging - INFO - Table features reviews: added -> 331
+2020-07-26 19:38:07,597 - Logging - INFO - Table features reviews: added -> 331
+2020-07-26 19:38:17,524 - Logging - INFO - Table features reviews: added -> 333
+2020-07-26 19:38:17,535 - Logging - INFO - Table features reviews: added -> 333
+2020-07-26 19:38:17,546 - Logging - INFO - Table features reviews: added -> 333
+2020-07-26 19:38:17,557 - Logging - INFO - Table features reviews: added -> 333
+2020-07-26 19:38:17,569 - Logging - INFO - Table features reviews: added -> 333
+2020-07-26 19:38:17,580 - Logging - INFO - Table features reviews: added -> 333
+2020-07-26 19:38:17,590 - Logging - INFO - Table features reviews: added -> 333
+2020-07-26 19:38:17,602 - Logging - INFO - Table features reviews: added -> 333
+2020-07-26 19:38:20,245 - Logging - INFO - Table features reviews: added -> 22
+2020-07-26 19:38:26,209 - Logging - INFO - Table features reviews: added -> 334
+2020-07-26 19:38:26,220 - Logging - INFO - Table features reviews: added -> 334
+2020-07-26 19:38:26,234 - Logging - INFO - Table features reviews: added -> 334
+2020-07-26 19:38:26,247 - Logging - INFO - Table features reviews: added -> 334
+2020-07-26 19:38:26,260 - Logging - INFO - Table features reviews: added -> 334
+2020-07-26 19:38:26,272 - Logging - INFO - Table features reviews: added -> 334
+2020-07-26 19:38:26,286 - Logging - INFO - Table features reviews: added -> 334
+2020-07-26 19:38:26,299 - Logging - INFO - Table features reviews: added -> 334
+2020-07-26 19:38:31,882 - Logging - INFO - Table features reviews: added -> 335
+2020-07-26 19:38:31,894 - Logging - INFO - Table features reviews: added -> 335
+2020-07-26 19:38:31,905 - Logging - INFO - Table features reviews: added -> 335
+2020-07-26 19:38:37,749 - Logging - INFO - Table features reviews: added -> 336
+2020-07-26 19:38:37,760 - Logging - INFO - Table features reviews: added -> 336
+2020-07-26 19:38:37,771 - Logging - INFO - Table features reviews: added -> 336
+2020-07-26 19:38:37,784 - Logging - INFO - Table features reviews: added -> 336
+2020-07-26 19:38:40,377 - Logging - INFO - Table features reviews: added -> 337
+2020-07-26 19:38:40,389 - Logging - INFO - Table features reviews: added -> 337
+2020-07-26 19:38:40,400 - Logging - INFO - Table features reviews: added -> 337
+2020-07-26 19:38:40,411 - Logging - INFO - Table features reviews: added -> 337
+2020-07-26 19:38:40,422 - Logging - INFO - Table features reviews: added -> 337
+2020-07-26 19:38:40,433 - Logging - INFO - Table features reviews: added -> 337
+2020-07-26 19:38:40,443 - Logging - INFO - Table features reviews: added -> 337
+2020-07-26 19:38:40,455 - Logging - INFO - Table features reviews: added -> 337
+2020-07-26 19:38:50,271 - Logging - INFO - Table features reviews: added -> 339
+2020-07-26 19:38:50,283 - Logging - INFO - Table features reviews: added -> 339
+2020-07-26 19:38:53,834 - Logging - INFO - Table features reviews: added -> 340
+2020-07-26 19:38:53,846 - Logging - INFO - Table features reviews: added -> 340
+2020-07-26 19:38:53,860 - Logging - INFO - Table features reviews: added -> 340
+2020-07-26 19:38:53,873 - Logging - INFO - Table features reviews: added -> 340
+2020-07-26 19:38:53,887 - Logging - INFO - Table features reviews: added -> 340
+2020-07-26 19:38:53,900 - Logging - INFO - Table features reviews: added -> 340
+2020-07-26 19:38:53,914 - Logging - INFO - Table features reviews: added -> 340
+2020-07-26 19:38:53,929 - Logging - INFO - Table features reviews: added -> 340
+2020-07-26 19:38:57,367 - Logging - INFO - Table features reviews: added -> 341
+2020-07-26 19:38:57,384 - Logging - INFO - Table features reviews: added -> 341
+2020-07-26 19:38:57,404 - Logging - INFO - Table features reviews: added -> 341
+2020-07-26 19:38:57,429 - Logging - INFO - Table features reviews: added -> 341
+2020-07-26 19:38:57,450 - Logging - INFO - Table features reviews: added -> 341
+2020-07-26 19:38:57,470 - Logging - INFO - Table features reviews: added -> 341
+2020-07-26 19:39:00,917 - Logging - INFO - Table features reviews: added -> 342
+2020-07-26 19:39:00,928 - Logging - INFO - Table features reviews: added -> 342
+2020-07-26 19:39:00,942 - Logging - INFO - Table features reviews: added -> 342
+2020-07-26 19:39:00,956 - Logging - INFO - Table features reviews: added -> 342
+2020-07-26 19:39:00,969 - Logging - INFO - Table features reviews: added -> 342
+2020-07-26 19:39:00,981 - Logging - INFO - Table features reviews: added -> 342
+2020-07-26 19:39:00,993 - Logging - INFO - Table features reviews: added -> 342
+2020-07-26 19:39:01,007 - Logging - INFO - Table features reviews: added -> 342
+2020-07-26 19:39:03,932 - Logging - INFO - Table features reviews: added -> 343
+2020-07-26 19:39:03,943 - Logging - INFO - Table features reviews: added -> 343
+2020-07-26 19:39:03,953 - Logging - INFO - Table features reviews: added -> 343
+2020-07-26 19:39:03,964 - Logging - INFO - Table features reviews: added -> 343
+2020-07-26 19:39:03,975 - Logging - INFO - Table features reviews: added -> 343
+2020-07-26 19:39:03,985 - Logging - INFO - Table features reviews: added -> 343
+2020-07-26 19:39:03,996 - Logging - INFO - Table features reviews: added -> 343
+2020-07-26 19:39:04,007 - Logging - INFO - Table features reviews: added -> 343
+2020-07-26 19:39:07,325 - Logging - INFO - Table features reviews: added -> 344
+2020-07-26 19:39:07,336 - Logging - INFO - Table features reviews: added -> 344
+2020-07-26 19:39:07,348 - Logging - INFO - Table features reviews: added -> 344
+2020-07-26 19:39:07,362 - Logging - INFO - Table features reviews: added -> 344
+2020-07-26 19:39:07,375 - Logging - INFO - Table features reviews: added -> 344
+2020-07-26 19:39:07,389 - Logging - INFO - Table features reviews: added -> 344
+2020-07-26 19:39:07,403 - Logging - INFO - Table features reviews: added -> 344
+2020-07-26 19:39:07,416 - Logging - INFO - Table features reviews: added -> 344
+2020-07-26 19:39:09,920 - Logging - INFO - Table features reviews: added -> 345
+2020-07-26 19:39:09,931 - Logging - INFO - Table features reviews: added -> 345
+2020-07-26 19:39:09,942 - Logging - INFO - Table features reviews: added -> 345
+2020-07-26 19:39:09,952 - Logging - INFO - Table features reviews: added -> 345
+2020-07-26 19:39:09,962 - Logging - INFO - Table features reviews: added -> 345
+2020-07-26 19:39:09,972 - Logging - INFO - Table features reviews: added -> 345
+2020-07-26 19:39:09,983 - Logging - INFO - Table features reviews: added -> 345
+2020-07-26 19:39:09,994 - Logging - INFO - Table features reviews: added -> 345
+2020-07-26 19:39:16,643 - Logging - INFO - Table features reviews: added -> 346
+2020-07-26 19:39:16,654 - Logging - INFO - Table features reviews: added -> 346
+2020-07-26 19:39:16,665 - Logging - INFO - Table features reviews: added -> 346
+2020-07-26 19:39:16,675 - Logging - INFO - Table features reviews: added -> 346
+2020-07-26 19:39:16,687 - Logging - INFO - Table features reviews: added -> 346
+2020-07-26 19:39:20,388 - Logging - INFO - Table features reviews: added -> 347
+2020-07-26 19:39:20,399 - Logging - INFO - Table features reviews: added -> 347
+2020-07-26 19:39:20,409 - Logging - INFO - Table features reviews: added -> 347
+2020-07-26 19:39:20,420 - Logging - INFO - Table features reviews: added -> 347
+2020-07-26 19:39:20,433 - Logging - INFO - Table features reviews: added -> 347
+2020-07-26 19:39:23,709 - Logging - INFO - Table features reviews: added -> 348
+2020-07-26 19:39:23,721 - Logging - INFO - Table features reviews: added -> 348
+2020-07-26 19:39:23,732 - Logging - INFO - Table features reviews: added -> 348
+2020-07-26 19:39:23,743 - Logging - INFO - Table features reviews: added -> 348
+2020-07-26 19:39:23,754 - Logging - INFO - Table features reviews: added -> 348
+2020-07-26 19:39:23,767 - Logging - INFO - Table features reviews: added -> 348
+2020-07-26 19:39:23,778 - Logging - INFO - Table features reviews: added -> 348
+2020-07-26 19:39:23,789 - Logging - INFO - Table features reviews: added -> 348
+2020-07-26 19:39:27,213 - Logging - INFO - Table features reviews: added -> 349
+2020-07-26 19:39:27,226 - Logging - INFO - Table features reviews: added -> 349
+2020-07-26 19:39:27,236 - Logging - INFO - Table features reviews: added -> 349
+2020-07-26 19:39:27,246 - Logging - INFO - Table features reviews: added -> 349
+2020-07-26 19:39:27,259 - Logging - INFO - Table features reviews: added -> 349
+2020-07-26 19:39:27,270 - Logging - INFO - Table features reviews: added -> 349
+2020-07-26 19:39:27,282 - Logging - INFO - Table features reviews: added -> 349
+2020-07-26 19:39:30,856 - Logging - INFO - Table features laptop: added -> 331
+2020-07-26 19:39:34,578 - Logging - INFO - Table features laptop: added -> 332
+2020-07-26 19:39:37,750 - Logging - INFO - Table features laptop: added -> 333
+2020-07-26 19:39:40,596 - Logging - INFO - Table features laptop: added -> 334
+2020-07-26 19:39:43,294 - Logging - INFO - Table features laptop: added -> 335
+2020-07-26 19:39:46,246 - Logging - INFO - Table features laptop: added -> 336
+2020-07-26 19:39:48,852 - Logging - INFO - Table features laptop: added -> 337
+2020-07-26 19:39:51,938 - Logging - INFO - Table features laptop: added -> 338
+2020-07-26 19:39:55,336 - Logging - INFO - Table features laptop: added -> 339
+2020-07-26 19:39:57,968 - Logging - INFO - Table features laptop: added -> 340
+2020-07-26 19:40:00,954 - Logging - INFO - Table features laptop: added -> 341
+2020-07-26 19:40:03,808 - Logging - INFO - Table features laptop: added -> 342
+2020-07-26 19:40:07,008 - Logging - INFO - Table features laptop: added -> 343
+2020-07-26 19:40:10,380 - Logging - INFO - Table features laptop: added -> 344
+2020-07-26 19:40:12,724 - Logging - INFO - Table features laptop: added -> 345
+2020-07-26 19:40:17,621 - Logging - INFO - Table features laptop: added -> 346
+2020-07-26 19:40:20,722 - Logging - INFO - Table features laptop: added -> 347
+2020-07-26 19:40:23,875 - Logging - INFO - Table features laptop: added -> 348
+2020-07-26 19:40:27,666 - Logging - INFO - Table features laptop: added -> 349
+2020-07-26 19:41:42,460 - Logging - INFO - Table profile: updated -> AGY2K4OMQUW27TZIVKJ57JKQKZSA
+2020-07-26 19:44:09,801 - Logging - INFO - Table laptop: added -> Microsoft Surface Go (Intel Pentium Gold, 8GB RAM, 128GB) (MCZ-00001)
+2020-07-26 19:44:09,814 - Logging - INFO - Table laptop: added -> Lenovo Chromebook Duet, 2-in-1, 10.1" WUXGA (1920 x 1200) Display, MediaTek Helio P60T, 4GB LPDDR4X RAM, 64GB eMCP SSD, Integrated ARM G72 MP3 Graphics, Chrome OS, ZA6F0031US, Ice Blue + Iron Grey
+2020-07-26 19:44:09,826 - Logging - INFO - Table laptop: added -> Thomson WWNEO10A4BK64 10.1 inch 1.44GHz Intel Atom Z8300 Processor 4GB DDR3 RAM | 64GB Intel HD 400 Graphic Processor, Windows 10 Home with Mobile Office Included, Black
+2020-07-26 19:44:09,838 - Logging - INFO - Table laptop: added -> GPD Pocket 2 Amber Black [Latest Update-256GB SSD Version] 7" Touch Screen Windows 10 Mini Portable Laptop UMPC Tablet PC CPU Intel Celeron Processor 3965Y lntel HD Graphics 615 8GB RAM/256GB ROM
+2020-07-26 19:44:09,850 - Logging - INFO - Table laptop: added -> 2018 RCA Viking Pro 2-in-1 10.1" Touchscreen High Performance Tablet Laptop PC, Intel Quad-Core Processor, 1G RAM, 32GB HDD, Detachable Keyboard, Webcam, Android 5.0 Lollipop (Charcoal)
+2020-07-26 19:44:09,862 - Logging - INFO - Table laptop: added -> GPD Micro PC-Mini Industry Laptop-[128GB M.2 SSD Version] 6 Inches Portable UMPC Laptop Computer Notebook CPU Intel Celeron N4100 GPU Intel UHD Graphics 600 Windows 10 Pro,Ubuntu Mate 18.10,8GB/128GB
+2020-07-26 19:44:09,874 - Logging - INFO - Table laptop: added -> 2019 Newest Lenovo Yoga Book C930 10.8" Dual-Display QHD 2560 x 1600 IPS & FHD 1920 x 1080 E Ink Mobius Touchscreen Light Weight Active Pen Intel Core i5-7Y54 Up to 3.2GHz 4G RAM 128G M2 SSD Grey
+2020-07-26 19:44:09,886 - Logging - INFO - Table laptop: added -> ALLDOCUBE iwork10 Pro 2-in-1 Tablet PC with Keyboard, 10.1 inch Laptop, 1920x1200 IPS Screen, Windows 10 + Android 5.1, Intel Atom Quad Core CPU, 4GB RAM, 64GB ROM, USB Type-C, HDMI Output, Black
+2020-07-26 19:44:09,898 - Logging - INFO - Table laptop: added -> GPD P2 Max 8.9 Inches Portable Ultrabook Mini pc Notebook Laptop UMPC Touch Screen Tablet CPU Intel m3-8100Y GPU HD Graphics 615 WIN10 16GB RAM/512GB ROM,Amber Black
+2020-07-26 19:44:09,909 - Logging - INFO - Table laptop: added -> Lenovo Yoga Book C930-10.8" 1920 x 1080 Touch - i5-7Y54-4GB - 128GB SSD - Pen
+2020-07-26 19:44:09,921 - Logging - INFO - Table laptop: added -> GPD Pocket 2 Mini Laptop 7" Touch Screen Aluminum Shell UMPC Windows 10 System CPU Intel Celeron Processor 3965Y 8GB/256GB (Amber Black)
+2020-07-26 19:44:09,934 - Logging - INFO - Table laptop: added -> 2019 Lenovo Yoga Book C930 2-in-1 10.8" QHD Touchscreen Tablet Laptop Computer, Intel Core i5-7Y54 up to 3.2GHz, 4GB RAM, 128GB SSD, Active Pen, Touch E-Ink Keyboard, Fingerprint Reader, Windows 10
+2020-07-26 19:44:09,945 - Logging - INFO - Table laptop: added -> GPD P2 Max, Portable Ultrabook Laptop 8.9" Touch Screen Windows 10 Home CPU Intel m3-8100Y 16GB RAM/512GB Storage Built-in Camera(Amber Black)
+2020-07-26 19:44:09,956 - Logging - INFO - Table laptop: added -> 2018 Premium High Performance RCA Galileo Pro 11.5" Touchscreen Tablet Computer with Detachable Keyboard, Intel Quad-Core Processor 1GB Memory 32GB SSD Webcam WiFi Bluetooth Android 6.0, Blue
+2020-07-26 19:44:09,968 - Logging - INFO - Table laptop: added -> One Netbook One Mix 3 PRO Platinum Edition Yoga CPU Intel 10th I7-10510Y 8.4" Mini Pocket Laptop Ultrabook UMPC Win 10 Home,2560X1600 Touch Screen Tablet PC 16GB RAM/512GB PCIE SSD Storage
+2020-07-26 19:44:09,979 - Logging - INFO - Table laptop: added -> ASUS C100PA-DB02 10.1-inch Touch Chromebook Flip (1.8GHz, 4GB Memory, 16GB eMMC, Google OS), All Metal Body
+2020-07-26 19:44:13,789 - Logging - INFO - Table features reviews: added -> 350
+2020-07-26 19:44:13,801 - Logging - INFO - Table features reviews: added -> 350
+2020-07-26 19:44:13,811 - Logging - INFO - Table features reviews: added -> 350
+2020-07-26 19:44:13,824 - Logging - INFO - Table features reviews: added -> 350
+2020-07-26 19:44:16,589 - Logging - INFO - Table features reviews: added -> 351
+2020-07-26 19:44:16,600 - Logging - INFO - Table features reviews: added -> 351
+2020-07-26 19:44:16,612 - Logging - INFO - Table features reviews: added -> 351
+2020-07-26 19:44:19,152 - Logging - INFO - Table features reviews: added -> 352
+2020-07-26 19:44:19,163 - Logging - INFO - Table features reviews: added -> 352
+2020-07-26 19:44:22,417 - Logging - INFO - Table features reviews: added -> 353
+2020-07-26 19:44:22,430 - Logging - INFO - Table features reviews: added -> 353
+2020-07-26 19:44:22,443 - Logging - INFO - Table features reviews: added -> 353
+2020-07-26 19:44:22,454 - Logging - INFO - Table features reviews: added -> 353
+2020-07-26 19:44:22,466 - Logging - INFO - Table features reviews: added -> 353
+2020-07-26 19:44:22,478 - Logging - INFO - Table features reviews: added -> 353
+2020-07-26 19:44:26,356 - Logging - INFO - Table features reviews: added -> 354
+2020-07-26 19:44:26,375 - Logging - INFO - Table features reviews: added -> 354
+2020-07-26 19:44:26,388 - Logging - INFO - Table features reviews: added -> 354
+2020-07-26 19:44:26,399 - Logging - INFO - Table features reviews: added -> 354
+2020-07-26 19:44:26,410 - Logging - INFO - Table features reviews: added -> 354
+2020-07-26 19:44:26,419 - Logging - INFO - Table features reviews: added -> 354
+2020-07-26 19:44:26,431 - Logging - INFO - Table features reviews: added -> 354
+2020-07-26 19:44:26,452 - Logging - INFO - Table features reviews: added -> 354
+2020-07-26 19:44:28,998 - Logging - INFO - Table features reviews: added -> 355
+2020-07-26 19:44:29,010 - Logging - INFO - Table features reviews: added -> 355
+2020-07-26 19:44:32,432 - Logging - INFO - Table features reviews: added -> 356
+2020-07-26 19:44:32,443 - Logging - INFO - Table features reviews: added -> 356
+2020-07-26 19:44:32,452 - Logging - INFO - Table features reviews: added -> 356
+2020-07-26 19:44:32,463 - Logging - INFO - Table features reviews: added -> 356
+2020-07-26 19:44:32,476 - Logging - INFO - Table features reviews: added -> 356
+2020-07-26 19:44:32,488 - Logging - INFO - Table features reviews: added -> 356
+2020-07-26 19:44:32,502 - Logging - INFO - Table features reviews: added -> 356
+2020-07-26 19:44:32,515 - Logging - INFO - Table features reviews: added -> 356
+2020-07-26 19:44:35,477 - Logging - INFO - Table features reviews: added -> 357
+2020-07-26 19:44:35,488 - Logging - INFO - Table features reviews: added -> 357
+2020-07-26 19:44:35,500 - Logging - INFO - Table features reviews: added -> 357
+2020-07-26 19:44:35,511 - Logging - INFO - Table features reviews: added -> 357
+2020-07-26 19:44:35,522 - Logging - INFO - Table features reviews: added -> 357
+2020-07-26 19:44:38,655 - Logging - INFO - Table features reviews: added -> 358
+2020-07-26 19:44:38,667 - Logging - INFO - Table features reviews: added -> 358
+2020-07-26 19:44:41,691 - Logging - INFO - Table features reviews: added -> 359
+2020-07-26 19:44:41,702 - Logging - INFO - Table features reviews: added -> 359
+2020-07-26 19:44:41,714 - Logging - INFO - Table features reviews: added -> 359
+2020-07-26 19:44:41,725 - Logging - INFO - Table features reviews: added -> 359
+2020-07-26 19:44:41,737 - Logging - INFO - Table features reviews: added -> 359
+2020-07-26 19:44:41,748 - Logging - INFO - Table features reviews: added -> 359
+2020-07-26 19:44:41,760 - Logging - INFO - Table features reviews: added -> 359
+2020-07-26 19:44:41,774 - Logging - INFO - Table features reviews: added -> 359
+2020-07-26 19:44:44,661 - Logging - INFO - Table features reviews: added -> 360
+2020-07-26 19:44:44,673 - Logging - INFO - Table features reviews: added -> 360
+2020-07-26 19:44:44,685 - Logging - INFO - Table features reviews: added -> 360
+2020-07-26 19:44:44,696 - Logging - INFO - Table features reviews: added -> 360
+2020-07-26 19:44:44,707 - Logging - INFO - Table features reviews: added -> 360
+2020-07-26 19:44:44,718 - Logging - INFO - Table features reviews: added -> 360
+2020-07-26 19:44:44,733 - Logging - INFO - Table features reviews: added -> 360
+2020-07-26 19:44:44,747 - Logging - INFO - Table features reviews: added -> 360
+2020-07-26 19:44:47,262 - Logging - INFO - Table features reviews: added -> 361
+2020-07-26 19:44:47,274 - Logging - INFO - Table features reviews: added -> 361
+2020-07-26 19:44:47,285 - Logging - INFO - Table features reviews: added -> 361
+2020-07-26 19:47:02,877 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:47:02,886 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:47:02,897 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L,Silver
+2020-07-26 19:47:02,907 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:47:02,917 - Logging - INFO - Table laptop: updated -> 2020 HP 14-inch HD Touchscreen Premium Laptop PC, AMD Ryzen 3 3200U Processor, 8GB DDR4 Memory, 256GB SSD, Bluetooth, Windows 10, Silver
+2020-07-26 19:47:02,926 - Logging - INFO - Table laptop: updated -> HP 14-inch Touchscreen Laptop, AMD Ryzen 3-3200U up to 3.5GHz, 8GB DDR4, 256GB SSD, Bluetooth, USB 3.1 Type-C, Webcam, WiFi, HDMI, Windows 10 Home
+2020-07-26 19:47:02,936 - Logging - INFO - Table laptop: updated -> Laptop Notebook 14 Inch Windows 10 – Winnovo N140 Netbook Intel Celeron Processor 4GB RAM 64GB eMMC HD IPS Display Dual Band WiFi Numeric Touchpad Support SSD Extension (Grey)
+2020-07-26 19:47:02,945 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:47:02,956 - Logging - INFO - Table laptop: updated -> Lenovo Flex 5 14" 2-in-1 Laptop, 14.0" FHD (1920 x 1080) Touch Display, AMD Ryzen 5 4500U Processor, 16GB DDR4, 256GB SSD, AMD Radeon Graphics, Digital Pen Included, Win 10, 81X20005US, Graphite Grey
+2020-07-26 19:47:02,966 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6" Full HD IPS Display, 10th Gen Intel Core i5-10210U, 8GB DDR4, 256GB PCIe NVMe SSD, Intel Wi-Fi 6 AX201 802.11ax, Fingerprint Reader, Backlit KB, A515-54-59W2, Silver
+2020-07-26 19:47:02,975 - Logging - INFO - Table laptop: updated -> Acer Nitro 5 Gaming Laptop, 9th Gen Intel Core i5-9300H, NVIDIA GeForce GTX 1650, 15.6" Full HD IPS Display, 8GB DDR4, 256GB NVMe SSD, WiFi 6, Waves MaxxAudio, Backlit Keyboard, AN515-54-5812
+2020-07-26 19:47:02,986 - Logging - INFO - Table laptop: updated -> LG Gram 2-in-1 Convertible Laptop: 14" Full HD IPS Touchscreen Display, Intel 10th Gen Core i7-10510U CPU, 16GB RAM, 1TB (512GB x 2) M.2 MVMe SSD, Thunderbolt 3, 20.5 Hour Battery 14T90N (2020)
+2020-07-26 19:47:02,996 - Logging - INFO - Table laptop: updated -> ASUS VivoBook L203MA Laptop, 11.6” HD Display, Intel Celeron Dual Core CPU, 4GB RAM, 64GB Storage, USB-C, Windows 10 Home In S Mode, Up To 10 Hours Battery Life, One Year of Microsoft 365, L203MA-DS04
+2020-07-26 19:47:03,006 - Logging - INFO - Table laptop: updated -> Acer Predator Helios 300 Gaming Laptop, Intel Core i7-9750H, GeForce GTX 1660 Ti, 15.6" Full HD 144Hz Display, 3ms Response Time, 16GB DDR4, 512GB PCIe NVMe SSD, RGB Backlit Keyboard, PH315-52-710B
+2020-07-26 19:47:03,016 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” Full HD, AMD Quad Core R5-3500U CPU, 8GB DDR4 RAM, 256GB PCIe SSD, AMD Radeon Vega 8 Graphics, Windows 10 Home, F512DA-EB51, Slate Gray
+2020-07-26 19:47:03,026 - Logging - INFO - Table laptop: updated -> 2020 HP 17.3" Laptop Computer/ 8th Gen Intel Quad-Core i5-8265U Up to 3.9GHz/ 8GB DDR4 RAM/ 256GB PCIe SSD/ DVD/ Bluetooth 4.2/ USB 3.1/ HDMI/ Windows 10 Home/ Black
+2020-07-26 19:47:03,035 - Logging - INFO - Table laptop: updated -> Acer Chromebook Spin 11 CP311-1H-C5PN Convertible Laptop, Celeron N3350, 11.6" HD Touch, 4GB DDR4, 32GB eMMC, Google Chrome
+2020-07-26 19:47:03,045 - Logging - INFO - Table laptop: updated -> 2020 HP 15 15.6" HD Touchscreen Premium Laptop - 10th Gen Intel Core i5-1035G1, 16GB DDR4, 512GB SSD, USB Type-C, HDMI, Windows 10 - Silver W
+2020-07-26 19:47:03,055 - Logging - INFO - Table laptop: updated -> 2020 Newest Dell Inspiron 15 3000 PC Laptop: 15.6" HD Anti-Glare LED-Backlit Nontouch Display, Intel 2-Core 4205U Processor, 8GB RAM, 1TB HDD, WiFi, Bluetooth, HDMI, Webcam,DVD-RW, Win 10
+2020-07-26 19:47:03,065 - Logging - INFO - Table laptop: updated -> HP 14" Touchscreen Home and Business Laptop Ryzen 3-3200U, 8GB RAM, 128GB M.2 SSD, Dual-Core up to 3.50 GHz, Vega 3 Graphics, RJ-45, USB-C, 4K Output HDMI, Bluetooth, Webcam, 1366x768, Win 10
+2020-07-26 19:47:03,075 - Logging - INFO - Table laptop: updated -> 2020 ASUS VivoBook 15 15.6 Inch FHD 1080P Laptop (AMD Ryzen 3 3200U up to 3.5GHz, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 3, Backlit Keyboard, FP Reader, WiFi, Bluetooth, HDMI, Windows 10) (Grey)
+2020-07-26 19:47:03,086 - Logging - INFO - Table laptop: updated -> Lenovo Chromebook Flex 5 13" Laptop, FHD (1920 x 1080) Touch Display, Intel Core i3-10110U Processor, 4GB DDR4 OnBoard RAM, 64GB SSD, Intel Integrated Graphics, Chrome OS, 82B80006UX, Graphite Grey
+2020-07-26 19:47:03,097 - Logging - INFO - Table laptop: updated -> 2020 HP 14“ Laptop (AMD A9-9425 up to 3.7 GHz, 4GB DDR4 RAM, 128GB SSD, AMD Radeon R5 Graphic, Wi-Fi, Bluetooth, HDMI, Windows 10 Home)
+2020-07-26 19:47:03,110 - Logging - INFO - Table laptop: added -> 2020 HP 15.6" Touchscreen Laptop Computer/ 10th Gen Intel Quard-Core i5 1035G1 up to 3.6GHz/ 8GB DDR4 RAM/ 512GB PCIe SSD/ 802.11ac WiFi/ Bluetooth 4.2/ USB 3.1 Type-C/ HDMI/ Silver/ Windows 10 Home
+2020-07-26 19:47:03,125 - Logging - INFO - Table laptop: added -> HP Stream 14-inch Laptop, AMD Dual-Core A4-9120E Processor, 4 GB SDRAM, 64 GB eMMC, Windows 10 Home in S Mode with Office 365 Personal for One Year (14-ds0040nr, Rose Pink)
+2020-07-26 19:47:03,139 - Logging - INFO - Table laptop: updated -> HP 2020 Newest 17.3 Inch Flagship Laptop?Computer (8th Gen?Intel Core i5-8265U 3.9GHz, 16GB RAM, 256GB SSD, Intel HD 620, WiFi, Bluetooth, DVD, Windows 10)
+2020-07-26 19:47:03,151 - Logging - INFO - Table laptop: added -> HP Stream 14-inch Laptop, Intel Celeron N4000, 4 GB RAM, 64 GB eMMC, Windows 10 Home in S Mode (14-cb159nr, Jet Black)
+2020-07-26 19:47:03,165 - Logging - INFO - Table laptop: added -> New HP 15.6" HD Touchscreen Laptop Intel Core i3-1005G1 8GB DDR4 RAM 128GB SSD HDMI Bluetooth 802.11/b/g/n/ac Windows 10 15-dy1731ms Silver
+2020-07-26 19:49:05,950 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:49:05,961 - Logging - INFO - Table laptop: updated -> Acer Chromebook Spin 11 CP311-1H-C5PN Convertible Laptop, Celeron N3350, 11.6" HD Touch, 4GB DDR4, 32GB eMMC, Google Chrome
+2020-07-26 19:49:05,972 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L,Silver
+2020-07-26 19:49:05,981 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:49:05,991 - Logging - INFO - Table laptop: updated -> 2020 HP 14-inch HD Touchscreen Premium Laptop PC, AMD Ryzen 3 3200U Processor, 8GB DDR4 Memory, 256GB SSD, Bluetooth, Windows 10, Silver
+2020-07-26 19:49:06,001 - Logging - INFO - Table laptop: updated -> HP 14-inch Touchscreen Laptop, AMD Ryzen 3-3200U up to 3.5GHz, 8GB DDR4, 256GB SSD, Bluetooth, USB 3.1 Type-C, Webcam, WiFi, HDMI, Windows 10 Home
+2020-07-26 19:49:06,010 - Logging - INFO - Table laptop: updated -> Laptop Notebook 14 Inch Windows 10 – Winnovo N140 Netbook Intel Celeron Processor 4GB RAM 64GB eMMC HD IPS Display Dual Band WiFi Numeric Touchpad Support SSD Extension (Grey)
+2020-07-26 19:49:06,020 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:49:06,030 - Logging - INFO - Table laptop: updated -> Lenovo Flex 5 14" 2-in-1 Laptop, 14.0" FHD (1920 x 1080) Touch Display, AMD Ryzen 5 4500U Processor, 16GB DDR4, 256GB SSD, AMD Radeon Graphics, Digital Pen Included, Win 10, 81X20005US, Graphite Grey
+2020-07-26 19:49:06,040 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6" Full HD IPS Display, 10th Gen Intel Core i5-10210U, 8GB DDR4, 256GB PCIe NVMe SSD, Intel Wi-Fi 6 AX201 802.11ax, Fingerprint Reader, Backlit KB, A515-54-59W2, Silver
+2020-07-26 19:49:06,050 - Logging - INFO - Table laptop: updated -> Acer Nitro 5 Gaming Laptop, 9th Gen Intel Core i5-9300H, NVIDIA GeForce GTX 1650, 15.6" Full HD IPS Display, 8GB DDR4, 256GB NVMe SSD, WiFi 6, Waves MaxxAudio, Backlit Keyboard, AN515-54-5812
+2020-07-26 19:49:06,061 - Logging - INFO - Table laptop: updated -> ASUS VivoBook L203MA Laptop, 11.6” HD Display, Intel Celeron Dual Core CPU, 4GB RAM, 64GB Storage, USB-C, Windows 10 Home In S Mode, Up To 10 Hours Battery Life, One Year of Microsoft 365, L203MA-DS04
+2020-07-26 19:49:06,071 - Logging - INFO - Table laptop: updated -> Acer Predator Helios 300 Gaming Laptop, Intel Core i7-9750H, GeForce GTX 1660 Ti, 15.6" Full HD 144Hz Display, 3ms Response Time, 16GB DDR4, 512GB PCIe NVMe SSD, RGB Backlit Keyboard, PH315-52-710B
+2020-07-26 19:49:06,083 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” Full HD, AMD Quad Core R5-3500U CPU, 8GB DDR4 RAM, 256GB PCIe SSD, AMD Radeon Vega 8 Graphics, Windows 10 Home, F512DA-EB51, Slate Gray
+2020-07-26 19:49:06,096 - Logging - INFO - Table laptop: updated -> 2020 HP 17.3" Laptop Computer/ 8th Gen Intel Quad-Core i5-8265U Up to 3.9GHz/ 8GB DDR4 RAM/ 256GB PCIe SSD/ DVD/ Bluetooth 4.2/ USB 3.1/ HDMI/ Windows 10 Home/ Black
+2020-07-26 19:49:06,108 - Logging - INFO - Table laptop: updated -> 2020 HP 15 15.6" HD Touchscreen Premium Laptop - 10th Gen Intel Core i5-1035G1, 16GB DDR4, 512GB SSD, USB Type-C, HDMI, Windows 10 - Silver W
+2020-07-26 19:49:06,119 - Logging - INFO - Table laptop: updated -> 2020 Newest Dell Inspiron 15 3000 PC Laptop: 15.6" HD Anti-Glare LED-Backlit Nontouch Display, Intel 2-Core 4205U Processor, 8GB RAM, 1TB HDD, WiFi, Bluetooth, HDMI, Webcam,DVD-RW, Win 10
+2020-07-26 19:49:06,132 - Logging - INFO - Table laptop: updated -> HP 14" Touchscreen Home and Business Laptop Ryzen 3-3200U, 8GB RAM, 128GB M.2 SSD, Dual-Core up to 3.50 GHz, Vega 3 Graphics, RJ-45, USB-C, 4K Output HDMI, Bluetooth, Webcam, 1366x768, Win 10
+2020-07-26 19:49:06,146 - Logging - INFO - Table laptop: added -> Newest HP 14" HD WLED Backlit High Performance Business Laptop, AMD Athlon Silver 3050U up to 3.2GHz, 4GB DDR4, 128GB SSD, Wireless-AC, HDMI, Bluetooth, Webcam, SD Card Reader, Windows 10 S
+2020-07-26 19:49:06,160 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:49:06,172 - Logging - INFO - Table laptop: updated -> Lenovo Chromebook Flex 5 13" Laptop, FHD (1920 x 1080) Touch Display, Intel Core i3-10110U Processor, 4GB DDR4 OnBoard RAM, 64GB SSD, Intel Integrated Graphics, Chrome OS, 82B80006UX, Graphite Grey
+2020-07-26 19:49:06,184 - Logging - INFO - Table laptop: updated -> HP Chromebook 11-Inch Laptop, Intel Celeron N3060 Processor, 2 GB SDRAM, 16 GB eMMC Storage, Chrome OS (11-v000nr, Ash Gray)
+2020-07-26 19:49:06,196 - Logging - INFO - Table laptop: updated -> 2020 ASUS VivoBook 15 15.6 Inch FHD 1080P Laptop (AMD Ryzen 3 3200U up to 3.5GHz, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 3, Backlit Keyboard, FP Reader, WiFi, Bluetooth, HDMI, Windows 10) (Grey)
+2020-07-26 19:49:06,208 - Logging - INFO - Table laptop: updated -> 2020 HP 14“ Laptop (AMD A9-9425 up to 3.7 GHz, 4GB DDR4 RAM, 128GB SSD, AMD Radeon R5 Graphic, Wi-Fi, Bluetooth, HDMI, Windows 10 Home)
+2020-07-26 19:49:06,220 - Logging - INFO - Table laptop: updated -> 2020 HP 15.6" Touchscreen Laptop Computer/ 10th Gen Intel Quard-Core i5 1035G1 up to 3.6GHz/ 8GB DDR4 RAM/ 512GB PCIe SSD/ 802.11ac WiFi/ Bluetooth 4.2/ USB 3.1 Type-C/ HDMI/ Silver/ Windows 10 Home
+2020-07-26 19:49:06,232 - Logging - INFO - Table laptop: updated -> HP Stream 14-inch Laptop, AMD Dual-Core A4-9120E Processor, 4 GB SDRAM, 64 GB eMMC, Windows 10 Home in S Mode with Office 365 Personal for One Year (14-ds0040nr, Rose Pink)
+2020-07-26 19:49:06,244 - Logging - INFO - Table laptop: updated -> HP 2020 Newest 17.3 Inch Flagship Laptop?Computer (8th Gen?Intel Core i5-8265U 3.9GHz, 16GB RAM, 256GB SSD, Intel HD 620, WiFi, Bluetooth, DVD, Windows 10)
+2020-07-26 19:49:06,257 - Logging - INFO - Table laptop: updated -> HP Stream 14-inch Laptop, Intel Celeron N4000, 4 GB RAM, 64 GB eMMC, Windows 10 Home in S Mode (14-cb159nr, Jet Black)
+2020-07-26 19:49:42,554 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:49:42,566 - Logging - INFO - Table laptop: updated -> Acer Nitro 5 Gaming Laptop, 9th Gen Intel Core i5-9300H, NVIDIA GeForce GTX 1650, 15.6" Full HD IPS Display, 8GB DDR4, 256GB NVMe SSD, WiFi 6, Waves MaxxAudio, Backlit Keyboard, AN515-54-5812
+2020-07-26 19:49:42,577 - Logging - INFO - Table laptop: updated -> Acer Predator Helios 300 Gaming Laptop, Intel Core i7-9750H, GeForce GTX 1660 Ti, 15.6" Full HD 144Hz Display, 3ms Response Time, 16GB DDR4, 512GB PCIe NVMe SSD, RGB Backlit Keyboard, PH315-52-710B
+2020-07-26 19:49:42,591 - Logging - INFO - Table laptop: updated -> Lenovo Chromebook Flex 5 13" Laptop, FHD (1920 x 1080) Touch Display, Intel Core i3-10110U Processor, 4GB DDR4 OnBoard RAM, 64GB SSD, Intel Integrated Graphics, Chrome OS, 82B80006UX, Graphite Grey
+2020-07-26 19:49:42,604 - Logging - INFO - Table laptop: added -> HP Chromebook X360 14-Inch HD Touchscreen Laptop, Intel Celeron N4000, 4 GB RAM, 32 GB eMMC, Chrome (14b-ca0010nr, Ceramic White/Mineral Silver)
+2020-07-26 19:49:42,618 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” Full HD, AMD Quad Core R5-3500U CPU, 8GB DDR4 RAM, 256GB PCIe SSD, AMD Radeon Vega 8 Graphics, Windows 10 Home, F512DA-EB51, Slate Gray
+2020-07-26 19:49:42,631 - Logging - INFO - Table laptop: added -> Samsung 11.6" Chromebook with Intel N3060 up to 2.48GHz, 4GB Memory, 16GB eMMC Flash Memory, Bluetooth 4.0, USB 3.0, HDMI, Webcam, Chrome Operating System
+2020-07-26 19:49:42,645 - Logging - INFO - Table laptop: added -> Razer Blade 15 Gaming Laptop: Intel Core i7-9750H 6 Core, NVIDIA GeForce GTX 1660 Ti, 15.6" FHD 144Hz, 16GB RAM, 256GB SSD, CNC Aluminum, Chroma RGB Lighting, Thunderbolt 3, 9th Gen i7-9750H
+2020-07-26 19:49:42,657 - Logging - INFO - Table laptop: updated -> Acer Swift 3 Thin & Light Laptop, 14" Full HD IPS, AMD Ryzen 7 4700U Octa-Core Processor with Radeon Graphics, 8GB LPDDR4, 512GB NVMe SSD, WiFi 6, Backlit Keyboard, Fingerprint Reader, SF314-42-R9YN
+2020-07-26 19:49:42,669 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:49:42,681 - Logging - INFO - Table laptop: added -> MSI GL65 Leopard 10SFK-062 15.6" FHD 144Hz 3ms Thin Bezel Gaming Laptop Intel Core i7-10750H RTX2070 16GB 512GB NVMe SSD Win 10
+2020-07-26 19:49:42,695 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6" Full HD IPS Display, 10th Gen Intel Core i5-10210U, 8GB DDR4, 256GB PCIe NVMe SSD, Intel Wi-Fi 6 AX201 802.11ax, Fingerprint Reader, Backlit KB, A515-54-59W2, Silver
+2020-07-26 19:49:42,708 - Logging - INFO - Table laptop: added -> 2020 Dell Inspiron 3000 15.6-inch HD Touchscreen Laptop PC, Intel 10th Gen Dual Core i3-1005G1 Processor, 8GB DDR4, 128GB SSD, 1TB HDD, Bluetooth, Windows 10, Black
+2020-07-26 19:49:42,721 - Logging - INFO - Table laptop: updated -> Asus TUF FX505DT Gaming Laptop, 15.6” 120Hz Full HD, AMD Ryzen 5 R5-3550H Processor, GeForce GTX 1650 Graphics, 8GB DDR4, 256GB PCIe SSD, Gigabit Wi-Fi 5, Windows 10 Home, FX505DT-AH51, RGB Keyboard
+2020-07-26 19:49:42,735 - Logging - INFO - Table laptop: added -> 2019 Newest HP 14" Lightweight Chromebook-AMD A4-Series Processor, 4GB LPDDR4 RAM, 32GB SSD, WiFi, Chrome OS
+2020-07-26 19:49:42,748 - Logging - INFO - Table laptop: updated -> 2020 HP 15 15.6" HD Touchscreen Premium Laptop - 10th Gen Intel Core i5-1035G1, 16GB DDR4, 512GB SSD, USB Type-C, HDMI, Windows 10 - Silver W
+2020-07-26 19:49:57,398 - Logging - INFO - Table features reviews: added -> 371
+2020-07-26 19:49:57,409 - Logging - INFO - Table features reviews: added -> 371
+2020-07-26 19:49:57,421 - Logging - INFO - Table features reviews: added -> 371
+2020-07-26 19:49:57,433 - Logging - INFO - Table features reviews: added -> 371
+2020-07-26 19:49:57,443 - Logging - INFO - Table features reviews: added -> 371
+2020-07-26 19:49:57,454 - Logging - INFO - Table features reviews: added -> 371
+2020-07-26 19:49:57,464 - Logging - INFO - Table features reviews: added -> 371
+2020-07-26 19:49:57,479 - Logging - INFO - Table features reviews: added -> 371
+2020-07-26 19:50:05,785 - Logging - INFO - Table features reviews: added -> 372
+2020-07-26 19:50:05,798 - Logging - INFO - Table features reviews: added -> 372
+2020-07-26 19:50:05,809 - Logging - INFO - Table features reviews: added -> 372
+2020-07-26 19:50:05,821 - Logging - INFO - Table features reviews: added -> 372
+2020-07-26 19:50:05,832 - Logging - INFO - Table features reviews: added -> 372
+2020-07-26 19:50:05,842 - Logging - INFO - Table features reviews: added -> 372
+2020-07-26 19:50:05,854 - Logging - INFO - Table features reviews: added -> 372
+2020-07-26 19:50:05,867 - Logging - INFO - Table features reviews: added -> 372
+2020-07-26 19:50:08,991 - Logging - INFO - Table features reviews: added -> 373
+2020-07-26 19:50:09,002 - Logging - INFO - Table features reviews: added -> 373
+2020-07-26 19:50:09,013 - Logging - INFO - Table features reviews: added -> 373
+2020-07-26 19:50:09,024 - Logging - INFO - Table features reviews: added -> 373
+2020-07-26 19:50:17,486 - Logging - INFO - Table features reviews: added -> 374
+2020-07-26 19:50:17,498 - Logging - INFO - Table features reviews: added -> 374
+2020-07-26 19:50:17,510 - Logging - INFO - Table features reviews: added -> 374
+2020-07-26 19:50:17,519 - Logging - INFO - Table features reviews: added -> 374
+2020-07-26 19:50:17,530 - Logging - INFO - Table features reviews: added -> 374
+2020-07-26 19:50:17,541 - Logging - INFO - Table features reviews: added -> 374
+2020-07-26 19:50:17,551 - Logging - INFO - Table features reviews: added -> 374
+2020-07-26 19:50:17,564 - Logging - INFO - Table features reviews: added -> 374
+2020-07-26 19:50:24,296 - Logging - INFO - Table features reviews: added -> 375
+2020-07-26 19:50:24,306 - Logging - INFO - Table features reviews: added -> 375
+2020-07-26 19:50:24,317 - Logging - INFO - Table features reviews: added -> 375
+2020-07-26 19:50:24,327 - Logging - INFO - Table features reviews: added -> 375
+2020-07-26 19:50:24,339 - Logging - INFO - Table features reviews: added -> 375
+2020-07-26 19:50:24,353 - Logging - INFO - Table features reviews: added -> 375
+2020-07-26 19:50:24,367 - Logging - INFO - Table features reviews: added -> 375
+2020-07-26 19:50:24,384 - Logging - INFO - Table features reviews: added -> 375
+2020-07-26 19:50:31,520 - Logging - INFO - Table features reviews: added -> 376
+2020-07-26 19:50:31,532 - Logging - INFO - Table features reviews: added -> 376
+2020-07-26 19:50:31,545 - Logging - INFO - Table features reviews: added -> 376
+2020-07-26 19:50:31,558 - Logging - INFO - Table features reviews: added -> 376
+2020-07-26 19:50:31,570 - Logging - INFO - Table features reviews: added -> 376
+2020-07-26 19:50:31,583 - Logging - INFO - Table features reviews: added -> 376
+2020-07-26 19:50:31,598 - Logging - INFO - Table features reviews: added -> 376
+2020-07-26 19:50:31,613 - Logging - INFO - Table features reviews: added -> 376
+2020-07-26 19:50:36,441 - Logging - INFO - Table features laptop: added -> 371
+2020-07-26 19:50:39,730 - Logging - INFO - Table features laptop: added -> 372
+2020-07-26 19:50:42,481 - Logging - INFO - Table features laptop: added -> 373
+2020-07-26 19:50:44,754 - Logging - INFO - Table features laptop: added -> 374
+2020-07-26 19:50:48,123 - Logging - INFO - Table features laptop: added -> 375
+2020-07-26 19:50:53,107 - Logging - INFO - Table features laptop: added -> 376
+2020-07-26 19:53:18,063 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:53:18,072 - Logging - INFO - Table laptop: updated -> Acer Chromebook Spin 11 CP311-1H-C5PN Convertible Laptop, Celeron N3350, 11.6" HD Touch, 4GB DDR4, 32GB eMMC, Google Chrome
+2020-07-26 19:53:18,083 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L,Silver
+2020-07-26 19:53:18,093 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:53:18,103 - Logging - INFO - Table laptop: updated -> 2020 HP 14-inch HD Touchscreen Premium Laptop PC, AMD Ryzen 3 3200U Processor, 8GB DDR4 Memory, 256GB SSD, Bluetooth, Windows 10, Silver
+2020-07-26 19:53:18,113 - Logging - INFO - Table laptop: updated -> ASUS VivoBook L203MA Laptop, 11.6” HD Display, Intel Celeron Dual Core CPU, 4GB RAM, 64GB Storage, USB-C, Windows 10 Home In S Mode, Up To 10 Hours Battery Life, One Year of Microsoft 365, L203MA-DS04
+2020-07-26 19:53:18,123 - Logging - INFO - Table laptop: updated -> Laptop Notebook 14 Inch Windows 10 – Winnovo N140 Netbook Intel Celeron Processor 4GB RAM 64GB eMMC HD IPS Display Dual Band WiFi Numeric Touchpad Support SSD Extension (Grey)
+2020-07-26 19:53:18,134 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6" Full HD IPS Display, 10th Gen Intel Core i5-10210U, 8GB DDR4, 256GB PCIe NVMe SSD, Intel Wi-Fi 6 AX201 802.11ax, Fingerprint Reader, Backlit KB, A515-54-59W2, Silver
+2020-07-26 19:53:18,146 - Logging - INFO - Table laptop: updated -> Acer Nitro 5 Gaming Laptop, 9th Gen Intel Core i5-9300H, NVIDIA GeForce GTX 1650, 15.6" Full HD IPS Display, 8GB DDR4, 256GB NVMe SSD, WiFi 6, Waves MaxxAudio, Backlit Keyboard, AN515-54-5812
+2020-07-26 19:53:18,157 - Logging - INFO - Table laptop: updated -> HP 14-inch Touchscreen Laptop, AMD Ryzen 3-3200U up to 3.5GHz, 8GB DDR4, 256GB SSD, Bluetooth, USB 3.1 Type-C, Webcam, WiFi, HDMI, Windows 10 Home
+2020-07-26 19:53:18,168 - Logging - INFO - Table laptop: updated -> Lenovo Flex 5 14" 2-in-1 Laptop, 14.0" FHD (1920 x 1080) Touch Display, AMD Ryzen 5 4500U Processor, 16GB DDR4, 256GB SSD, AMD Radeon Graphics, Digital Pen Included, Win 10, 81X20005US, Graphite Grey
+2020-07-26 19:53:18,179 - Logging - INFO - Table laptop: updated -> Lenovo Chromebook Flex 5 13" Laptop, FHD (1920 x 1080) Touch Display, Intel Core i3-10110U Processor, 4GB DDR4 OnBoard RAM, 64GB SSD, Intel Integrated Graphics, Chrome OS, 82B80006UX, Graphite Grey
+2020-07-26 19:53:18,189 - Logging - INFO - Table laptop: updated -> 2020 HP 15 15.6" HD Touchscreen Premium Laptop - 10th Gen Intel Core i5-1035G1, 16GB DDR4, 512GB SSD, USB Type-C, HDMI, Windows 10 - Silver W
+2020-07-26 19:53:18,201 - Logging - INFO - Table laptop: updated -> Newest HP 14" HD WLED Backlit High Performance Business Laptop, AMD Athlon Silver 3050U up to 3.2GHz, 4GB DDR4, 128GB SSD, Wireless-AC, HDMI, Bluetooth, Webcam, SD Card Reader, Windows 10 S
+2020-07-26 19:53:18,212 - Logging - INFO - Table laptop: updated -> 2020 ASUS VivoBook 15 15.6 Inch FHD 1080P Laptop (AMD Ryzen 3 3200U up to 3.5GHz, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 3, Backlit Keyboard, FP Reader, WiFi, Bluetooth, HDMI, Windows 10) (Grey)
+2020-07-26 19:53:18,222 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:53:18,232 - Logging - INFO - Table laptop: updated -> ASUS Chromebook Flip C302 2-In-1 Laptop- 12.5” Full HD 4-Way NanoEdge Touchscreen, Intel Core M7 Processor, 8GB RAM, 64GB Flash Storage, USB Type C, All Metal Body, Chrome OS- C302CA-AH74 Silver
+2020-07-26 19:53:18,243 - Logging - INFO - Table laptop: added -> HP 15.6" HD Intel 10th Gen i3-1005G1 3.4GHz 4GB RAM 128GB SSD Webcam Windows 10 Laptop (1W830UA)
+2020-07-26 19:53:18,255 - Logging - INFO - Table laptop: updated -> HP 14" Touchscreen Home and Business Laptop Ryzen 3-3200U, 8GB RAM, 128GB M.2 SSD, Dual-Core up to 3.50 GHz, Vega 3 Graphics, RJ-45, USB-C, 4K Output HDMI, Bluetooth, Webcam, 1366x768, Win 10
+2020-07-26 19:53:18,266 - Logging - INFO - Table laptop: updated -> 2020 Newest Dell Inspiron 15 3000 PC Laptop: 15.6" HD Anti-Glare LED-Backlit Nontouch Display, Intel 2-Core 4205U Processor, 8GB RAM, 1TB HDD, WiFi, Bluetooth, HDMI, Webcam,DVD-RW, Win 10
+2020-07-26 19:53:18,277 - Logging - INFO - Table laptop: updated -> HP 2020 Newest 17.3 Inch Flagship Laptop?Computer (8th Gen?Intel Core i5-8265U 3.9GHz, 16GB RAM, 256GB SSD, Intel HD 620, WiFi, Bluetooth, DVD, Windows 10)
+2020-07-26 19:53:18,288 - Logging - INFO - Table laptop: updated -> LG Gram 2-in-1 Convertible Laptop: 14" Full HD IPS Touchscreen Display, Intel 10th Gen Core i7-10510U CPU, 16GB RAM, 1TB (512GB x 2) M.2 MVMe SSD, Thunderbolt 3, 20.5 Hour Battery 14T90N (2020)
+2020-07-26 19:53:18,301 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” Full HD, AMD Quad Core R5-3500U CPU, 8GB DDR4 RAM, 256GB PCIe SSD, AMD Radeon Vega 8 Graphics, Windows 10 Home, F512DA-EB51, Slate Gray
+2020-07-26 19:53:18,310 - Logging - INFO - Table laptop: updated -> HP 14 14" HD SVA Anti-Glare Micro-Edge WLED-backlit Laptop for Students, AMD Athlon 3050U 2.3GHz up to 3.2GHz, 4GB DDR4, 128GB SSD, Wi-Fi 5, Bluetooth 4.2, HDMI, Webcam, Windows 10 S, Accessory Bundle
+2020-07-26 19:53:18,322 - Logging - INFO - Table laptop: updated -> Acer Predator Helios 300 Gaming Laptop, Intel Core i7-9750H, GeForce GTX 1660 Ti, 15.6" Full HD 144Hz Display, 3ms Response Time, 16GB DDR4, 512GB PCIe NVMe SSD, RGB Backlit Keyboard, PH315-52-710B
+2020-07-26 19:53:18,333 - Logging - INFO - Table laptop: updated -> 2020 HP 17.3" Laptop Computer/ 8th Gen Intel Quad-Core i5-8265U Up to 3.9GHz/ 8GB DDR4 RAM/ 256GB PCIe SSD/ DVD/ Bluetooth 4.2/ USB 3.1/ HDMI/ Windows 10 Home/ Black
+2020-07-26 19:53:18,344 - Logging - INFO - Table laptop: updated -> Asus TUF FX505DT Gaming Laptop, 15.6” 120Hz Full HD, AMD Ryzen 5 R5-3550H Processor, GeForce GTX 1650 Graphics, 8GB DDR4, 256GB PCIe SSD, Gigabit Wi-Fi 5, Windows 10 Home, FX505DT-AH51, RGB Keyboard
+2020-07-26 19:53:18,355 - Logging - INFO - Table laptop: updated -> 2020 Dell Inspiron 3000 15.6-inch HD Touchscreen Laptop PC, Intel 10th Gen Dual Core i3-1005G1 Processor, 8GB DDR4, 128GB SSD, 1TB HDD, Bluetooth, Windows 10, Black
+2020-07-26 19:53:29,267 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:53:29,276 - Logging - INFO - Table laptop: updated -> Acer Chromebook Spin 11 CP311-1H-C5PN Convertible Laptop, Celeron N3350, 11.6" HD Touch, 4GB DDR4, 32GB eMMC, Google Chrome
+2020-07-26 19:53:29,286 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L,Silver
+2020-07-26 19:53:29,295 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:53:29,305 - Logging - INFO - Table laptop: updated -> 2020 HP 14-inch HD Touchscreen Premium Laptop PC, AMD Ryzen 3 3200U Processor, 8GB DDR4 Memory, 256GB SSD, Bluetooth, Windows 10, Silver
+2020-07-26 19:53:29,315 - Logging - INFO - Table laptop: updated -> HP 14-inch Touchscreen Laptop, AMD Ryzen 3-3200U up to 3.5GHz, 8GB DDR4, 256GB SSD, Bluetooth, USB 3.1 Type-C, Webcam, WiFi, HDMI, Windows 10 Home
+2020-07-26 19:53:29,326 - Logging - INFO - Table laptop: updated -> Laptop Notebook 14 Inch Windows 10 – Winnovo N140 Netbook Intel Celeron Processor 4GB RAM 64GB eMMC HD IPS Display Dual Band WiFi Numeric Touchpad Support SSD Extension (Grey)
+2020-07-26 19:53:29,335 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:53:29,345 - Logging - INFO - Table laptop: updated -> Lenovo Flex 5 14" 2-in-1 Laptop, 14.0" FHD (1920 x 1080) Touch Display, AMD Ryzen 5 4500U Processor, 16GB DDR4, 256GB SSD, AMD Radeon Graphics, Digital Pen Included, Win 10, 81X20005US, Graphite Grey
+2020-07-26 19:53:29,354 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6" Full HD IPS Display, 10th Gen Intel Core i5-10210U, 8GB DDR4, 256GB PCIe NVMe SSD, Intel Wi-Fi 6 AX201 802.11ax, Fingerprint Reader, Backlit KB, A515-54-59W2, Silver
+2020-07-26 19:53:29,365 - Logging - INFO - Table laptop: updated -> Acer Nitro 5 Gaming Laptop, 9th Gen Intel Core i5-9300H, NVIDIA GeForce GTX 1650, 15.6" Full HD IPS Display, 8GB DDR4, 256GB NVMe SSD, WiFi 6, Waves MaxxAudio, Backlit Keyboard, AN515-54-5812
+2020-07-26 19:53:29,379 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:53:29,390 - Logging - INFO - Table laptop: updated -> ASUS VivoBook L203MA Laptop, 11.6” HD Display, Intel Celeron Dual Core CPU, 4GB RAM, 64GB Storage, USB-C, Windows 10 Home In S Mode, Up To 10 Hours Battery Life, One Year of Microsoft 365, L203MA-DS04
+2020-07-26 19:57:11,792 - Logging - INFO - Table laptop: updated -> Acer Chromebook Spin 11 CP311-1H-C5PN Convertible Laptop, Celeron N3350, 11.6" HD Touch, 4GB DDR4, 32GB eMMC, Google Chrome
+2020-07-26 19:57:11,806 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:57:11,817 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L,Silver
+2020-07-26 19:57:11,829 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” FHD Display, Intel i3-1005G1 CPU, 8GB RAM, 128GB SSD, Backlit Keyboard, Fingerprint, Windows 10 Home in S Mode, Slate Gray, F512JA-AS34
+2020-07-26 19:57:11,838 - Logging - INFO - Table laptop: updated -> ASUS VivoBook L203MA Laptop, 11.6” HD Display, Intel Celeron Dual Core CPU, 4GB RAM, 64GB Storage, USB-C, Windows 10 Home In S Mode, Up To 10 Hours Battery Life, One Year of Microsoft 365, L203MA-DS04
+2020-07-26 19:57:11,847 - Logging - INFO - Table laptop: updated -> 2020 HP 14-inch HD Touchscreen Premium Laptop PC, AMD Ryzen 3 3200U Processor, 8GB DDR4 Memory, 256GB SSD, Bluetooth, Windows 10, Silver
+2020-07-26 19:57:11,856 - Logging - INFO - Table laptop: updated -> Laptop Notebook 14 Inch Windows 10 – Winnovo N140 Netbook Intel Celeron Processor 4GB RAM 64GB eMMC HD IPS Display Dual Band WiFi Numeric Touchpad Support SSD Extension (Grey)
+2020-07-26 19:57:11,867 - Logging - INFO - Table laptop: updated -> Acer Nitro 5 Gaming Laptop, 9th Gen Intel Core i5-9300H, NVIDIA GeForce GTX 1650, 15.6" Full HD IPS Display, 8GB DDR4, 256GB NVMe SSD, WiFi 6, Waves MaxxAudio, Backlit Keyboard, AN515-54-5812
+2020-07-26 19:57:11,876 - Logging - INFO - Table laptop: updated -> HP 14-inch Touchscreen Laptop, AMD Ryzen 3-3200U up to 3.5GHz, 8GB DDR4, 256GB SSD, Bluetooth, USB 3.1 Type-C, Webcam, WiFi, HDMI, Windows 10 Home
+2020-07-26 19:57:11,884 - Logging - INFO - Table laptop: updated -> Acer Aspire 5 Slim Laptop, 15.6" Full HD IPS Display, 10th Gen Intel Core i5-10210U, 8GB DDR4, 256GB PCIe NVMe SSD, Intel Wi-Fi 6 AX201 802.11ax, Fingerprint Reader, Backlit KB, A515-54-59W2, Silver
+2020-07-26 19:57:11,894 - Logging - INFO - Table laptop: updated -> Lenovo Flex 5 14" 2-in-1 Laptop, 14.0" FHD (1920 x 1080) Touch Display, AMD Ryzen 5 4500U Processor, 16GB DDR4, 256GB SSD, AMD Radeon Graphics, Digital Pen Included, Win 10, 81X20005US, Graphite Grey
+2020-07-26 19:57:11,905 - Logging - INFO - Table laptop: updated -> Lenovo Chromebook Flex 5 13" Laptop, FHD (1920 x 1080) Touch Display, Intel Core i3-10110U Processor, 4GB DDR4 OnBoard RAM, 64GB SSD, Intel Integrated Graphics, Chrome OS, 82B80006UX, Graphite Grey
+2020-07-26 19:57:11,914 - Logging - INFO - Table laptop: updated -> 2020 HP 15 15.6" HD Touchscreen Premium Laptop - 10th Gen Intel Core i5-1035G1, 16GB DDR4, 512GB SSD, USB Type-C, HDMI, Windows 10 - Silver W
+2020-07-26 19:57:11,924 - Logging - INFO - Table laptop: updated -> Newest HP 14" HD WLED Backlit High Performance Business Laptop, AMD Athlon Silver 3050U up to 3.2GHz, 4GB DDR4, 128GB SSD, Wireless-AC, HDMI, Bluetooth, Webcam, SD Card Reader, Windows 10 S
+2020-07-26 19:57:11,935 - Logging - INFO - Table laptop: updated -> 2020 ASUS VivoBook 15 15.6 Inch FHD 1080P Laptop (AMD Ryzen 3 3200U up to 3.5GHz, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 3, Backlit Keyboard, FP Reader, WiFi, Bluetooth, HDMI, Windows 10) (Grey)
+2020-07-26 19:57:11,945 - Logging - INFO - Table laptop: updated -> HP 14 14" HD SVA Anti-Glare Micro-Edge WLED-backlit Laptop for Students, AMD Athlon 3050U 2.3GHz up to 3.2GHz, 4GB DDR4, 128GB SSD, Wi-Fi 5, Bluetooth 4.2, HDMI, Webcam, Windows 10 S, Accessory Bundle
+2020-07-26 19:57:11,971 - Logging - INFO - Table laptop: updated -> ASUS Chromebook Flip C302 2-In-1 Laptop- 12.5” Full HD 4-Way NanoEdge Touchscreen, Intel Core M7 Processor, 8GB RAM, 64GB Flash Storage, USB Type C, All Metal Body, Chrome OS- C302CA-AH74 Silver
+2020-07-26 19:57:11,999 - Logging - INFO - Table laptop: updated -> Lenovo IdeaPad 3 14" Laptop, 14.0" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue
+2020-07-26 19:57:12,025 - Logging - INFO - Table laptop: updated -> HP 14" Touchscreen Home and Business Laptop Ryzen 3-3200U, 8GB RAM, 128GB M.2 SSD, Dual-Core up to 3.50 GHz, Vega 3 Graphics, RJ-45, USB-C, 4K Output HDMI, Bluetooth, Webcam, 1366x768, Win 10
+2020-07-26 19:57:12,038 - Logging - INFO - Table laptop: updated -> 2020 Newest Dell Inspiron 15 3000 PC Laptop: 15.6" HD Anti-Glare LED-Backlit Nontouch Display, Intel 2-Core 4205U Processor, 8GB RAM, 1TB HDD, WiFi, Bluetooth, HDMI, Webcam,DVD-RW, Win 10
+2020-07-26 19:57:12,049 - Logging - INFO - Table laptop: updated -> HP 2020 Newest 17.3 Inch Flagship Laptop?Computer (8th Gen?Intel Core i5-8265U 3.9GHz, 16GB RAM, 256GB SSD, Intel HD 620, WiFi, Bluetooth, DVD, Windows 10)
+2020-07-26 19:57:12,064 - Logging - INFO - Table laptop: updated -> LG Gram 2-in-1 Convertible Laptop: 14" Full HD IPS Touchscreen Display, Intel 10th Gen Core i7-10510U CPU, 16GB RAM, 1TB (512GB x 2) M.2 MVMe SSD, Thunderbolt 3, 20.5 Hour Battery 14T90N (2020)
+2020-07-26 19:57:12,078 - Logging - INFO - Table laptop: updated -> 2020 HP 14“ Laptop (AMD A9-9425 up to 3.7 GHz, 4GB DDR4 RAM, 128GB SSD, AMD Radeon R5 Graphic, Wi-Fi, Bluetooth, HDMI, Windows 10 Home)
+2020-07-26 19:57:12,092 - Logging - INFO - Table laptop: updated -> HP Stream 14-inch Laptop, Intel Celeron N4000, 4 GB RAM, 32 GB eMMC, Windows 10 Home in S Mode with Office 365 Personal for 1 Year (14-cb184nr, Rose Pink)
+2020-07-26 19:57:12,107 - Logging - INFO - Table laptop: updated -> Acer Predator Helios 300 Gaming Laptop, Intel Core i7-9750H, GeForce GTX 1660 Ti, 15.6" Full HD 144Hz Display, 3ms Response Time, 16GB DDR4, 512GB PCIe NVMe SSD, RGB Backlit Keyboard, PH315-52-710B
+2020-07-26 19:57:12,119 - Logging - INFO - Table laptop: updated -> ASUS VivoBook 15 Thin and Light Laptop, 15.6” Full HD, AMD Quad Core R5-3500U CPU, 8GB DDR4 RAM, 256GB PCIe SSD, AMD Radeon Vega 8 Graphics, Windows 10 Home, F512DA-EB51, Slate Gray
+2020-07-26 19:57:12,131 - Logging - INFO - Table laptop: updated -> HP High Performance 15.6" Touch-Screen Laptop (15-EF0023dx) AMD Ryzen 5 3500U 12GB Memory 256GB SSD - Natural Silver
+2020-07-26 19:57:12,143 - Logging - INFO - Table laptop: updated -> 2020 HP 17.3" Laptop Computer/ 8th Gen Intel Quad-Core i5-8265U Up to 3.9GHz/ 8GB DDR4 RAM/ 256GB PCIe SSD/ DVD/ Bluetooth 4.2/ USB 3.1/ HDMI/ Windows 10 Home/ Black
+2020-07-26 19:57:57,745 - Logging - INFO - Reviews added for laptop:-> 370
+2020-07-26 19:57:57,758 - Logging - INFO - Reviews added for laptop:-> 370
+2020-07-26 19:57:57,770 - Logging - INFO - Reviews added for laptop:-> 370
+2020-07-26 19:57:57,781 - Logging - INFO - Reviews added for laptop:-> 370
+2020-07-26 19:57:57,793 - Logging - INFO - Reviews added for laptop:-> 370
+2020-07-26 19:57:57,808 - Logging - INFO - Reviews added for laptop:-> 370
+2020-07-26 19:57:57,825 - Logging - INFO - Reviews added for laptop:-> 370
+2020-07-26 19:57:57,849 - Logging - INFO - Reviews added for laptop:-> 370
+2020-07-26 19:59:27,343 - Logging - INFO - Table profile: updated -> AGY2K4OMQUW27TZIVKJ57JKQKZSA
+2020-07-26 20:01:07,282 - Logging - INFO - Table profile: updated -> AG336JTW6JW5IM7PXYMWM6QCMSZQ
+2020-07-26 20:03:10,786 - Logging - INFO - Table profile: updated -> AFBSIAOQTFWGSUPUE547XKZ4FS6Q

@@ -1,3 +1,6 @@
+"""We add columns to the reviews table with the result of the sentiment analysis using aylien api
+Author: Serah"""
+
 import re
 import requests
 import contextlib

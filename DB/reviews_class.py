@@ -1,7 +1,6 @@
 """
 Define an OOP Review, with the corresponding attributes and functions.
-Authors:
-Aviv and Serah
+Author: Serah
 """
 
 import contextlib
@@ -34,7 +33,7 @@ class Review:
                         "INSERT INTO reviews ( Laptop_id, User_id, Username, Location, Date, UserRank, Profile_link, Content, Created_At) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)",
                         [laptop_id, self.user_id, self.username, self.location, self.date, self.rank, self.profile, self.content, datetime.now()])
                     con.commit()
-            logger.info('Table features reviews: added -> ' + str(laptop_id))
+            logger.info('Reviews added for laptop:-> ' + str(laptop_id))
 
         except Exception as e:
             logger.error(f'An error {e} occurs when adding the reviews of the laptop' + str(laptop_id))

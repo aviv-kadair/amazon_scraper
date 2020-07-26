@@ -1,7 +1,6 @@
 """
 Define an OOP Profile, with the corresponding attributes and functions for the profile of a user
-Authors:
-Aviv and Serah
+Author: Serah
 """
 
 import contextlib

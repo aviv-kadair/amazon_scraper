@@ -1,6 +1,6 @@
 """
 Create our database for the amazon project
-Authors: Aviv & Serah
+Author: Serah
 """
 
 import sqlite3

@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b0acdd95-1b83-413e-9ed0-38c5aeeb1e01" name="Default Changelist" comment="CLI added writing to CSV functionality">
-      <change beforePath="$PROJECT_DIR$/cli_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cli_command/cli_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cli_command/cli_functions_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cli_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cli_command/class_cli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cli_command/cli_main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cli_command/queries_url.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cli_command/queries_url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/Createdb.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB/Createdb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/api_sentiment_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB/api_sentiment_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/laptop_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB/laptop_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/laptop_features_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB/laptop_features_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/profile_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB/profile_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/reviews_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/DB/reviews_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scraping/scraper_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scraping/scraper_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class_filtered_results.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dict.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filtered_results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/filtering.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptop_features.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.db" beforeDir="false" afterPath="$PROJECT_DIR$/project.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt~origin_master" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +62,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dWo4RyAhoSBHBPl2EiQ3azaJvo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,7 +73,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/RECAP" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ilan avraham\PycharmProjects\amazon_scraper\images_readme" />
+      <recent name="C:\Users\Ilan avraham\PycharmProjects\amazon_scraper" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.cli_main">
     <configuration name="class_cli" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -52,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="class_filtered_results" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="cli_functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="amazon_scraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,11 +113,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cli_command" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/class_filtered_results.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cli_command/cli_functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -94,7 +147,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="queries_url" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="cli_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="amazon_scraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,11 +155,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cli_command" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/queries_url.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Ilan avraham\PycharmProjects\amazon_scraper\cli_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,10 +192,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.cli_main" />
+        <item itemvalue="Python.cli_functions" />
+        <item itemvalue="Python.cli_main (1)" />
         <item itemvalue="Python.class_cli" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.class_filtered_results" />
-        <item itemvalue="Python.queries_url" />
       </list>
     </recent_temporary>
   </component>
@@ -238,6 +291,18 @@
     <option name="localTasksCounter" value="14" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed selenium timeout and language problem, tested on Aviv's laptop" />
     <MESSAGE value="not relevant" />
@@ -253,9 +318,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="CLI added writing to CSV functionality" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="528" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593878232181">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="440" y="177" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595782605693">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="440" y="177" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1595782605693" />
     <state x="528" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1593878232181" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592748581878">
       <screen x="0" y="0" width="1536" height="824" />
@@ -277,21 +343,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1593884874430" />
-    <state width="1515" height="251" key="GridCell.Tab.0.bottom" timestamp="1594578166162">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1595765941340">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1595765941340" />
+    <state width="895" height="298" key="GridCell.Tab.0.bottom" timestamp="1595782620655">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="895" height="298" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1595782620655" />
     <state width="1515" height="251" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594578166162" />
-    <state width="1515" height="251" key="GridCell.Tab.0.center" timestamp="1594578166162">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="895" height="298" key="GridCell.Tab.0.center" timestamp="1595782620654">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="895" height="298" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1595782620654" />
     <state width="1515" height="251" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594578166162" />
-    <state width="1515" height="251" key="GridCell.Tab.0.left" timestamp="1594578166161">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="895" height="298" key="GridCell.Tab.0.left" timestamp="1595782620654">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="895" height="298" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1595782620654" />
     <state width="1515" height="251" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594578166161" />
-    <state width="1515" height="251" key="GridCell.Tab.0.right" timestamp="1594578166162">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="895" height="298" key="GridCell.Tab.0.right" timestamp="1595782620654">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="895" height="298" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595782620654" />
     <state width="1515" height="251" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594578166162" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1594558794587">
       <screen x="0" y="0" width="1536" height="824" />
@@ -317,9 +391,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594486593653" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1594558757787">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="301" y="120" key="Vcs.Push.Dialog.v2" timestamp="1595707696159">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="301" y="120" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1595707696159" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1594558757787" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1594558338653">
       <screen x="0" y="0" width="1536" height="824" />
@@ -341,26 +416,5 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="576" y="311" key="git4idea.ui.GitStashDialog/0.0.1536.824@0.0.1536.824" timestamp="1593877832673" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/cli_main.py</url>
-          <line>99</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

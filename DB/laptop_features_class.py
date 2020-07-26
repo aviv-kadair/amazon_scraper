@@ -1,7 +1,6 @@
 """
 Define an OOP Features, with the corresponding attributes and functions for the features of the laptop
-Authors:
-Aviv and Serah
+Authors: Serah
 """
 
 import contextlib

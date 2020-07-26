@@ -1,7 +1,6 @@
 """
 This file contains all the scraping class
-Authors:
-Aviv and Serah
+Author: Serah
 """
 
 import requests

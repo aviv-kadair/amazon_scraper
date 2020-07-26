@@ -1,7 +1,6 @@
 """
 Define an OOP Laptop, with the corresponding attributes and functions.
-Authors:
-Aviv and Serah
+Author: Serah
 """
 
 import contextlib
