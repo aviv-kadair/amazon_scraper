@@ -11,7 +11,7 @@
 -   **Scrape laptop top reviews**
 -   **Scrape reviewers profile**
 -   **Command Line Interface for filter based search**
-
+-   **New! write filtered results directly to the database
 
 ## Requirements:
 - BeautifulSoup4
@@ -108,7 +108,7 @@
 `Createdb.py`
 
 <p align="center">
-  <img src="https://github.com/thewizardofozz/amazon_scraper/blob/master/images_readme/db.png" width="600"><br><br>
+  <img src="https://raw.githubusercontent.com/thewizardofozz/amazon_scraper/master/images_readme/ERD.png" width="600"><br><br>
 </p>
 
 - The table laptop and profile need to be updated frequently because they contains attributes that are constantly changing.
