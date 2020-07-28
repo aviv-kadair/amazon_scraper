@@ -1,13 +1,6 @@
 import requests
-from bs4 import BeautifulSoup
-import random
-from selenium import webdriver
-import selenium as se
-import re
 import config
-from Logging import logger
-from time import sleep
-from random import randint
+
 
 
 proxies_list = config.PROXIES_LIST
