@@ -230,12 +230,10 @@ class ProfileScrapper:
 
 # print(get_description('https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'))
 
-url = 'https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'
+#url = 'https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'
 
 #scraper = Reviews(url)
 #print(scraper.get_reviews())
 # scrap = ProfileScrapper('/gp/profile/amzn1.account.AEQQY4I75RA6VVZW5WQN2KUU4YRQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8')
 # print(scrap.user_profile().get_arg('Reviewer_Ranking'))
 
-scr = SearchPage(url)
-scr.get_data()
