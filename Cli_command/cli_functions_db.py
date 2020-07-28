@@ -22,6 +22,7 @@ def search_results(url):
     # my_url = f'https://www.amazon.com/s?k=laptop&s=date-desc-rank&page={count}&qid=1594213292&ref=sr_pg_2'
     scraper = scraper_class.SearchPage(url)
     laptop_list = scraper.get_data()
+    print(laptop_list)
     for lap in laptop_list:
         if lap.if_exist():
             lap.update_db('Price', 'Rating', 'Reviews')
