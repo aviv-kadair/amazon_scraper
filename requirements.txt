@@ -12,7 +12,6 @@ greenlet==0.4.16
 grequests==0.6.0
 idna==2.9
 lxml==4.5.1
-numpy==1.18.5
 pandas==1.0.5
 pycparser==2.20
 python-dateutil==2.8.1
