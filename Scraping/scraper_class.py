@@ -53,41 +53,42 @@ class SearchPage(Scraper):
     def get_data(self):
         """Retrieve the data for all the laptops of the search page of amazon"""
         laptop_list = []
-        for d in self.soup.findAll('div', attrs={'class': 'sg-col-4-of-12 sg-col-8-of-16 sg-col-16-of-24 sg-col-12-of-20 sg-col-24-of-32 sg-col sg-col-28-of-36 sg-col-20-of-28'}):
-            name = d.find('span', attrs={'class': 'a-size-medium a-color-base a-text-normal'})
-            review = d.find('span', attrs={'class': 'a-size-base'})
-            price = d.find('span', attrs={'class': 'a-offscreen'})
-            rating = d.find('span', attrs={'class': 'a-icon-alt'})
+        if self.soup is not None:
+            for d in self.soup.findAll('div', attrs={'class': 'sg-col-4-of-12 sg-col-8-of-16 sg-col-16-of-24 sg-col-12-of-20 sg-col-24-of-32 sg-col sg-col-28-of-36 sg-col-20-of-28'}):
+                name = d.find('span', attrs={'class': 'a-size-medium a-color-base a-text-normal'})
+                review = d.find('span', attrs={'class': 'a-size-base'})
+                price = d.find('span', attrs={'class': 'a-offscreen'})
+                rating = d.find('span', attrs={'class': 'a-icon-alt'})
 
-            if name is not None:
-                link = d.find('a', {'class': "a-link-normal a-text-normal"})['href']
-            else:
-                link = None
-
-            if name is not None:
-                name = name.text
-
-                if price is not None:
-                    price = price.text[1::]
+                if name is not None:
+                    link = d.find('a', {'class': "a-link-normal a-text-normal"})['href']
                 else:
-                    price = 0
+                    link = None
 
-                if rating is not None:
-                    rating = rating.text.split()[0]
-                else:
-                    rating = -1
+                if name is not None:
+                    name = name.text
 
-                if review is not None:
-                    reviews = review.text
-                else:
-                    reviews = 0
-                if link is not None:
-                    link = link
-                else:
-                    link = 'Empty'
+                    if price is not None:
+                        price = price.text[1::]
+                    else:
+                        price = 0
 
-                laptop_list.append(Laptop(name, price, rating, reviews, link))
-        return laptop_list
+                    if rating is not None:
+                        rating = rating.text.split()[0]
+                    else:
+                        rating = -1
+
+                    if review is not None:
+                        reviews = review.text
+                    else:
+                        reviews = 0
+                    if link is not None:
+                        link = link
+                    else:
+                        link = 'Empty'
+
+                    laptop_list.append(Laptop(name, price, rating, reviews, link))
+            return laptop_list
 
 
 class Parameters(Scraper):
@@ -229,9 +230,12 @@ class ProfileScrapper:
 
 # print(get_description('https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'))
 
-#url = 'https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'
+url = 'https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'
 
 #scraper = Reviews(url)
 #print(scraper.get_reviews())
 # scrap = ProfileScrapper('/gp/profile/amzn1.account.AEQQY4I75RA6VVZW5WQN2KUU4YRQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8')
 # print(scrap.user_profile().get_arg('Reviewer_Ranking'))
+
+scr = SearchPage(url)
+scr.get_data()
