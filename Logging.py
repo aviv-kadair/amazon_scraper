@@ -16,7 +16,7 @@ class Logger:
         self.logger.setLevel(logging.INFO)
 
         # Create the logs.log file
-        handler = logging.FileHandler('logs.log')
+        handler = logging.FileHandler('logs.log', encoding='utf-8')
 
         # Format the logs structure so that every line would include the time, name, level name and log message
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
