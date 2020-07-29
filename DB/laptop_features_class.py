@@ -4,7 +4,7 @@ Authors: Serah
 """
 
 import contextlib
-import sqlite3
+from Createdb import connect_to_db
 from datetime import datetime
 import config
 from Logging import logger
@@ -39,15 +39,15 @@ class Features:
     def add_to_db(self, name, laptop_id, link):
         """Add the Features to the table laptop_features of the db"""
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-                with con:
-                    cur = con.cursor()
-                    cur.execute(
-                        "INSERT INTO laptop_features (Laptop_id, Product_Name, Link, Screen_Size, Max_Screen_Resolution, Chipset_Brand, Card_Description, Brand_Name, Item_Weight, Operating_System, Computer_Memory_Type, Batteries, Date_First_Available, Created_At, Valid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)",
-                        [laptop_id, name, link, self.screen_size, self.max_screen_resolution, self.brand,
-                         self.card_description, self.brand_name, self.item_weight, self.operating_system,
-                         self.computer_memory_type, self.batteries, self.date, datetime.now(), self.valid])
-                    con.commit()
+            con = connect_to_db()
+            cur = con.cursor()
+            cur.execute(
+                "INSERT INTO laptop_features (Laptop_id, Product_Name, Link, Screen_Size, Max_Screen_Resolution, Chipset_Brand, Card_Description, Brand_Name, Item_Weight, Operating_System, Computer_Memory_Type, Batteries, Date_First_Available, Created_At, Valid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)",
+                [laptop_id, name, link, self.screen_size, self.max_screen_resolution, self.brand,
+                 self.card_description, self.brand_name, self.item_weight, self.operating_system,
+                 self.computer_memory_type, self.batteries, self.date, datetime.now(), self.valid])
+            con.commit()
+            con.close()
             logger.info('Table features laptop: added -> ' + str(laptop_id))
 
         except Exception as e:
@@ -56,17 +56,17 @@ class Features:
     def update_db(self, laptop_id):
         """Update the Features to the table laptop_features of the db in case the argument valid is 0."""
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-                with con:
-                    cur = con.cursor()
-                    query = "UPDATE laptop_features SET Screen_Size=:screensize, Max_Screen_Resolution=:maxscreen, Chipset_Brand=:chipset, Card_Description=:card, Brand_Name=:brand, Item_Weight=:weight, Operating_System=:operating, Computer_Memory_Type=:memory, Batteries=:batterie, Date_First_Available=:date,Valid=:valid WHERE Laptop_id = :id"
-                    cur.execute(query, {"screensize": self.screen_size, "maxscreen": self.max_screen_resolution,
-                                        "chipset": self.brand, "card": self.card_description,
-                                        "brand": self.brand_name, "weight": self.item_weight,
-                                        "operating": self.operating_system, "memory": self.computer_memory_type,
-                                        "batterie": self.batteries, "date": self.date, "valid": self.valid,
-                                        "id": laptop_id})
-                    con.commit()
+            con = connect_to_db()
+            cur = con.cursor()
+            query = "UPDATE laptop_features SET Screen_Size=:screensize, Max_Screen_Resolution=:maxscreen, Chipset_Brand=:chipset, Card_Description=:card, Brand_Name=:brand, Item_Weight=:weight, Operating_System=:operating, Computer_Memory_Type=:memory, Batteries=:batterie, Date_First_Available=:date,Valid=:valid WHERE Laptop_id = :id"
+            cur.execute(query, {"screensize": self.screen_size, "maxscreen": self.max_screen_resolution,
+                                "chipset": self.brand, "card": self.card_description,
+                                "brand": self.brand_name, "weight": self.item_weight,
+                                "operating": self.operating_system, "memory": self.computer_memory_type,
+                                "batterie": self.batteries, "date": self.date, "valid": self.valid,
+                                "id": laptop_id})
+            con.commit()
+            con.close()
 
             logger.info('Table features laptop: updated -> ' + str(laptop_id))
 
@@ -81,13 +81,13 @@ class Features:
             query += f'{arg} ,'
 
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-                with con:
-                    cur = con.cursor()
-                    get_query = "SELECT " + query[0:-1] + " FROM laptop_features WHERE Product_Name=:name"
-                    cur.execute(get_query, {"name": name})
-                    db_output = [item for item in cur.fetchall()[0]]
-                    return db_output
+            con = connect_to_db()
+            cur = con.cursor()
+            get_query = "SELECT " + query[0:-1] + " FROM laptop_features WHERE Product_Name=:name"
+            cur.execute(get_query, {"name": name})
+            db_output = [item for item in cur.fetchall()[0]]
+            con.close()
+            return db_output
 
         except Exception as e:
             logger.error(f'An error {e} occurs when selecting the features of laptop' + name)

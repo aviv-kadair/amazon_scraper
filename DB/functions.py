@@ -4,7 +4,7 @@ Author: Serah
 """
 
 from Scraping import scraper_class
-from DB.laptop_class import *
+from Createdb import connect_to_db
 import config
 import sys
 sys.path.append('../')
@@ -67,15 +67,15 @@ def features_laptop(new_laptop):
 def valid_features():
     """Check the validity of the features that were added to the table laptop_features,
     and re-scrape and update the corresponding records in case it was not valid."""
-    with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-        with con:
-            cur = con.cursor()
-            cur.execute("SELECT Link, Laptop_id FROM laptop_features WHERE Valid=0")
-            db_output = [item for item in cur.fetchall()]
-            for my_url in db_output:
-                feat = scraper_class.Parameters(config.AMAZON + my_url[0])
-                laptop = feat.get_param()
-                laptop.update_db(my_url[1])
+    con = connect_to_db()
+    cur = con.cursor()
+    cur.execute("SELECT Link, Laptop_id FROM laptop_features WHERE Valid=0")
+    db_output = [item for item in cur.fetchall()]
+    con.close()
+    for my_url in db_output:
+        feat = scraper_class.Parameters(config.AMAZON + my_url[0])
+        laptop = feat.get_param()
+        laptop.update_db(my_url[1])
 
 
 def reviews(total_laptop):
@@ -102,11 +102,11 @@ def reviews(total_laptop):
 
 def profile():
     """Select all the profiles of the users from the reviews table"""
-    with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-        with con:
-            cur = con.cursor()
-            cur.execute("SELECT DISTINCT Profile_link FROM reviews")
-            db_output = [item for item in cur.fetchall()]
+    con = connect_to_db()
+    cur = con.cursor()
+    cur.execute("SELECT DISTINCT Profile_link FROM reviews")
+    db_output = [item for item in cur.fetchall()]
+    con.close()
     return db_output
 
 

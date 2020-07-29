@@ -39,5 +39,5 @@ if __name__ == '__main__':
             print(i + 1)
 
         valid_features()
-    except sqlite3.OperationalError:
+    except Exception:
         print('The database is blocked, try to unblock it before running the main.')

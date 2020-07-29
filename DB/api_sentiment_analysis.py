@@ -3,22 +3,23 @@ Author: Serah"""
 
 import re
 import requests
-import contextlib
-import sqlite3
 import config
 import sys
+from Createdb import connect_to_db
 sys.path.append('../')
 
 DB_FILENAME = config.DB_FILENAME
 
 
+
+
 def get_reviews_content():
     """Select all the profiles of the users from the reviews table"""
-    with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-        with con:
-            cur = con.cursor()
-            cur.execute("SELECT Review_id, Content FROM reviews")
-            db_output = [item for item in cur.fetchall()]
+    con = connect_to_db()
+    cur = con.cursor()
+    cur.execute("SELECT Review_id, Content FROM reviews")
+    db_output = [item for item in cur.fetchall()]
+    con.close()
     return db_output
 
 
@@ -62,15 +63,14 @@ def sentiment_analyser(review):
 
 
 def add_sentiment_to_db(id, polarity, subjectivity, polarity_conf, subjectivity_conf):
-    with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-        with con:
-            cur = con.\
-                cursor()
-            query = """UPDATE reviews 
-                   SET Polarity=:polarity, Subjectivity=:subjectivity, Polarity_confidence=:polarity_conf, Subjectivity_confidence=:subjectivity_conf 
-                   WHERE Review_id =:id"""
-            val={'polarity':polarity, 'subjectivity':subjectivity,'polarity_conf':polarity_conf, 'subjectivity_conf':subjectivity_conf, 'id':id}
-            cur.execute(query,val)
-        con.commit()
+    con = connect_to_db()
+    cur = con.cursor()
+    query = """UPDATE reviews 
+           SET Polarity=:polarity, Subjectivity=:subjectivity, Polarity_confidence=:polarity_conf, Subjectivity_confidence=:subjectivity_conf 
+           WHERE Review_id =:id"""
+    val={'polarity':polarity, 'subjectivity':subjectivity,'polarity_conf':polarity_conf, 'subjectivity_conf':subjectivity_conf, 'id':id}
+    cur.execute(query,val)
+    con.commit()
+    con.close()
 
 

@@ -4,7 +4,7 @@ Author: Serah
 """
 
 import contextlib
-import sqlite3
+from Createdb import connect_to_db
 from datetime import datetime
 import config
 from Logging import logger
@@ -31,13 +31,13 @@ class Profile:
     def add_to_db(self):
         """Add the Profile to the table profile of the db"""
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-                with con:
-                    cur = con.cursor()
-                    cur.execute(
-                        "INSERT INTO profile ( User_id, Reviewer_Ranking, Reviews, Helpful_votes, Created_at,Last_Update, Valid) VALUES ( ?, ?, ?, ?, ?,?,?)",
-                        [self.username, self.ranking, self.review, self.votes, datetime.now(), None, self.valid])
-                    con.commit()
+            con=connect_to_db()
+            cur = con.cursor()
+            cur.execute(
+                "INSERT INTO profile ( User_id, Reviewer_Ranking, Reviews, Helpful_votes, Created_at,Last_Update, Valid) VALUES ( ?, ?, ?, ?, ?,?,?)",
+                [self.username, self.ranking, self.review, self.votes, datetime.now(), None, self.valid])
+            con.commit()
+            con.close()
             logger.info('Table profile: added -> ' + self.username)
 
         except Exception as e:
@@ -50,14 +50,14 @@ class Profile:
             query += f'{arg} ,'
 
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:
-                with con:
-                    cur = con.cursor()
+            con=connect_to_db()
+            cur = con.cursor()
 
-                    get_query = "SELECT " + query[0:-1] + " FROM profile WHERE User_id=:username"
-                    cur.execute(get_query, {"username": self.username})
-                    db_output = [item for item in cur.fetchall()[0]]
-                    return db_output
+            get_query = "SELECT " + query[0:-1] + " FROM profile WHERE User_id=:username"
+            cur.execute(get_query, {"username": self.username})
+            db_output = [item for item in cur.fetchall()[0]]
+            con.close()
+            return db_output
         except Exception as e:
             logger.error(f'An error {e} occurs when selecting the profile' + self.username)
 
@@ -83,15 +83,16 @@ class Profile:
     def if_exist(self):
         """Check if the Profile already exists in the table profile of the db"""
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:
-                with con:
-                    cur = con.cursor()
-                    query = "SELECT COUNT(*) FROM profile WHERE User_id= :username"
-                    cur.execute(query, {'username': self.username})
-                    if cur.fetchone()[0] != 0:
-                        return True
-                    else:
-                        return False
+            con=connect_to_db()
+            cur = con.cursor()
+            query = "SELECT COUNT(*) FROM profile WHERE User_id= :username"
+            cur.execute(query, {'username': self.username})
+            con.close()
+            if cur.fetchone()[0] != 0:
+                return True
+            else:
+                return False
+
         except Exception as e:
             logger.error(f'An error {e} occurs when opening the table profile')
 
@@ -109,12 +110,12 @@ class Profile:
         val['username'] = self.username
 
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:
-                with con:
-                    cur = con.cursor()
-                    query = "UPDATE profile SET " + q + " WHERE User_id = :username"
-                    cur.execute(query, val)
-                    con.commit()
+            con=connect_to_db()
+            cur = con.cursor()
+            query = "UPDATE profile SET " + q + " WHERE User_id = :username"
+            cur.execute(query, val)
+            con.commit()
+            con.close()
             logger.info('Table profile: updated -> ' + self.username)
         except Exception as e:
             logger.error(f'An error {e} occurs when updating the profile' + self.username)

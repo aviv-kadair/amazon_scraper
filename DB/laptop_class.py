@@ -4,7 +4,7 @@ Author: Serah
 """
 
 import contextlib
-import sqlite3
+from Createdb import connect_to_db
 from datetime import datetime
 import config
 from Logging import logger
@@ -33,13 +33,13 @@ class Laptop:
         """Add the Laptop to the table laptop of the db"""
 
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-                with con:
-                    cur = con.cursor()
-                    cur.execute(
-                        "INSERT INTO laptop ( Product_Name, Price, Rating, Reviews, Link, Created_At, Last_Update, Valid) VALUES (?, ?, ?, ?, ?, ?,?,?)",
-                        [self.name, self.price, self.rating, self.reviews, self.link, datetime.now(), None, self.valid])
-                con.commit()
+            con = connect_to_db()
+            cur = con.cursor()
+            cur.execute(
+                "INSERT INTO laptop ( Product_Name, Price, Rating, Reviews, Link, Created_At, Last_Update, Valid) VALUES (?, ?, ?, ?, ?, ?,?,?)",
+                [self.name, self.price, self.rating, self.reviews, self.link, datetime.now(), None, self.valid])
+            con.commit()
+            con.close()
             logger.info('Table laptop: added -> ' + self.name)
         except Exception as e:
             logger.error(f'An error {e} occurs when adding the laptop ' + self.name)
@@ -58,12 +58,12 @@ class Laptop:
         val['name'] = self.name
 
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-                with con:
-                    cur = con.cursor()
-                    query = "UPDATE laptop SET " + q + " WHERE Product_Name = :name"
-                    cur.execute(query, val)
-                    con.commit()
+            con = connect_to_db()
+            cur = con.cursor()
+            query = "UPDATE laptop SET " + q + " WHERE Product_Name = :name"
+            cur.execute(query, val)
+            con.commit()
+            con.close()
             logger.info('Table laptop: updated -> ' + self.name)
         except Exception as e:
             logger.error(f'An error {e} occurs when updating the laptop ' + self.name)
@@ -75,14 +75,14 @@ class Laptop:
             query += f'{arg}, '
 
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-                with con:
-                    cur = con.cursor()
+            con = connect_to_db()
+            cur = con.cursor()
 
-                    get_query = "SELECT " + query[0:-2] + " FROM laptop WHERE Product_Name=:name"
-                    cur.execute(get_query, {"name": self.name})
-                    db_output = [item for item in cur.fetchall()]
-                    return db_output
+            get_query = "SELECT " + query[0:-2] + " FROM laptop WHERE Product_Name=:name"
+            cur.execute(get_query, {"name": self.name})
+            db_output = [item for item in cur.fetchall()]
+            con.close()
+            return db_output
         except Exception as e:
             logger.error(f'An error {e} occurs when selecting the laptop ' + self.name)
 
@@ -110,14 +110,15 @@ class Laptop:
     def if_exist(self):
         """Check if the Laptop already exists in the table laptop of the db"""
         try:
-            with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:
-                with con:
-                    cur = con.cursor()
-                    query = "SELECT COUNT(*) FROM laptop WHERE Product_Name= :name "
-                    cur.execute(query, {'name': self.name})
-                    if cur.fetchone()[0] != 0:
-                        return True
-                    else:
-                        return False
+            con = connect_to_db()
+            cur = con.cursor()
+            query = "SELECT COUNT(*) FROM laptop WHERE Product_Name= :name "
+            cur.execute(query, {'name': self.name})
+            con.close()
+            if cur.fetchone()[0] != 0:
+                return True
+            else:
+                return False
+
         except Exception as e:
             logger.error(f'An error {e} occurs when opening the table laptop')
