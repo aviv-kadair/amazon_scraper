@@ -17,7 +17,8 @@ import config
 from Logging import logger
 from time import sleep
 from random import randint
-
+import sys
+sys.path.append('../')
 
 class Scraper:
     proxies_list = config.PROXIES_LIST

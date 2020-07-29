@@ -6,6 +6,8 @@ Author: Serah
 import sqlite3
 import config
 from Logging import logger
+import sys
+sys.path.append('../')
 
 DB_FILENAME = config.DB_FILENAME
 

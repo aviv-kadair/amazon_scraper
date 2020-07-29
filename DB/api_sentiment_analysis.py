@@ -6,6 +6,8 @@ import requests
 import contextlib
 import sqlite3
 import config
+import sys
+sys.path.append('../')
 
 DB_FILENAME = config.DB_FILENAME
 

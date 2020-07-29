@@ -10,7 +10,9 @@ from Cli_command import queries_url
 from Cli_command.cli_functions_db import *
 from time import sleep
 from random import randint
-
+import sys
+sys.path.append('../DB')
+sys.path.append('../Cli_command')
 
 def main():
     """This main function should run in order to activate the CLI"""

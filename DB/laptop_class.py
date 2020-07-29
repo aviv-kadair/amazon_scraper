@@ -8,7 +8,8 @@ import sqlite3
 from datetime import datetime
 import config
 from Logging import logger
-
+import sys
+sys.path.append('../')
 
 DB_FILENAME = config.DB_FILENAME
 

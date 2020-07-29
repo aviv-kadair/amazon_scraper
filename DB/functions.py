@@ -6,9 +6,10 @@ Author: Serah
 from Scraping import scraper_class
 from DB.laptop_class import *
 import config
+import sys
+sys.path.append('../')
 
 pages = config.NOPAGES
-
 DB_FILENAME = config.DB_FILENAME
 
 

@@ -8,6 +8,8 @@ from DB.functions import *
 from time import sleep
 from random import randint
 from DB.api_sentiment_analysis import *
+import sys
+sys.path.append('../DB')
 
 pages = config.NOPAGES
 

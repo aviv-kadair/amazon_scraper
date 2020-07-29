@@ -1,5 +1,7 @@
 import config
 from Scraping import scraper_class
+import sys
+sys.path.append('../')
 
 DB_FILENAME = config.DB_FILENAME
 
