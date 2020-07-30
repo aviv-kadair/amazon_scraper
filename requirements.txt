@@ -22,3 +22,5 @@ soupsieve==2.0.1
 urllib3==1.25.9
 zope.event==4.4
 zope.interface==5.1.0
+
+mysql-connector-python~=8.0.20

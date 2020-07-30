@@ -1,5 +1,7 @@
 import config
-from Scraping import scraper_class
+import scraper_class
+import sys
+sys.path.append('../')
 
 DB_FILENAME = config.DB_FILENAME
 
@@ -20,7 +22,6 @@ def search_results(url):
     new_laptop = []
     total_laptop = []
 
-    # my_url = f'https://www.amazon.com/s?k=laptop&s=date-desc-rank&page={count}&qid=1594213292&ref=sr_pg_2'
     scraper = scraper_class.SearchPage(url)
     laptop_list = scraper.get_data()
     print(laptop_list)

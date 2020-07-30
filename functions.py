@@ -3,12 +3,13 @@ Retrieve information from the scraping and adding or updating my database
 Author: Serah
 """
 
-from Scraping import scraper_class
-from DB.laptop_class import *
+import scraper_class
+from Createdb import connect_to_db
 import config
+import sys
+sys.path.append('../')
 
 pages = config.NOPAGES
-
 DB_FILENAME = config.DB_FILENAME
 
 
@@ -27,18 +28,19 @@ def search_results(no_pages):
      """
     new_laptop = []
     total_laptop = []
-    for count in range(1, no_pages + 1):
-        my_url = f'https://www.amazon.com/s?k=laptop&s=date-desc-rank&page={count}&qid=1594213292&ref=sr_pg_2'
+    for count in range(no_pages + 1):
+        my_url = f'https://www.amazon.com/s?k=laptop&s=date-desc-rank&page={count}&qid=1594213292&ref=sr_pg_{count}'
         scraper = scraper_class.SearchPage(my_url)
         laptop_list = scraper.get_data()
         for lap in laptop_list:
             if lap.if_exist():
-                lap.update_db('Price', 'Rating', 'Reviews')
+                lap.update_db()
             else:
                 lap.add_to_db()
-                new_laptop.append(lap.get_arg_db('Product_name', 'Laptop_id', 'Link'))
+                if lap.get_arg_db() is not None:
+                    new_laptop.append(lap.get_arg_db())
         for lap in laptop_list:
-            total_laptop.append(lap.get_arg_db('Laptop_id', 'Link'))
+            total_laptop.append(lap.get_arg_db())
 
         print(str(round(100 * count / no_pages)) + '% of the search page has been downloaded')
     return new_laptop, total_laptop
@@ -53,10 +55,10 @@ def features_laptop(new_laptop):
     val = 0
     for count, new in enumerate(new_laptop):
         if new is not None:
-            feat = scraper_class.Parameters(config.AMAZON + new[0][2])
+            feat = scraper_class.Parameters(config.AMAZON + new[0][1])
             laptop = feat.get_param()
             if laptop is not None:
-                laptop.add_to_db(new[0][0], new[0][1], new[0][2])
+                laptop.add_to_db(new[0][0], new[0][1])
 
         if round(count * 100 / len(new_laptop)) % 5 == 0 and round(count * 100 / len(new_laptop)) != val:
             val = round(count * 100 / len(new_laptop))
@@ -66,15 +68,15 @@ def features_laptop(new_laptop):
 def valid_features():
     """Check the validity of the features that were added to the table laptop_features,
     and re-scrape and update the corresponding records in case it was not valid."""
-    with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-        with con:
-            cur = con.cursor()
-            cur.execute("SELECT Link, Laptop_id FROM laptop_features WHERE Valid=0")
-            db_output = [item for item in cur.fetchall()]
-            for my_url in db_output:
-                feat = scraper_class.Parameters(config.AMAZON + my_url[0])
-                laptop = feat.get_param()
-                laptop.update_db(my_url[1])
+    con = connect_to_db()
+    cur = con.cursor()
+    cur.execute("SELECT Link, Laptop_id FROM laptop_features WHERE Valid=0")
+    db_output = [item for item in cur.fetchall()]
+    con.close()
+    for my_url in db_output:
+        feat = scraper_class.Parameters(config.AMAZON + my_url[0])
+        laptop = feat.get_param()
+        laptop.update_db(my_url[1])
 
 
 def reviews(total_laptop):
@@ -101,11 +103,11 @@ def reviews(total_laptop):
 
 def profile():
     """Select all the profiles of the users from the reviews table"""
-    with contextlib.closing(sqlite3.connect(DB_FILENAME)) as con:  # auto-closes
-        with con:
-            cur = con.cursor()
-            cur.execute("SELECT DISTINCT Profile_link FROM reviews")
-            db_output = [item for item in cur.fetchall()]
+    con = connect_to_db()
+    cur = con.cursor()
+    cur.execute("SELECT DISTINCT Profile_link FROM reviews")
+    db_output = [item for item in cur.fetchall()]
+    con.close()
     return db_output
 
 
