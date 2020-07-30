@@ -28,18 +28,19 @@ def search_results(no_pages):
      """
     new_laptop = []
     total_laptop = []
-    for count in range(1, no_pages + 1):
-        my_url = f'https://www.amazon.com/s?k=laptop&s=date-desc-rank&page={count}&qid=1594213292&ref=sr_pg_2'
+    for count in range(no_pages + 1):
+        my_url = f'https://www.amazon.com/s?k=laptop&s=date-desc-rank&page={count}&qid=1594213292&ref=sr_pg_{count}'
         scraper = scraper_class.SearchPage(my_url)
         laptop_list = scraper.get_data()
         for lap in laptop_list:
             if lap.if_exist():
-                lap.update_db('Price', 'Rating', 'Reviews')
+                lap.update_db()
             else:
                 lap.add_to_db()
-                new_laptop.append(lap.get_arg_db('Product_name', 'Laptop_id', 'Link'))
+                if lap.get_arg_db() is not None:
+                    new_laptop.append(lap.get_arg_db())
         for lap in laptop_list:
-            total_laptop.append(lap.get_arg_db('Laptop_id', 'Link'))
+            total_laptop.append(lap.get_arg_db())
 
         print(str(round(100 * count / no_pages)) + '% of the search page has been downloaded')
     return new_laptop, total_laptop
@@ -54,10 +55,10 @@ def features_laptop(new_laptop):
     val = 0
     for count, new in enumerate(new_laptop):
         if new is not None:
-            feat = scraper_class.Parameters(config.AMAZON + new[0][2])
+            feat = scraper_class.Parameters(config.AMAZON + new[0][1])
             laptop = feat.get_param()
             if laptop is not None:
-                laptop.add_to_db(new[0][0], new[0][1], new[0][2])
+                laptop.add_to_db(new[0][0], new[0][1])
 
         if round(count * 100 / len(new_laptop)) % 5 == 0 and round(count * 100 / len(new_laptop)) != val:
             val = round(count * 100 / len(new_laptop))

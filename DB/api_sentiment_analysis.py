@@ -19,7 +19,6 @@ def get_reviews_content():
     cur = con.cursor()
     cur.execute("SELECT Review_id, Content FROM reviews")
     db_output = [item for item in cur.fetchall()]
-    con.close()
     return db_output
 
 
@@ -62,14 +61,12 @@ def sentiment_analyser(review):
 
 
 
-def add_sentiment_to_db(id, polarity, subjectivity, polarity_conf, subjectivity_conf):
+def add_sentiment_to_db(review_id, polarity, subjectivity, polarity_conf, subjectivity_conf):
     con = connect_to_db()
     cur = con.cursor()
-    query = """UPDATE reviews 
-           SET Polarity=:polarity, Subjectivity=:subjectivity, Polarity_confidence=:polarity_conf, Subjectivity_confidence=:subjectivity_conf 
-           WHERE Review_id =:id"""
-    val={'polarity':polarity, 'subjectivity':subjectivity,'polarity_conf':polarity_conf, 'subjectivity_conf':subjectivity_conf, 'id':id}
-    cur.execute(query,val)
+    cur.execute("""UPDATE reviews 
+           SET Polarity=%s, Subjectivity=%s, Polarity_confidence=%s, Subjectivity_confidence=%s 
+           WHERE Review_id =%s""",(polarity, subjectivity, polarity_conf, subjectivity_conf, review_id))
     con.commit()
     con.close()
 

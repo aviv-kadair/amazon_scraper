@@ -3,12 +3,12 @@ Define an OOP Features, with the corresponding attributes and functions for the 
 Authors: Serah
 """
 
-import contextlib
 from Createdb import connect_to_db
 from datetime import datetime
 import config
 from Logging import logger
 import sys
+
 sys.path.append('../')
 DB_FILENAME = config.DB_FILENAME
 
@@ -35,90 +35,19 @@ class Features:
             self.valid = 1
         else:
             self.valid = 0
+        self.con = connect_to_db()
+        self.cur = self.con.cursor()
 
-    def add_to_db(self, name, laptop_id, link):
+    def add_to_db(self, laptop_id, link):
         """Add the Features to the table laptop_features of the db"""
         try:
-            con = connect_to_db()
-            cur = con.cursor()
-            cur.execute(
-                "INSERT INTO laptop_features (Laptop_id, Product_Name, Link, Screen_Size, Max_Screen_Resolution, Chipset_Brand, Card_Description, Brand_Name, Item_Weight, Operating_System, Computer_Memory_Type, Batteries, Date_First_Available, Created_At, Valid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)",
-                [laptop_id, name, link, self.screen_size, self.max_screen_resolution, self.brand,
-                 self.card_description, self.brand_name, self.item_weight, self.operating_system,
-                 self.computer_memory_type, self.batteries, self.date, datetime.now(), self.valid])
-            con.commit()
-            con.close()
+            query = config.QUERY_INSERT_FEATURES
+            records = (laptop_id, link, self.screen_size, self.max_screen_resolution, self.brand,
+                       self.card_description, self.brand_name, self.item_weight, self.operating_system,
+                       self.computer_memory_type, self.batteries, self.date, datetime.now(), self.valid)
+            self.cur.execute(query, records)
+            self.con.commit()
             logger.info('Table features laptop: added -> ' + str(laptop_id))
 
         except Exception as e:
-            logger.error(f'An error {e} occurs when adding the features of laptop' + laptop_id)
-
-    def update_db(self, laptop_id):
-        """Update the Features to the table laptop_features of the db in case the argument valid is 0."""
-        try:
-            con = connect_to_db()
-            cur = con.cursor()
-            query = "UPDATE laptop_features SET Screen_Size=:screensize, Max_Screen_Resolution=:maxscreen, Chipset_Brand=:chipset, Card_Description=:card, Brand_Name=:brand, Item_Weight=:weight, Operating_System=:operating, Computer_Memory_Type=:memory, Batteries=:batterie, Date_First_Available=:date,Valid=:valid WHERE Laptop_id = :id"
-            cur.execute(query, {"screensize": self.screen_size, "maxscreen": self.max_screen_resolution,
-                                "chipset": self.brand, "card": self.card_description,
-                                "brand": self.brand_name, "weight": self.item_weight,
-                                "operating": self.operating_system, "memory": self.computer_memory_type,
-                                "batterie": self.batteries, "date": self.date, "valid": self.valid,
-                                "id": laptop_id})
-            con.commit()
-            con.close()
-
-            logger.info('Table features laptop: updated -> ' + str(laptop_id))
-
-        except Exception as e:
-            logger.error(f'An error {e} occurs when updating the features of laptop' + laptop_id)
-
-    @staticmethod
-    def get_arg_db(name, *args):
-        """Retrieve info from the table laptop_features of the db for this specific laptop"""
-        query = ''
-        for arg in args:
-            query += f'{arg} ,'
-
-        try:
-            con = connect_to_db()
-            cur = con.cursor()
-            get_query = "SELECT " + query[0:-1] + " FROM laptop_features WHERE Product_Name=:name"
-            cur.execute(get_query, {"name": name})
-            db_output = [item for item in cur.fetchall()[0]]
-            con.close()
-            return db_output
-
-        except Exception as e:
-            logger.error(f'An error {e} occurs when selecting the features of laptop' + name)
-
-    def get_arg(self, *args):
-        """Get the values of my Laptop attributes"""
-        output = []
-        for option in args:
-            if option == 'Screen_Size':
-                output.append(self.screen_size)
-            elif option == 'Max_Screen_Resolution':
-                output.append(self.max_screen_resolution)
-            elif option == 'Chipset_Brand':
-                output.append(self.brand)
-            elif option == 'Card_Description':
-                output.append(self.card_description)
-            elif option == 'Brand_Name':
-                output.append(self.brand_name)
-            elif option == 'Item_Weight':
-                output.append(self.item_weight)
-            elif option == 'Operating_System':
-                output.append(self.operating_system)
-            elif option == 'Computer_Memory_Type':
-                output.append(self.computer_memory_type)
-            elif option == 'Batteries':
-                output.append(self.batteries)
-            elif option == 'Valid':
-                output.append(self.valid)
-            elif option == 'Date':
-                output.append(self.date)
-            else:
-                print('Write you arguments by using the following 10 options:\n\
-                 Screen_Size, Max_Screen_Resolution, Chipset_Brand, Card_Description, Brand_Name, Item_Weight, Operating_System, Computer_Memory_Type, Batteries, Valid, Date')
-        return output
+            logger.error(f'Adding Laptop features: {e}')

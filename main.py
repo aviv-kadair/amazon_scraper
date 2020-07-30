@@ -11,14 +11,15 @@ from DB.api_sentiment_analysis import *
 import sys
 sys.path.append('../DB')
 
+
 pages = config.NOPAGES
 
 if __name__ == '__main__':
 
-    laptops = search_results(pages)
+    laptops = search_results(7)
 
-    if len(laptops[0]) > 0:
-        features_laptop(laptops[0])
+    #if len(laptops[0]) > 0:
+    #    features_laptop(laptops[0])
 
     if len(laptops[1]) > 0:
         reviews(laptops[1])
@@ -32,7 +33,7 @@ if __name__ == '__main__':
 
     try:
         output = profile()
-        # print(len(output))
+        print(len(output))
         for i, p in enumerate(output):
             retrieve_profile(p)
             sleep(randint(1, 10))

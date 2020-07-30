@@ -22,7 +22,9 @@ def create_db():
     logger.info("\n*** Connection was created successfully. ***\n")
 
     conn = db.cursor()
+    conn.execute(f"DROP DATABASE IF EXISTS {config.DB_FILENAME}" )
     conn.execute(f"CREATE DATABASE IF NOT EXISTS {config.DB_FILENAME}")
+    db.commit()
     logger.info("\n*** Database was created successfully. ***\n")
 
 
@@ -58,6 +60,3 @@ def create_tables():
     finally:
         db.close()
 
-
-create_db()
-create_tables()

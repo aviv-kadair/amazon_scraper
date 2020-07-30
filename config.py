@@ -29,40 +29,39 @@ USER = "username"
 
 PSW="password"
 
-TABLE1 = '''CREATE TABLE IF NOT EXISTS laptop (
+TABLE1 = '''CREATE TABLE laptop (
                             Laptop_id INT AUTO_INCREMENT PRIMARY KEY,
                             Product_Name varchar(767) UNIQUE,
-                            Price INT,
+                            Price VARCHAR(30),
                             Rating REAL,
-                            Reviews INT,
+                            Reviews VARCHAR(100),
                             Link TEXT, 
                             Created_At TEXT,
                             Last_Update TEXT,
                             Valid INT
                             )'''
-TABLE2 = '''CREATE TABLE IF NOT EXISTS laptop_features (
+TABLE2 = '''CREATE TABLE laptop_features (
                             Laptop_id INT PRIMARY KEY,
-                            Product_Name varchar(767) UNIQUE,
                             Link TEXT,
-                            Screen_Size VARCHAR(30),
-                            Max_Screen_Resolution VARCHAR(30), 
-                            Chipset_Brand VARCHAR(30),
-                            Card_Description VARCHAR(30),
-                            Brand_Name VARCHAR(30), 
-                            Item_Weight VARCHAR(30),
-                            Operating_System VARCHAR(30), 
-                            Computer_Memory_Type VARCHAR(30),
-                            Batteries VARCHAR(30),
+                            Screen_Size VARCHAR(100),
+                            Max_Screen_Resolution VARCHAR(100), 
+                            Chipset_Brand VARCHAR(100),
+                            Card_Description VARCHAR(100),
+                            Brand_Name VARCHAR(100), 
+                            Item_Weight VARCHAR(100),
+                            Operating_System VARCHAR(100), 
+                            Computer_Memory_Type VARCHAR(100),
+                            Batteries VARCHAR(100),
                             Date_First_Available TEXT,
                             Created_At TEXT,
                             Valid INT
                             )'''
 
-TABLE3 = '''CREATE TABLE IF NOT EXISTS reviews (
+TABLE3 = '''CREATE TABLE reviews (
                             Review_id INT AUTO_INCREMENT PRIMARY KEY,
                             Laptop_id INT,
-                            User_id VARCHAR(30),
-                            Username VARCHAR(30),
+                            User_id VARCHAR(100),
+                            Username VARCHAR(100),
                             Location TEXT,
                             Date TEXT,
                             UserRank REAL,
@@ -75,8 +74,8 @@ TABLE3 = '''CREATE TABLE IF NOT EXISTS reviews (
                             Created_at TEXT
                             )'''
 
-TABLE4 = '''CREATE TABLE IF NOT EXISTS profile ( 
-                            User_id VARCHAR(30) PRIMARY KEY ,
+TABLE4 = '''CREATE TABLE profile ( 
+                            User_id VARCHAR(100) PRIMARY KEY ,
                             Reviewer_Ranking INT,
                             Reviews INT,
                             Helpful_votes INT,
@@ -93,7 +92,15 @@ KEY_TABLE2="""ALTER TABLE reviews
               ADD FOREIGN KEY (Laptop_id) 
               REFERENCES laptop (Laptop_id)"""
 
-KEY_TABLE3="""ALTER TABLE reviews
-              ADD FOREIGN KEY (User_id) 
-              REFERENCES profile (User_id)"""
 
+QUERY_INSERT_LAPTOP = """INSERT INTO laptop (Product_Name, Price, Rating, Reviews, Link, Created_At, Last_Update, Valid) VALUES (%s, %s, %s, %s, %s, %s,%s,%s)"""
+QUERY_INSERT_FEATURES = """INSERT INTO laptop_features (Laptop_id, Link, Screen_Size, Max_Screen_Resolution, Chipset_Brand, Card_Description, Brand_Name, Item_Weight, Operating_System, Computer_Memory_Type, Batteries, Date_First_Available, Created_At, Valid) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+QUERY_INSERT_REVIEWS = """INSERT INTO reviews (Laptop_id, User_id, Username, Location, Date, UserRank, Profile_link, Content, Created_At) VALUES (%s, %s, %s, %s, %s, %s, %s, %s ,%s)"""
+QUERY_INSERT_PROFILE = """INSERT INTO profile (User_id, Reviewer_Ranking, Reviews, Helpful_votes, Created_at,Last_Update, Valid) VALUES (%s, %s, %s, %s, %s, %s, %s)"""
+QUERY_UPDATE_LAPTOP = """UPDATE laptop SET Price=%s, Rating=%s, Reviews=%s, Last_Update=%s WHERE Product_Name = %s"""
+QUERY_UPDATE_FEATURES = """UPDATE laptop_features SET Screen_Size=%s, Max_Screen_Resolution=%s, Chipset_Brand=%s, Card_Description=%s, Brand_Name=%s, Item_Weight=%s, Operating_System=%s, Computer_Memory_Type=%s, Batteries=%s, Date_First_Available=%s, Valid=%s WHERE Laptop_id =%s"""
+QUERY_UPDATE_PROFILE = """UPDATE profile SET Reviewer_Ranking=%s, Reviews=%s, Helpful_votes=%s, Last_Update=%s WHERE User_id =%s"""
+QUERY_GET_ARG = """SELECT Laptop_id, Link FROM laptop WHERE Product_name = %s"""
+QUERY_LAPTOP_EXIST = """SELECT EXISTS (SELECT * from laptop WHERE Product_name=%s)"""
+QUERY_REVIEW_EXIST = """SELECT EXISTS (SELECT * FROM reviews WHERE Username= %s AND Location=%s AND Date=%s)"""
+QUERY_PROFILE_EXIST = """"SELECT COUNT(*) FROM profile WHERE User_id=%s"""

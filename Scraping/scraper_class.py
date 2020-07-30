@@ -89,6 +89,7 @@ class SearchPage(Scraper):
                         link = 'Empty'
 
                     laptop_list.append(Laptop(name, price, rating, reviews, link))
+
             return laptop_list
 
 

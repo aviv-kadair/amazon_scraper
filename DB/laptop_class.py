@@ -3,7 +3,6 @@ Define an OOP Laptop, with the corresponding attributes and functions.
 Author: Serah
 """
 
-import contextlib
 from Createdb import connect_to_db
 from datetime import datetime
 import config
@@ -16,7 +15,9 @@ DB_FILENAME = config.DB_FILENAME
 
 class Laptop:
     def __init__(self, name, price, rating, reviews, link):
-        self.name = name
+
+        self.name = str(name.encode('utf-8', errors='ignore').decode('utf-8'))
+
         self.price = price
         self.rating = rating
         self.reviews = reviews
@@ -29,96 +30,55 @@ class Laptop:
         else:
             self.valid = 0
 
+        self.con = connect_to_db()
+        self.cur = self.con.cursor()
+
     def add_to_db(self):
         """Add the Laptop to the table laptop of the db"""
-
         try:
-            con = connect_to_db()
-            cur = con.cursor()
-            cur.execute(
-                "INSERT INTO laptop ( Product_Name, Price, Rating, Reviews, Link, Created_At, Last_Update, Valid) VALUES (?, ?, ?, ?, ?, ?,?,?)",
-                [self.name, self.price, self.rating, self.reviews, self.link, datetime.now(), None, self.valid])
-            con.commit()
-            con.close()
+            query = config.QUERY_INSERT_LAPTOP
+            records = (self.name, self.price, self.rating, self.reviews, self.link, datetime.now(), None, self.valid)
+            self.cur.execute(query, records)
+            self.con.commit()
             logger.info('Table laptop: added -> ' + self.name)
         except Exception as e:
-            logger.error(f'An error {e} occurs when adding the laptop ' + self.name)
+            print(self.name)
+            logger.error(f'Adding record to table laptop: {e} ')
 
-    def update_db(self, *args):
+    def update_db(self):
         """Update the Laptop in the table laptop of the db"""
-        q = ''
-        val = {}
-        parameter = {'Price': self.price, 'Rating': self.rating, 'Reviews': self.reviews, 'Link': self.link}
-        for arg in args:
-            val[arg] = parameter[arg]
-            q += f'{arg} = :{arg},'
-
-        q += 'Last_Update = :date'
-        val['date'] = datetime.now()
-        val['name'] = self.name
-
         try:
-            con = connect_to_db()
-            cur = con.cursor()
-            query = "UPDATE laptop SET " + q + " WHERE Product_Name = :name"
-            cur.execute(query, val)
-            con.commit()
-            con.close()
+            query = config.QUERY_UPDATE_LAPTOP
+            self.cur.execute(query, (self.price, self.rating, self.reviews, datetime.now(), self.name))
+            self.con.commit()
             logger.info('Table laptop: updated -> ' + self.name)
         except Exception as e:
-            logger.error(f'An error {e} occurs when updating the laptop ' + self.name)
+            print(self.name)
+            logger.error(f'Updating table laptop: {e} ')
 
-    def get_arg_db(self, *args):
+    def get_arg_db(self):
         """Retrieve info from the table laptop of the db for the specific laptop"""
-        query = ''
-        for arg in args:
-            query += f'{arg}, '
-
         try:
-            con = connect_to_db()
-            cur = con.cursor()
-
-            get_query = "SELECT " + query[0:-2] + " FROM laptop WHERE Product_Name=:name"
-            cur.execute(get_query, {"name": self.name})
-            db_output = [item for item in cur.fetchall()]
-            con.close()
+            get_query = config.QUERY_GET_ARG
+            self.cur.execute(get_query, (self.name,))
+            db_output = [item for item in self.cur.fetchall()]
             return db_output
         except Exception as e:
-            logger.error(f'An error {e} occurs when selecting the laptop ' + self.name)
+            print(self.name)
+            logger.error(f'Selecting arguments from laptop table: {e} ' )
 
-    def get_arg(self, *args):
-        """Get the values of my Laptop attributes"""
-        output = []
-        for option in args:
-            if option == 'Price':
-                output.append(self.price)
-            elif option == 'Name':
-                output.append(self.name)
-            elif option == 'Reviews':
-                output.append(self.reviews)
-            elif option == 'Rating':
-                output.append(self.rating)
-            elif option == 'Link':
-                output.append(self.link)
-            elif option == 'Valid':
-                output.append(self.valid)
-            else:
-                print('Write you arguments by using the following 5 options:\n\
-                 Name, Price, Reviews, Link, Valid')
-        return output
 
     def if_exist(self):
         """Check if the Laptop already exists in the table laptop of the db"""
         try:
-            con = connect_to_db()
-            cur = con.cursor()
-            query = "SELECT COUNT(*) FROM laptop WHERE Product_Name= :name "
-            cur.execute(query, {'name': self.name})
-            con.close()
-            if cur.fetchone()[0] != 0:
+            query = config.QUERY_LAPTOP_EXIST
+            self.cur.execute(query, (self.name,))
+            result = self.cur.fetchone()[0]
+            if result != 0:
                 return True
             else:
                 return False
 
         except Exception as e:
-            logger.error(f'An error {e} occurs when opening the table laptop')
+            print(self.name)
+            logger.error(f'Checking existence: {e} ')
