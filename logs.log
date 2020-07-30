@@ -1343,3 +1343,7 @@
 2020-07-29 00:05:34,494 - Logging - INFO - Table laptop: updated -> HP Envy x360 15t-ed000 Home and Business Laptop (Intel i7-1065G7 8-Core, 16GB RAM, 2TB PCIe SSD, Intel Iris Plus, 15.6" Touch Full HD (1920x1080), Active Pen, Fingerprint, Win 10 Pro) with USB Hub
 2020-07-29 00:05:34,494 - Logging - INFO - Table laptop: updated -> LG Gram 2-in-1 Convertible Laptop: 14" Full HD IPS Touchscreen Display, Intel 10th Gen Core i7-10510U CPU, 16GB RAM, 1TB (512GB x 2) M.2 MVMe SSD, Thunderbolt 3, 20.5 Hour Battery 14T90N (2020)
 2020-07-29 00:05:34,509 - Logging - INFO - Table laptop: updated -> ASUS ZenBook 15 Laptop, 15.6” UHD 4K NanoEdge Display, Intel Core i7-10510U, GeForce GTX 1650, 16GB, 512GB PCIe SSD, ScreenPad 2.0, Amazon Alexa Compatible, Windows 10, Icicle Silver, UX534FTC-AS77
+2020-07-29 08:41:06,399 - Logging - WARNING - Page https://www.amazon.com/s?k=laptop&s=date-desc-rank&page=1&qid=1594213292&ref=sr_pg_2 was blocked by Amazon. Please try using better proxies
+
+2020-07-29 08:48:57,626 - Logging - WARNING - Page https://www.amazon.com/s?i=computers-intl-ship&bbn=16225007011&rh=n%3A16225007011%2Cn%3A13896617011%2Cn%3A565108%2Cp_n_size_browse-bin%3A7817234011&dc&qid=1594231073&rnid=2242797011&ref=sr_nr_p_n_size_browse-bin_1 was blocked by Amazon. Please try using better proxies
+
