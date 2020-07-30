@@ -18,8 +18,8 @@ if __name__ == '__main__':
 
     laptops = search_results(pages)
 
-    #if len(laptops[0]) > 0:
-    #    features_laptop(laptops[0])
+    if len(laptops[0]) > 0:
+        features_laptop(laptops[0])
 
     if len(laptops[1]) > 0:
         reviews(laptops[1])
@@ -36,7 +36,7 @@ if __name__ == '__main__':
         print(len(output))
         for i, p in enumerate(output):
             retrieve_profile(p)
-            sleep(randint(1, 10))
+            sleep(randint(1, 4))
             print(i + 1)
 
         valid_features()
