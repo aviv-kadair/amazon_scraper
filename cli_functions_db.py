@@ -1,5 +1,5 @@
 import config
-from Scraping import scraper_class
+import scraper_class
 import sys
 sys.path.append('../')
 

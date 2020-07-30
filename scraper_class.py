@@ -9,10 +9,10 @@ import random
 from selenium import webdriver
 import selenium as se
 import re
-from DB.laptop_class import Laptop
-from DB.laptop_features_class import Features
-from DB.reviews_class import Review
-from DB.profile_class import Profile
+from laptop_class import Laptop
+from laptop_features_class import Features
+from reviews_class import Review
+from profile_class import Profile
 import config
 from Logging import logger
 from time import sleep

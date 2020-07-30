@@ -5,7 +5,7 @@ Authors:
 Aviv and Serah
 """
 import grequests
-from Scraping import scraper_class
+import scraper_class
 from laptop_class import *
 import config
 import random

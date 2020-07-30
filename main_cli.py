@@ -2,12 +2,12 @@
 Run this file to scrape using the cli
 Author: Aviv
 """
-from Cli_command import cli_functions
-from DB.api_sentiment_analysis import *
+import cli_functions
+from api_sentiment_analysis import *
 import argparse
-from DB.functions import *
-from Cli_command import queries_url
-from Cli_command.cli_functions_db import *
+from functions import *
+import queries_url
+from cli_functions_db import *
 from time import sleep
 from random import randint
 import sys

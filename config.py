@@ -21,7 +21,7 @@ AMAZON = 'https://www.amazon.com'
 
 BROWSER = "chromedriver.exe"
 
-NOPAGES = 50
+NOPAGES = 100
 
 HOST = "localhost"
 

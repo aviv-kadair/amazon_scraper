@@ -1,7 +1,7 @@
 """This file contains all the functions to filter the scraping using the command line
 Author: Aviv
 """
-from Cli_command import queries_url
+import queries_url
 
 
 def filter_not():

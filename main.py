@@ -4,10 +4,10 @@ Authors:
 Aviv and Serah
 """
 
-from DB.functions import *
+from functions import *
 from time import sleep
 from random import randint
-from DB.api_sentiment_analysis import *
+from api_sentiment_analysis import *
 import sys
 sys.path.append('../DB')
 
@@ -16,7 +16,7 @@ pages = config.NOPAGES
 
 if __name__ == '__main__':
 
-    laptops = search_results(7)
+    laptops = search_results(pages)
 
     #if len(laptops[0]) > 0:
     #    features_laptop(laptops[0])

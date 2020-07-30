@@ -3,7 +3,7 @@ Retrieve information from the scraping and adding or updating my database
 Author: Serah
 """
 
-from Scraping import scraper_class
+import scraper_class
 from Createdb import connect_to_db
 import config
 import sys

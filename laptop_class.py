@@ -42,7 +42,6 @@ class Laptop:
             self.con.commit()
             logger.info('Table laptop: added -> ' + self.name)
         except Exception as e:
-            print(self.name)
             logger.error(f'Adding record to table laptop: {e} ')
 
     def update_db(self):
@@ -53,7 +52,6 @@ class Laptop:
             self.con.commit()
             logger.info('Table laptop: updated -> ' + self.name)
         except Exception as e:
-            print(self.name)
             logger.error(f'Updating table laptop: {e} ')
 
     def get_arg_db(self):
@@ -64,7 +62,6 @@ class Laptop:
             db_output = [item for item in self.cur.fetchall()]
             return db_output
         except Exception as e:
-            print(self.name)
             logger.error(f'Selecting arguments from laptop table: {e} ' )
 
 
@@ -80,5 +77,4 @@ class Laptop:
                 return False
 
         except Exception as e:
-            print(self.name)
             logger.error(f'Checking existence: {e} ')
