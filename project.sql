@@ -34,7 +34,7 @@ CREATE TABLE `laptop` (
   `Valid` int DEFAULT NULL,
   PRIMARY KEY (`Laptop_id`),
   UNIQUE KEY `Product_Name` (`Product_Name`)
-) ENGINE=InnoDB AUTO_INCREMENT=330 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=330 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +71,7 @@ CREATE TABLE `laptop_features` (
   `Valid` int DEFAULT NULL,
   PRIMARY KEY (`Laptop_id`),
   CONSTRAINT `laptop_features_ibfk_1` FOREIGN KEY (`Laptop_id`) REFERENCES `laptop` (`Laptop_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,7 +100,7 @@ CREATE TABLE `profile` (
   `Last_Update` text,
   `Valid` int DEFAULT NULL,
   PRIMARY KEY (`User_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -138,7 +138,7 @@ CREATE TABLE `reviews` (
   PRIMARY KEY (`Review_id`),
   KEY `Laptop_id` (`Laptop_id`),
   CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`Laptop_id`) REFERENCES `laptop` (`Laptop_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
