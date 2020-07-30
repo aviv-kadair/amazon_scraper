@@ -29,7 +29,7 @@ def search_results(no_pages):
     new_laptop = []
     total_laptop = []
     for count in range(no_pages + 1):
-        my_url = f'https://www.amazon.com/s?k=laptop&s=date-desc-rank&page={count}&qid=1594213292&ref=sr_pg_{count}'
+        my_url = f'https://www.amazon.com/s?k=laptop&s=date-desc-rank&page={count}&qid=1594213292&ref=sr_pg_2'
         scraper = scraper_class.SearchPage(my_url)
         laptop_list = scraper.get_data()
         for lap in laptop_list:
