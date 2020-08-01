@@ -16,7 +16,7 @@ def create_db():
     db = mysql.connector.connect(
         host='localhost',
         user='root',
-        passwd='Abensour1'
+        passwd='Eacded9'
     )
 
     logger.info("\n*** Connection was created successfully. ***\n")
@@ -28,7 +28,7 @@ def create_db():
     logger.info("\n*** Database was created successfully. ***\n")
 
 
-def connect_to_db(host='localhost', user='root', psw='Abensour1'):
+def connect_to_db(host='localhost', user='root', psw='Eacded9'):
     db = mysql.connector.connect(
         host=host,
         user=user,
@@ -60,3 +60,8 @@ def create_tables():
     finally:
         db.close()
 
+
+
+create_db()
+connect_to_db(host='localhost', user='root', psw='Eacded9')
+create_tables()

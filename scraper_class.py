@@ -18,7 +18,9 @@ from Logging import logger
 from time import sleep
 from random import randint
 import sys
+
 sys.path.append('../')
+
 
 class Scraper:
     proxies_list = config.PROXIES_LIST
@@ -55,7 +57,8 @@ class SearchPage(Scraper):
         """Retrieve the data for all the laptops of the search page of amazon"""
         laptop_list = []
         if self.soup is not None:
-            for d in self.soup.findAll('div', attrs={'class': 'sg-col-4-of-12 sg-col-8-of-16 sg-col-16-of-24 sg-col-12-of-20 sg-col-24-of-32 sg-col sg-col-28-of-36 sg-col-20-of-28'}):
+            for d in self.soup.findAll('div', attrs={
+                'class': 'sg-col-4-of-12 sg-col-8-of-16 sg-col-16-of-24 sg-col-12-of-20 sg-col-24-of-32 sg-col sg-col-28-of-36 sg-col-20-of-28'}):
                 name = d.find('span', attrs={'class': 'a-size-medium a-color-base a-text-normal'})
                 review = d.find('span', attrs={'class': 'a-size-base'})
                 price = d.find('span', attrs={'class': 'a-offscreen'})
@@ -152,7 +155,7 @@ class Parameters(Scraper):
 
         if table2 is not None and table3 is not None:
             new_para = {k.lower().replace(' ', '_'): v for k, v in para.items()}
-            return Features( **new_para)
+            return Features(**new_para)
 
 
 class Reviews(Scraper):
@@ -175,9 +178,10 @@ class Reviews(Scraper):
             rev = d.find('span', attrs={'class': 'a-icon-alt'}).get_text().split()[0]
             # get the profile link of the user
             link = d.find('a', href=True, attrs={'class': 'a-profile'})['href']
-            user_id = re.findall(r'([\w]+)',link)[4]
-            #get the reviews content
-            cont = d.find('div', attrs={'class': 'a-expander-content reviewText review-text-content a-expander-partial-collapse-content'}).get_text()
+            user_id = re.findall(r'([\w]+)', link)[4]
+            # get the reviews content
+            cont = d.find('div', attrs={
+                'class': 'a-expander-content reviewText review-text-content a-expander-partial-collapse-content'}).get_text()
 
             reviews.append(Review(user_id, name, location, date, rev, link, cont))
         return reviews
@@ -193,7 +197,7 @@ class ProfileScrapper:
         options.add_argument("--lang=en-US")
         self.driver = se.webdriver.Chrome(config.BROWSER, options=options)
         self.link = link
-        self.user_id = re.findall(r'([\w]+)',self.link)[4]
+        self.user_id = re.findall(r'([\w]+)', self.link)[4]
         try:
             self.driver.get(config.AMAZON + self.link)
             sleep(randint(30, 120))
@@ -232,10 +236,9 @@ class ProfileScrapper:
 
 # print(get_description('https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'))
 
-#url = 'https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'
+# url = 'https://www.amazon.com/dp/B08173ZTJX/ref=sr_1_6?dchild=1&keywords=laptops&qid=1592682151&sr=8-6'
 
-#scraper = Reviews(url)
-#print(scraper.get_reviews())
+# scraper = Reviews(url)
+# print(scraper.get_reviews())
 # scrap = ProfileScrapper('/gp/profile/amzn1.account.AEQQY4I75RA6VVZW5WQN2KUU4YRQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8')
 # print(scrap.user_profile().get_arg('Reviewer_Ranking'))
-

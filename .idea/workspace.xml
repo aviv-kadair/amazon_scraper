@@ -20,10 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0acdd95-1b83-413e-9ed0-38c5aeeb1e01" name="Default Changelist" comment="DB added">
+      <change beforePath="$PROJECT_DIR$/.idea/amazon_scraper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/amazon_scraper.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Createdb.py" beforeDir="false" afterPath="$PROJECT_DIR$/Createdb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli_functions_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli_functions_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptop_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/laptop_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.sql" beforeDir="false" afterPath="$PROJECT_DIR$/project.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_cli.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraper_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraper_class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +73,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="Createdb" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Createdb (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="amazon_scraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -74,11 +81,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Ilan avraham\PycharmProjects\amazon_scraper\Createdb.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Createdb.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -87,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cli_functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="amazon_scraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -95,11 +102,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cli_command" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Ilan avraham\PycharmProjects\amazon_scraper\cli_functions.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,11 +123,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Ilan avraham\PycharmProjects\amazon_scraper\laptop_class.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/laptop_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -171,34 +178,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main_cli" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="amazon_scraper" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cli_command" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Ilan avraham\PycharmProjects\amazon_scraper\main_cli.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.Createdb" />
+        <item itemvalue="Python.functions" />
+        <item itemvalue="Python.Createdb (1)" />
         <item itemvalue="Python.main_cli (1)" />
         <item itemvalue="Python.laptop_class" />
-        <item itemvalue="Python.cli_functions" />
       </list>
     </recent_temporary>
   </component>
@@ -366,26 +352,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1595765941340" />
-    <state width="1259" height="279" key="GridCell.Tab.0.bottom" timestamp="1596144240604">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1515" height="189" key="GridCell.Tab.0.bottom" timestamp="1596298334611">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="279" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1596144240604" />
-    <state width="1515" height="251" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594578166162" />
-    <state width="1259" height="279" key="GridCell.Tab.0.center" timestamp="1596144240604">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1515" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596298334611" />
+    <state width="1515" height="189" key="GridCell.Tab.0.center" timestamp="1596298334611">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="279" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1596144240604" />
-    <state width="1515" height="251" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594578166162" />
-    <state width="1259" height="279" key="GridCell.Tab.0.left" timestamp="1596144240603">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1515" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596298334611" />
+    <state width="1515" height="189" key="GridCell.Tab.0.left" timestamp="1596298334611">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="279" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1596144240603" />
-    <state width="1515" height="251" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594578166161" />
-    <state width="1259" height="279" key="GridCell.Tab.0.right" timestamp="1596144240604">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1515" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596298334611" />
+    <state width="1515" height="189" key="GridCell.Tab.0.right" timestamp="1596298334611">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1259" height="279" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1596144240604" />
-    <state width="1515" height="251" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594578166162" />
+    <state width="1515" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596298334611" />
     <state width="1259" height="215" key="GridCell.Tab.1.bottom" timestamp="1595970846317">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

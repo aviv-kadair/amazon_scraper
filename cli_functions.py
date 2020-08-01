@@ -17,8 +17,6 @@ def choose_filter():
     if parameter.isdigit():
         parameter = int(parameter)
         operation = list(queries_url.filtering_choice.keys())[parameter - 1]
-        # operation = queries_url.filtering_choice.keys()[parameter - 1]
-        # print(operation)
         if parameter == 1:
             user_filter = input('Please choose a minimal item ranking, from 1 to 4: ')
             rank_list = {1,2,3,4}
@@ -45,7 +43,6 @@ def get_choice(choice):
     choices = {2: queries_url.manufactures_list, 3: queries_url.screen_sizes, 4: queries_url.RAM_sizes,
                5: queries_url.weights_list, 6: queries_url.HD_type_list}
     choice_list = choices.get(choice)
-    # print(choice_list)
     return choice_list
 
 
@@ -64,7 +61,6 @@ def function_map(parameter, user_filter):
 
 def query_builder_ranking(spec_param):
     """This function builds the query form and returns the relevant URL"""
-    # print(f'The following search parameters were chosen: ranking, {spec_param}')
     var_name = 'ranking_' + spec_param
     my_url = queries_url.ranking.get(var_name)
     return my_url
@@ -72,26 +68,20 @@ def query_builder_ranking(spec_param):
 
 def query_builder_manufacture(spec_param):
     """This function builds the query form and returns the relevant URL"""
-    # print(f'The following search parameters were chosen: manufacturer, {spec_param}')
     var_name = 'manufacture_' + spec_param
-
     my_url = queries_url.manufacture.get(var_name)
-
     return my_url
 
 
 def query_builder_screen(spec_param):
     """This function builds the query form and returns the relevant URL"""
-    # print(f'The following search parameters were chosen: screen size, {spec_param}')
     var_name = ('screen_' + spec_param).replace('-', '_2_')
-
     my_url = queries_url.screen.get(var_name)
     return my_url
 
 
 def query_builder_ram(spec_param):
     """This function builds the query form and returns the relevant URL"""
-    # print(f'The following search parameters were chosen: RAM size, {spec_param}')
     var_name = 'RAM_' + spec_param
     my_url = queries_url.RAM.get(var_name)
     return my_url
@@ -102,16 +92,12 @@ def query_builder_weight(spec_param):
     # print(f'The following search parameters were chosen: weight, {spec_param}')
     var_name = 'weight_' + spec_param
     var_name = var_name.replace('-', '_2_')
-
     my_url = queries_url.weight.get(var_name)
-
     return my_url
 
 
 def query_builder_hd_type(spec_param):
     """This function builds the query form and returns the relevant my_url"""
-    # print(f'The following search parameters were chosen: HD type, {spec_param}')
-
     var_name = 'HD_type_' + spec_param
     my_url = queries_url.HD_type.get(var_name)
     return my_url

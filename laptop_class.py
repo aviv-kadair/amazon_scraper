@@ -8,6 +8,7 @@ from datetime import datetime
 import config
 from Logging import logger
 import sys
+
 sys.path.append('../')
 
 DB_FILENAME = config.DB_FILENAME
@@ -62,8 +63,7 @@ class Laptop:
             db_output = [item for item in self.cur.fetchall()]
             return db_output
         except Exception as e:
-            logger.error(f'Selecting arguments from laptop table: {e} ' )
-
+            logger.error(f'Selecting arguments from laptop table: {e} ')
 
     def if_exist(self):
         """Check if the Laptop already exists in the table laptop of the db"""

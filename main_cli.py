@@ -11,6 +11,7 @@ from cli_functions_db import *
 from time import sleep
 from random import randint
 import sys
+import sqlite3
 sys.path.append('../DB')
 sys.path.append('../Cli_command')
 
@@ -27,7 +28,6 @@ def main():
         args.parameter, args.user_filter = cli_functions.choose_filter()
         parser.add_argument(dest='-url')
         args.url = cli_functions.function_map(args.parameter, args.user_filter)
-        # print(args.url)
         my_url = args.url
     else:
         my_url = queries_url.default_url
@@ -47,12 +47,10 @@ def main():
 
     try:
         output = profile()
-        # print(len(output))
         for i, p in enumerate(output[0:4]):
             retrieve_profile(p)
             sleep(randint(1, 10))
             print(i + 1)
-
         valid_features()
     except sqlite3.OperationalError:
         print('The database is blocked, try to unblock it before running the main.')

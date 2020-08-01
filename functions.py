@@ -7,6 +7,7 @@ import scraper_class
 from Createdb import connect_to_db
 import config
 import sys
+from Logging import logger
 sys.path.append('../')
 
 pages = config.NOPAGES
@@ -32,17 +33,22 @@ def search_results(no_pages):
         my_url = f'https://www.amazon.com/s?k=laptop&s=date-desc-rank&page={count}&qid=1594213292&ref=sr_pg_2'
         scraper = scraper_class.SearchPage(my_url)
         laptop_list = scraper.get_data()
-        for lap in laptop_list:
-            if lap.if_exist():
-                lap.update_db()
-            else:
-                lap.add_to_db()
-                if lap.get_arg_db() is not None:
-                    new_laptop.append(lap.get_arg_db())
-        for lap in laptop_list:
-            total_laptop.append(lap.get_arg_db())
+        try:
+            for lap in laptop_list:
+                if lap.if_exist():
+                    lap.update_db()
+                else:
+                    lap.add_to_db()
+                    if lap.get_arg_db() is not None:
+                        new_laptop.append(lap.get_arg_db())
+            for lap in laptop_list:
+                total_laptop.append(lap.get_arg_db())
 
-        print(str(round(100 * count / no_pages)) + '% of the search page has been downloaded')
+            print(str(round(100 * count / no_pages)) + '% of the search page has been downloaded')
+        except ConnectionError:
+            logger.warning("Server has reached maximum requests, please try again later")
+
+
     return new_laptop, total_laptop
 
 

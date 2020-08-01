@@ -33,5 +33,4 @@ def search_results(url):
             new_laptop.append(lap.get_arg_db('Product_name', 'Laptop_id', 'Link'))
     for lap in laptop_list:
         total_laptop.append(lap.get_arg_db('Laptop_id', 'Link'))
-
     return new_laptop, total_laptop
