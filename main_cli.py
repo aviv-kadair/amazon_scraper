@@ -7,13 +7,14 @@ from api_sentiment_analysis import *
 import argparse
 from functions import *
 import queries_url
-from cli_functions_db import *
+import cli_functions_db
 from time import sleep
 from random import randint
 import sys
 import sqlite3
 sys.path.append('../DB')
 sys.path.append('../Cli_command')
+
 
 def main():
     """This main function should run in order to activate the CLI"""
@@ -32,7 +33,8 @@ def main():
     else:
         my_url = queries_url.default_url
 
-    laptops = search_results(my_url)
+    laptops = cli_functions_db.search_results(my_url)
+
     if len(laptops[1]) > 0:
         reviews(laptops[1])
     if len(laptops[0]) > 0:

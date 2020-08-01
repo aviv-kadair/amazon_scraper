@@ -1,6 +1,7 @@
 import config
 import scraper_class
 import sys
+from Logging import logger
 sys.path.append('../')
 
 DB_FILENAME = config.DB_FILENAME
@@ -24,13 +25,23 @@ def search_results(url):
 
     scraper = scraper_class.SearchPage(url)
     laptop_list = scraper.get_data()
-    print(laptop_list)
-    for lap in laptop_list:
-        if lap.if_exist():
-            lap.update_db('Price', 'Rating', 'Reviews')
-        else:
-            lap.add_to_db()
-            new_laptop.append(lap.get_arg_db('Product_name', 'Laptop_id', 'Link'))
-    for lap in laptop_list:
-        total_laptop.append(lap.get_arg_db('Laptop_id', 'Link'))
+    print(f'{len(laptop_list)} laptops were found')
+    try:
+        for lap in laptop_list:
+            if lap.if_exist():
+                lap.update_db()
+            else:
+                lap.add_to_db()
+                if lap.get_arg_db() is not None:
+                    new_laptop.append(lap.get_arg_db())
+        for lap in laptop_list:
+            total_laptop.append(lap.get_arg_db())
+
+
+    except ConnectionError:
+        logger.warning("Server has reached maximum requests, please try again later")
+
     return new_laptop, total_laptop
+
+
+#search_results("""https://www.amazon.com/s?k=laptop&i=computers&rh=n%3A541966%2Cn%3A565108%2Cp_72%3A1248882011&dc&qid=1594229352&rnid=1248877011&ref=sr_nr_p_72_4""")
