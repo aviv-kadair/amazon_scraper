@@ -23,7 +23,7 @@
 
 ## Installation:
   ```
-  git clone https://github.com/thewizardofozz/amazon_scraper.git
+  git clone https://github.com/aviv-kadair/amazon_scraper.git
   pip3 install -r requirements.txt
   ```
   
